@@ -1,0 +1,9 @@
+{
+  "Ulises": {
+    "HistoricsDeep": 30,
+    "LoginTimeOut": 0,
+    "Region": "Región Centro",
+    "BackupServiceDomain": "localhost:8082",
+    "Version": "V 9.0"
+  }
+}
