@@ -17,3 +17,4 @@ PROCEDIMIENTO PARA ACTUALIZAR LA BASE DE DATOS SIN ELIMINAR LOS DATOS ALMACENADO
 - Entrar en la aplicación de MySQL Workbench. Abajo a la izquierda aparece "Models" y un icono de una carpeta. Pulsar sobre este icono y buscar el archivo ug5k.mwb en el directorio de la instalación ./data_model.
 - Pulsar el botón abrir.
 - Una vez abierto, en la pestaña EER Diagram, seleccionar "Database/Synchronize model..." e ir pulsando sobre el botón Next hasta finalizar.
+
