@@ -552,7 +552,7 @@ function ShowFilterGroups(){
 	$('#BtnToExcel').hide();
 	$('#BtnToExcelEvents').hide();
 
-	//$('#DivHistorics').animate({width: '175px'});
+	$('#DivHistorics').animate({width: '206px'});
 	$('#tdFilter').attr('style','vertical-align:top;display:table-cell');
 	$('#AddFilterGroup').show();
 	$('#AddFilterDate').hide();
@@ -678,7 +678,7 @@ function ShowFilterDate(){
 	$('#AddFormHistorics').hide();
 	$('#AddFilterComponent').hide();
 
-	//$('#DivHistorics').animate({width: '175px'});
+	$('#DivHistorics').animate({width: '207px'});
 	$('#tdFilter').attr('style','vertical-align:top;display:table-cell');
 	$('#AddFilterGroup').hide();
 	$('#AddFilterDate').show();
@@ -790,7 +790,7 @@ function FilteringByDate(noRange){
 function ShowFilterComponent(){
 	$('#FormHistorics').show();
 	$('#AddFormHistorics').hide();
-	//$('#DivHistorics').animate({width: '175px'});
+	$('#DivHistorics').animate({width: '207px'});
 	$('#tdFilter').attr('style','vertical-align:top;display:table-cell');
 	$('#AddFilterComponent').show();
 	$('#AddFilterCode').hide();
@@ -915,7 +915,7 @@ function FilteringByComponent(noRange){
 function ShowFilterCode(){
 	$('#FormHistorics').show();
 	$('#AddFormHistorics').hide();
-	//$('#DivHistorics').animate({width: '395px'});
+	$('#DivHistorics').animate({width: '207px'});
 	$('#tdFilter').attr('style','vertical-align:top;display:table-cell');
 	$('#AddFilterCode').show();
 	$('#AddFilterComponent').hide();

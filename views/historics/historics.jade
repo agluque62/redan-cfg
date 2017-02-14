@@ -337,12 +337,12 @@ div(id="FormHistorics", style="display: none; width: 350px")
 									td
 										label.labelNucleo(tkey='StartingDate')
 										| 
-										input#IDateStartGroup(type='date' onchange="selectEndingDate(IDateStartGroup,IDateEndGroup)")
+										input#IDateStartGroup(type='datetime-local' onchange="selectEndingDate(IDateStartGroup,IDateEndGroup)")
 								tr
 									td
 										label.labelNucleo(tkey='EndingDate')
 										| 
-										input#IDateEndGroup(type='date')
+										input#IDateEndGroup(type='datetime-local')
 							label.labelNucleo(tkey='Group')
 							| 
 							select#SGroup(style='width:130px')
@@ -358,12 +358,12 @@ div(id="FormHistorics", style="display: none; width: 350px")
 									td
 										label.labelNucleo(tkey='StartingDate')
 										| 
-										input#IDateStart(type='date' onchange='selectEndingDate(IDateStart,IDateEnd)')
+										input#IDateStart(type='datetime-local' onchange='selectEndingDate(IDateStart,IDateEnd)')
 								tr
 									td
 										label.labelNucleo(tkey='EndingDate')
 										| 
-										input#IDateEnd(type='date')
+										input#IDateEnd(type='datetime-local')
 							table(style='padding-top:10px;width:100%')
 								tr(align='center')
 									td
@@ -376,12 +376,12 @@ div(id="FormHistorics", style="display: none; width: 350px")
 									td
 										label.labelNucleo(tkey='StartingDate')
 										| 
-										input#IDateStartComponent(type='date' onchange='selectEndingDate(IDateStartComponent,IDateEndComponent)')
+										input#IDateStartComponent(type='datetime-local' onchange='selectEndingDate(IDateStartComponent,IDateEndComponent)')
 								tr
 									td
 										label.labelNucleo(tkey='EndingDate')
 										| 
-										input#IDateEndComponent(type='date')
+										input#IDateEndComponent(type='datetime-local')
 							label.labelNucleo(tkey='Component')
 							| 
 							select#SComponent(style='width:100px')
@@ -398,13 +398,13 @@ div(id="FormHistorics", style="display: none; width: 350px")
 										label.labelNucleo(tkey='StartingDate')
 								tr
 									td
-										input#IDateStartCode(type='date' onchange='selectEndingDate(IDateStartCode,IDateEndCode)')
+										input#IDateStartCode(type='datetime-local' onchange='selectEndingDate(IDateStartCode,IDateEndCode)')
 								tr
 									td
 										label.labelNucleo(tkey='EndingDate')
 								tr
 									td
-										input#IDateEndCode(type='date')
+										input#IDateEndCode(type='datetime-local')
 							table
 								tr
 									td
@@ -489,13 +489,13 @@ div(id="FormStatiscs", style="display: none; width: 350px")
 										label.labelNucleo(tkey='StartingDate')
 								tr
 									td
-										input#IDateStartStatistics(type='date' onchange='selectEndingDate(IDateStartStatistics,IDateEndStatistics)')
+										input#IDateStartStatistics(type='datetime-local' onchange='selectEndingDate(IDateStartStatistics,IDateEndStatistics)')
 								tr
 									td
 										label.labelNucleo(tkey='EndingDate')
 								tr
 									td
-										input#IDateEndStatistics(type='date')
+										input#IDateEndStatistics(type='datetime-local')
 							table(style='padding-top:10px;width:100%')
 								tr(align='center')
 									td
@@ -509,13 +509,13 @@ div(id="FormStatiscs", style="display: none; width: 350px")
 										label.labelNucleo(tkey='StartingDate')
 								tr
 									td
-										input#IDateStartStatisticsComponent(type='date' onchange='selectEndingDate(IDateStartStatisticsComponent,IDateEndStatisticsComponent)')
+										input#IDateStartStatisticsComponent(type='datetime-local' onchange='selectEndingDate(IDateStartStatisticsComponent,IDateEndStatisticsComponent)')
 								tr
 									td
 										label.labelNucleo(tkey='EndingDate')
 								tr
 									td
-										input#IDateEndStatisticsComponent(type='date')
+										input#IDateEndStatisticsComponent(type='datetime-local')
 							label.labelNucleo(tkey='Component')
 							| 
 							#SComponentStatistics(style='height:120px;width:330px;overflow-y:scroll;border:2px solid #ccc')
@@ -532,13 +532,13 @@ div(id="FormStatiscs", style="display: none; width: 350px")
 										label.labelNucleo(tkey='StartingDate')
 								tr
 									td
-										input#IDateStartStatisticsCode(type='date' onchange='selectEndingDate(IDateStartStatisticsCode,IDateEndStatisticsCode)')
+										input#IDateStartStatisticsCode(type='datetime-local' onchange='selectEndingDate(IDateStartStatisticsCode,IDateEndStatisticsCode)')
 								tr
 									td
 										label.labelNucleo(tkey='EndingDate')
 								tr
 									td
-										input#IDateEndStatisticsCode(type='date')
+										input#IDateEndStatisticsCode(type='datetime-local')
 							table
 								tr
 									td
