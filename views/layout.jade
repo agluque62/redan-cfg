@@ -9,7 +9,7 @@ html
 		script(type='text/javascript' src='/pdfmake/pdfmake.min.js')
 		script(type='text/javascript' src='/pdfmake/vfs_fonts.js')
 		script(type='text/javascript' src='/javascripts/tableBss.js')
-
+		script(type='text/javascript' src='/javascripts/authentication.js')
 		script.
 			var actual='';
 			var actualShow='';
@@ -245,6 +245,7 @@ html
 			}
 
 			function Logout(){
+				authentication();
 				window.location.href=$('#BodyRedan').data('actualLocation')	
 				GenerateHistoricEvent(ID_HW,USER_LOGOUT_SYSTEM,$('#loggedUser').text(),$('#loggedUser').text());
 			}

@@ -115,7 +115,13 @@ function myEncode(e){
 						$('#LoginIncorrect').show();
 						GenerateHistoricEvent(ID_HW,ACCESS_SYSTEM_FAIL,$('#Operador').val());
 						return;
-					} 
+					}
+				
+					if (usuario === "User already logged."){
+						$('#AlreadyLogin').show();
+						GenerateHistoricEvent(ID_HW,ACCESS_SYSTEM_FAIL,$('#Operador').val());
+						return;
+					}
 
 					var perfilVisualizacion        = ((usuario.perfil & 1)   ?true:false);
 					var perfilMando                = ((usuario.perfil & 2)   ?true:false);

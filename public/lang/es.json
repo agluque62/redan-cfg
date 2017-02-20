@@ -247,6 +247,7 @@
     "AccessControl" 		: "Control de Acceso",
     "Key"					: "Clave",
     "BadLogin"				: "Login incorrecto",
+	"AlreadyLogin"			: "Usuario ya conectado",
     "Users" 				: "Usuarios",
     "Configurations"		: "Configuraciones",
 	"Gateways" 				: "Pasarelas",

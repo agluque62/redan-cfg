@@ -20,6 +20,7 @@ var radioDestinations = require('./routes/destinations/radioDestinations');
 var historics = require('./routes/historics/historics');
 var logging = require('./lib/loggingDate.js');
 
+
 var config = require('./configUlises.json');
 //var controlAccess=require('./routes/services/accessControl');
 var myLibHistorics = require('./lib/historics.js');
@@ -196,6 +197,11 @@ setInterval(function(){
 },86400000);
 
 app.set('port', process.env.PORT || 5050);
+
+//Variable para usuario ya conectado
+app.locals.isAuthenticated = false;
+app.locals.AuthenticatedUser = 'none';
+
 app.listen(app.get('port'),function(){
     logging.LoggingDate('Listening UG5k-Serv on port ' + app.get('port'));
     logging.LoggingDate('Express started in ' + app.get('env'));  
