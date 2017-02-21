@@ -113,16 +113,15 @@ function myEncode(e){
 						alertify.error('Error user login.' + textStatus + '.' + errorThrown);
 					},
 			success: function(usuario){
-					if (usuario === "User not found."){
+					if (usuario.errMsg === "User not found."){
 						$('#LoginIncorrect').show();
 						GenerateHistoricEvent(ID_HW,ACCESS_SYSTEM_FAIL,$('#Operador').val());
 						return;
 					}
-					if (usuario === "User already logged."){
+					if (usuario.errMsg === "User already logged."){
 						$('#AlreadyLogin').show();
 						$('#UserAlreadyLogin').show();
-						$('#UserAlreadyLogin').text(': '+ ' usuario.');
-						//$('#UserAlreadyLogin').text(': '+userName);
+						$('#UserAlreadyLogin').text(': '+ usuario.errUser);
 						GenerateHistoricEvent(ID_HW,ACCESS_SYSTEM_FAIL,$('#Operador').val());
 						return;
 					}
