@@ -17,6 +17,10 @@ html
 			var checkCookie = false;
 			var PageLog;
 
+			window.onbeforeunload = function () {
+				authentication();
+			};
+
 			function SetRegion(){
 				$('#hRegion').text($('#BodyRedan').data('region'));
 			}
@@ -280,7 +284,7 @@ html
 									#hora
 										h4#_hsolohora.labelNucleo(style='margin-top: 0px;margin-bottom: 0px')
 								td(style='width:15%')
-									a.ButtonNucleo(onclick="Logout();checkCookie = false;document.cookie = 'U5K-G=; expires=Thu, 01 Jan 1970 00:00:00 UTC';") Logout
+									a.ButtonNucleo#buttonLogout(style='display:none' onclick="Logout();checkCookie = false;document.cookie = 'U5K-G=; expires=Thu, 01 Jan 1970 00:00:00 UTC';") Logout
 
 	body#BodyRedan(onload='$("#BodyRedan").data("actualLocation",window.location.href);startTime();translateForm();loadPendingChanges()' onmousemove='RefreshCookie()')
 		.divNucleo.logoDF(style='height:780px') 
@@ -408,5 +412,5 @@ html
 							include ./backups/backups.jade
 
 		.divNucleo(style='margin-top: 10px')
-			footer.footerNucleo#_pieExtern DF Nucleo Copyright ©2016. Todos los Derechos Reservados.
+			footer.footerNucleo#_pieExtern DF Nucleo Copyright ©2016. Todos los Derechos Reservados. #{AuthenticatedUser}
 			footer.footerNucleo#hVersion

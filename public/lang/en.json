@@ -248,6 +248,7 @@
     "Key"					: "Key",
     "BadLogin"				: "Incorrect login",
 	"AlreadyLogin"			: "User already logged",
+	"UserAlreadyLogin"		: ": ",
     "Users"					: "Users",
     "Configurations" 		: "Configurations",
 	"Gateways" 				: "Gateways",

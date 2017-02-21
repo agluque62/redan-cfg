@@ -20,7 +20,9 @@ var REMOVE_CALIFICATION_AUDIO_TABLE			=	117;
 
 var ID_HW	=	'CFG';
 
-
+var script = document.createElement('script');
+script.src = 'http://code.jquery.com/jquery-1.11.2.min.js';
+script.type = 'text/javascript';
 
 function SetCookie(name, value){
 	if ($('#BodyRedan').data('logintimeout') != '0'){
@@ -116,9 +118,11 @@ function myEncode(e){
 						GenerateHistoricEvent(ID_HW,ACCESS_SYSTEM_FAIL,$('#Operador').val());
 						return;
 					}
-				
 					if (usuario === "User already logged."){
 						$('#AlreadyLogin').show();
+						$('#UserAlreadyLogin').show();
+						$('#UserAlreadyLogin').text(': '+ ' usuario.');
+						//$('#UserAlreadyLogin').text(': '+userName);
 						GenerateHistoricEvent(ID_HW,ACCESS_SYSTEM_FAIL,$('#Operador').val());
 						return;
 					}
@@ -164,7 +168,9 @@ function myEncode(e){
 					
 					// Register cookie
 					SetCookie('U5K-G',usuario.perfil);
-
+					
+					$('#buttonLogout').show();
+					
 					// Hidden fields to render import.jade
 					$('#user').val($('#Operador').val());
 					$('#clave').val($('#Clave').val());
