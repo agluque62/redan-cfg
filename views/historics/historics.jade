@@ -1,7 +1,7 @@
 block historics
 
 script.
-	
+
 	function selectEndingDate(crtIni,crtFin){
 		var fechaH = $(crtIni)[0].valueAsDate;
 		fechaH.setDate(fechaH.getDate());
@@ -337,12 +337,12 @@ div(id="FormHistorics", style="display: none; width: 350px")
 									td
 										label.labelNucleo(tkey='StartingDate')
 										| 
-										input#IDateStartGroup(type='datetime-local' onchange="selectEndingDate(IDateStartGroup,IDateEndGroup)")
+										input#IDateStartGroup(type='datetime-local' value='')
 								tr
 									td
 										label.labelNucleo(tkey='EndingDate')
 										| 
-										input#IDateEndGroup(type='datetime-local')
+										input#IDateEndGroup(type='datetime-local' value='')
 							label.labelNucleo(tkey='Group')
 							| 
 							select#SGroup(style='width:130px')
@@ -358,12 +358,12 @@ div(id="FormHistorics", style="display: none; width: 350px")
 									td
 										label.labelNucleo(tkey='StartingDate')
 										| 
-										input#IDateStart(type='datetime-local' onchange='selectEndingDate(IDateStart,IDateEnd)')
+										input#IDateStart(type='datetime-local' value='')
 								tr
 									td
 										label.labelNucleo(tkey='EndingDate')
 										| 
-										input#IDateEnd(type='datetime-local')
+										input#IDateEnd(type='datetime-local' value='')
 							table(style='padding-top:10px;width:100%')
 								tr(align='center')
 									td

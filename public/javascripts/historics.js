@@ -544,6 +544,10 @@ function GotoLastPage(){
 }
 
 function ShowFilterGroups(){
+
+    startHistoricDate('IDateStartGroup');
+    endHistoricDate('IDateEndGroup');
+
 	$('#FormHistorics').show();
 	$('#AddFilterCode').hide();
 	$('#AddFormHistorics').hide();
@@ -552,7 +556,7 @@ function ShowFilterGroups(){
 	$('#BtnToExcel').hide();
 	$('#BtnToExcelEvents').hide();
 
-	$('#DivHistorics').animate({width: '206px'});
+	$('#DivHistorics').animate({width: '223px'});
 	$('#tdFilter').attr('style','vertical-align:top;display:table-cell');
 	$('#AddFilterGroup').show();
 	$('#AddFilterDate').hide();
@@ -672,13 +676,60 @@ function FilteringByGroup(noRange){
 	});
 }
 
+function startHistoricDate(data) {
+    var field = document.getElementById(data);
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth();
+    month++;
+    var year = date.getFullYear()
+    var hour = date.getHours();
+    var mins = date.getMinutes();
+
+    if(day.toString().length == 1)
+        day = '0' + day;
+    if(month.toString().length == 1)
+        month = '0' + month;
+    if(hour.toString().length == 1)
+        day = '0' + day;
+    if(mins.toString().length == 1)
+        month = '0' + month;
+
+    field.value=year+'-'+month+'-'+day+'T00:00';
+}
+
+function endHistoricDate(data) {
+    var field = document.getElementById(data);
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth();
+    month++;
+    var year = date.getFullYear()
+    var hour = date.getHours();
+    var mins = date.getMinutes();
+
+    if(day.toString().length == 1)
+        day = '0' + day;
+    if(month.toString().length == 1)
+        month = '0' + month;
+    if(hour.toString().length == 1)
+        day = '0' + day;
+    if(mins.toString().length == 1)
+        month = '0' + month;
+
+    field.value=year+'-'+month+'-'+day+'T'+hour+':'+mins;
+}
+
 function ShowFilterDate(){
 	$('#FormHistorics').show();
 	$('#AddFilterCode').hide();
 	$('#AddFormHistorics').hide();
 	$('#AddFilterComponent').hide();
 
-	$('#DivHistorics').animate({width: '207px'});
+    startHistoricDate('IDateStart');
+	endHistoricDate('IDateEnd');
+
+	$('#DivHistorics').animate({width: '223px'});
 	$('#tdFilter').attr('style','vertical-align:top;display:table-cell');
 	$('#AddFilterGroup').hide();
 	$('#AddFilterDate').show();
