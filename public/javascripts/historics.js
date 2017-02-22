@@ -839,9 +839,11 @@ function FilteringByDate(noRange){
 }
 
 function ShowFilterComponent(){
+    startHistoricDate('IDateStartComponent');
+    endHistoricDate('IDateEndComponent');
 	$('#FormHistorics').show();
 	$('#AddFormHistorics').hide();
-	$('#DivHistorics').animate({width: '207px'});
+	$('#DivHistorics').animate({width: '223px'});
 	$('#tdFilter').attr('style','vertical-align:top;display:table-cell');
 	$('#AddFilterComponent').show();
 	$('#AddFilterCode').hide();
@@ -964,9 +966,11 @@ function FilteringByComponent(noRange){
 }
 
 function ShowFilterCode(){
+    startHistoricDate('IDateStartCode');
+    endHistoricDate('IDateEndCode');
 	$('#FormHistorics').show();
 	$('#AddFormHistorics').hide();
-	$('#DivHistorics').animate({width: '207px'});
+	$('#DivHistorics').animate({width: '223px'});
 	$('#tdFilter').attr('style','vertical-align:top;display:table-cell');
 	$('#AddFilterCode').show();
 	$('#AddFilterComponent').hide();
