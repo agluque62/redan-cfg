@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/views/services/postUsuario.jade" line="28" mnemonic="1" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b67ed5-138a-4677-b334-f4eba7a783b7" name="Default" comment="" />
     <ignored path="UG5K-Serv.iws" />
@@ -20,37 +23,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="historics.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/historics/historics.jade">
+      <file leaf-file-name="postUsuario.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/services/postUsuario.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="526" column="20" lean-forward="true" selection-start-line="526" selection-start-column="20" selection-end-line="526" selection-end-column="20" />
+            <state relative-caret-position="237">
+              <caret line="29" column="56" lean-forward="true" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="historics.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/historics.js">
+      <file leaf-file-name="postGateway.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/services/postGateway.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="975" column="25" lean-forward="false" selection-start-line="975" selection-start-column="25" selection-end-line="975" selection-end-column="25" />
+            <state relative-caret-position="283">
+              <caret line="166" column="33" lean-forward="true" selection-start-line="166" selection-start-column="33" selection-end-line="166" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="526">
+              <caret line="170" column="19" lean-forward="true" selection-start-line="170" selection-start-column="19" selection-end-line="170" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="89" column="23" lean-forward="true" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
               <folding>
-                <marker date="1487769278698" expanded="true" signature="1789:1834" ph="..." />
-                <marker date="1487769278698" expanded="true" signature="1861:1874" ph="..." />
-                <marker date="1487769278698" expanded="true" signature="1956:1988" ph="..." />
-                <marker date="1487769278698" expanded="true" signature="2054:2098" ph="..." />
-                <marker date="1487769278698" expanded="true" signature="2126:2154" ph="..." />
-                <marker date="1487769278698" expanded="true" signature="2248:2280" ph="..." />
-                <marker date="1487769278698" expanded="true" signature="2346:2390" ph="..." />
-                <marker date="1487769278698" expanded="true" signature="2402:2431" ph="..." />
-                <marker date="1487769278698" expanded="true" signature="2826:2870" ph="..." />
-                <marker date="1487769278698" expanded="true" signature="2898:2926" ph="..." />
-                <marker date="1487769278698" expanded="true" signature="3020:3052" ph="..." />
-                <marker date="1487769278698" expanded="true" signature="3119:3163" ph="..." />
-                <marker date="1487769278698" expanded="true" signature="3175:3204" ph="..." />
-                <marker date="1487769278698" expanded="true" signature="3474:3518" ph="..." />
-                <marker date="1487769278698" expanded="true" signature="3530:3559" ph="..." />
+                <marker date="1487778240451" expanded="true" signature="2056:2072" ph="..." />
               </folding>
             </state>
           </provider>
@@ -68,12 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.show</find>
-      <find>alre</find>
-      <find>usuario</find>
-      <find>users</find>
-      <find>AlreadyLogin</find>
-      <find>User already logged</find>
       <find>d</find>
       <find>selectEndingDate</find>
       <find>#IDateStart</find>
@@ -98,6 +101,12 @@
       <find>IDateStartStatisticsCode</find>
       <find>ShowFilter</find>
       <find>startHistoricDate</find>
+      <find>DATOSSSSSSSSSSSS</find>
+      <find>DATOSSSSS</find>
+      <find>Buscar</find>
+      <find>FilteringByComponentStatistics</find>
+      <find>ValidateUser</find>
+      <find>User already logged.</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -119,11 +128,13 @@
         <option value="$PROJECT_DIR$/public/lang/en.json" />
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
-        <option value="$PROJECT_DIR$/public/javascripts/index.js" />
-        <option value="$PROJECT_DIR$/lib/users.js" />
         <option value="$PROJECT_DIR$/public/bootstrap-2.3.2/less/tests/forms.html" />
         <option value="$PROJECT_DIR$/views/historics/historics.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/historics.js" />
+        <option value="$PROJECT_DIR$/routes/historics/historics.js" />
+        <option value="$PROJECT_DIR$/lib/historics.js" />
+        <option value="$PROJECT_DIR$/lib/users.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/index.js" />
       </list>
     </option>
   </component>
@@ -239,6 +250,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="backups" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UG5K-Serv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ug5k-redanserv-config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -361,12 +386,12 @@
       <workItem from="1487753114255" duration="6791000" />
       <workItem from="1487763307964" duration="35000" />
       <workItem from="1487763625837" duration="4216000" />
-      <workItem from="1487768941089" duration="394000" />
+      <workItem from="1487768941089" duration="3834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32266000" />
+    <option name="totallyTimeSpent" value="35706000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -384,6 +409,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24296875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23523094" sideWeight="0.5125" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924962" sideWeight="0.496875" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2729234" sideWeight="0.4875" order="2" side_tool="false" content_ui="tabs" />
@@ -397,7 +423,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924962" sideWeight="0.496875" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -430,7 +455,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/javascripts/index.js</url>
-          <line>121</line>
+          <line>131</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -454,11 +479,29 @@
           <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/lib/historics.js</url>
+          <line>608</line>
+          <properties />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/lib/historics.js</url>
+          <line>599</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/lib/historics.js</url>
+          <line>590</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="38" />
+      <option name="time" value="41" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSConfigurationType">
@@ -468,42 +511,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="49" lean-forward="false" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/lang/es.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3690">
-          <caret line="246" column="18" lean-forward="false" selection-start-line="246" selection-start-column="5" selection-end-line="246" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/historics/historics.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8100">
-          <caret line="540" column="89" lean-forward="false" selection-start-line="540" selection-start-column="89" selection-end-line="540" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4365">
-          <caret line="291" column="14" lean-forward="true" selection-start-line="291" selection-start-column="14" selection-end-line="291" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/historics.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13755">
@@ -694,21 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="186" column="29" lean-forward="false" selection-start-line="186" selection-start-column="29" selection-end-line="186" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="120" column="57" lean-forward="false" selection-start-line="120" selection-start-column="57" selection-end-line="120" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/authentication.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -808,18 +800,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/historics/package.json" />
-    <entry file="file://$PROJECT_DIR$/views/historics/historics.jade">
+    <entry file="file://$PROJECT_DIR$/views/services/postGateway.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="526" column="20" lean-forward="true" selection-start-line="526" selection-start-column="20" selection-end-line="526" selection-end-column="20" />
+        <state relative-caret-position="283">
+          <caret line="166" column="33" lean-forward="true" selection-start-line="166" selection-start-column="33" selection-end-line="166" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/historics/historics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="191" column="29" lean-forward="true" selection-start-line="191" selection-start-column="29" selection-end-line="191" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/historics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="975" column="25" lean-forward="false" selection-start-line="975" selection-start-column="25" selection-end-line="975" selection-end-column="25" />
+        <state relative-caret-position="460">
+          <caret line="1200" column="50" lean-forward="false" selection-start-line="1200" selection-start-column="33" selection-end-line="1200" selection-end-column="50" />
           <folding>
             <marker date="1487769278698" expanded="true" signature="1789:1834" ph="..." />
             <marker date="1487769278698" expanded="true" signature="1861:1874" ph="..." />
@@ -836,6 +836,56 @@
             <marker date="1487769278698" expanded="true" signature="3175:3204" ph="..." />
             <marker date="1487769278698" expanded="true" signature="3474:3518" ph="..." />
             <marker date="1487769278698" expanded="true" signature="3530:3559" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/historics/historics.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="524" column="94" lean-forward="false" selection-start-line="524" selection-start-column="64" selection-end-line="524" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/services/postUsuario.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="29" column="56" lean-forward="true" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/historics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="597" column="0" lean-forward="true" selection-start-line="597" selection-start-column="0" selection-end-line="597" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/response.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="170" column="19" lean-forward="true" selection-start-line="170" selection-start-column="19" selection-end-line="170" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="89" column="23" lean-forward="true" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
+          <folding>
+            <marker date="1487778240451" expanded="true" signature="2056:2072" ph="..." />
           </folding>
         </state>
       </provider>

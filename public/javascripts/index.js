@@ -77,6 +77,15 @@ function ResetAfterImport(datos){
 	});
 }
 
+function getAuthenticatedUser(data){
+	var index = data.toString().indexOf('.');
+
+	if(index > -1)
+        return data.toString().substring(index+1);
+	else
+		return "";
+}
+
 function myEncode(e){
 	e.preventDefault();
 	
@@ -113,15 +122,16 @@ function myEncode(e){
 						alertify.error('Error user login.' + textStatus + '.' + errorThrown);
 					},
 			success: function(usuario){
-					if (usuario.errMsg === "User not found."){
+					if (usuario === "User not found."){
 						$('#LoginIncorrect').show();
 						GenerateHistoricEvent(ID_HW,ACCESS_SYSTEM_FAIL,$('#Operador').val());
 						return;
 					}
-					if (usuario.errMsg === "User already logged."){
+					var userName = getAuthenticatedUser(usuario);
+					if (userName !== ""){
 						$('#AlreadyLogin').show();
 						$('#UserAlreadyLogin').show();
-						$('#UserAlreadyLogin').text(': '+ usuario.errUser);
+						$('#UserAlreadyLogin').text(': '+userName);
 						GenerateHistoricEvent(ID_HW,ACCESS_SYSTEM_FAIL,$('#Operador').val());
 						return;
 					}
