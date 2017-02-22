@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/public/javascripts/historics.js" line="739" mnemonic="1" />
-    <bookmark url="file://$PROJECT_DIR$/public/javascripts/historics.js" line="858" mnemonic="3" />
-    <bookmark url="file://$PROJECT_DIR$/public/javascripts/historics.js" line="984" mnemonic="4" />
-    <bookmark url="file://$PROJECT_DIR$/public/javascripts/historics.js" line="1159" mnemonic="A" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b67ed5-138a-4677-b334-f4eba7a783b7" name="Default" comment="" />
     <ignored path="UG5K-Serv.iws" />
@@ -26,98 +20,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="historics.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="historics.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/historics/historics.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="517" column="96" lean-forward="false" selection-start-line="517" selection-start-column="96" selection-end-line="517" selection-end-column="96" />
+            <state relative-caret-position="170">
+              <caret line="526" column="20" lean-forward="true" selection-start-line="526" selection-start-column="20" selection-end-line="526" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="historics.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="historics.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/historics.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="1228" column="49" lean-forward="false" selection-start-line="1228" selection-start-column="25" selection-end-line="1228" selection-end-column="49" />
+            <state relative-caret-position="256">
+              <caret line="975" column="25" lean-forward="false" selection-start-line="975" selection-start-column="25" selection-end-line="975" selection-end-column="25" />
               <folding>
-                <marker date="1487767772671" expanded="true" signature="1789:1834" ph="..." />
-                <marker date="1487767772671" expanded="true" signature="1861:1874" ph="..." />
-                <marker date="1487767772671" expanded="true" signature="1956:1988" ph="..." />
-                <marker date="1487767772671" expanded="true" signature="2054:2098" ph="..." />
-                <marker date="1487767772671" expanded="true" signature="2126:2154" ph="..." />
-                <marker date="1487767772671" expanded="true" signature="2248:2280" ph="..." />
-                <marker date="1487767772671" expanded="true" signature="2346:2390" ph="..." />
-                <marker date="1487767772671" expanded="true" signature="2402:2431" ph="..." />
-                <marker date="1487767772671" expanded="true" signature="2826:2870" ph="..." />
-                <marker date="1487767772671" expanded="true" signature="2898:2926" ph="..." />
-                <marker date="1487767772671" expanded="true" signature="3020:3052" ph="..." />
-                <marker date="1487767772671" expanded="true" signature="3119:3163" ph="..." />
-                <marker date="1487767772671" expanded="true" signature="3175:3204" ph="..." />
-                <marker date="1487767772671" expanded="true" signature="3474:3518" ph="..." />
-                <marker date="1487767772671" expanded="true" signature="3530:3559" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="1789:1834" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="1861:1874" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="1956:1988" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="2054:2098" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="2126:2154" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="2248:2280" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="2346:2390" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="2402:2431" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="2826:2870" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="2898:2926" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="3020:3052" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="3119:3163" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="3175:3204" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="3474:3518" ph="..." />
+                <marker date="1487769278698" expanded="true" signature="3530:3559" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base-css.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/bootstrap-2.3.2/docs/base-css.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17782">
-              <caret line="1046" column="0" lean-forward="false" selection-start-line="1046" selection-start-column="0" selection-end-line="1046" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/bootstrap-2.3.2/docs/assets/css/bootstrap.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18360">
-              <caret line="1080" column="12" lean-forward="false" selection-start-line="1080" selection-start-column="12" selection-end-line="1080" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/bootstrap-2.3.2/less/forms.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base-css.mustache" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/bootstrap-2.3.2/docs/templates/pages/base-css.mustache">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16507">
-              <caret line="971" column="134" lean-forward="false" selection-start-line="971" selection-start-column="134" selection-end-line="971" selection-end-column="134" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/bootstrap-2.3.2/less/tests/forms.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1921">
-              <caret line="113" column="31" lean-forward="false" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="alertify.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/alertifyjs/alertify.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="3196" lean-forward="false" selection-start-line="2" selection-start-column="3182" selection-end-line="2" selection-end-column="3196" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -134,7 +68,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>actual</find>
       <find>.show</find>
       <find>alre</find>
       <find>usuario</find>
@@ -157,13 +90,14 @@
       <find>showFilterC</find>
       <find>IDateStartComponent</find>
       <find>IDateStartCode</find>
-      <find>startHistoricDate</find>
       <find>datetime-local</find>
       <find>endHistoricDate</find>
       <find>endStatisticsDate</find>
       <find>startStatisticsDate</find>
       <find>showFilter</find>
       <find>IDateStartStatisticsCode</find>
+      <find>ShowFilter</find>
+      <find>startHistoricDate</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -188,8 +122,8 @@
         <option value="$PROJECT_DIR$/public/javascripts/index.js" />
         <option value="$PROJECT_DIR$/lib/users.js" />
         <option value="$PROJECT_DIR$/public/bootstrap-2.3.2/less/tests/forms.html" />
-        <option value="$PROJECT_DIR$/public/javascripts/historics.js" />
         <option value="$PROJECT_DIR$/views/historics/historics.jade" />
+        <option value="$PROJECT_DIR$/public/javascripts/historics.js" />
       </list>
     </option>
   </component>
@@ -310,8 +244,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -427,11 +361,12 @@
       <workItem from="1487753114255" duration="6791000" />
       <workItem from="1487763307964" duration="35000" />
       <workItem from="1487763625837" duration="4216000" />
+      <workItem from="1487768941089" duration="394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31872000" />
+    <option name="totallyTimeSpent" value="32266000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -449,7 +384,6 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24296875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23523094" sideWeight="0.5125" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924962" sideWeight="0.496875" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2729234" sideWeight="0.4875" order="2" side_tool="false" content_ui="tabs" />
@@ -463,6 +397,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924962" sideWeight="0.496875" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -500,27 +435,30 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/javascripts/historics.js</url>
-          <line>862</line>
-          <properties />
+          <line>849</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/javascripts/historics.js</url>
-          <line>748</line>
-          <properties />
+          <line>735</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/javascripts/historics.js</url>
-          <line>989</line>
-          <properties />
+          <line>976</line>
           <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/javascripts/historics.js</url>
+          <line>845</line>
+          <properties />
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="36" />
+      <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSConfigurationType">
@@ -869,43 +807,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/historics/package.json">
+    <entry file="file://$PROJECT_DIR$/views/historics/package.json" />
+    <entry file="file://$PROJECT_DIR$/views/historics/historics.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="526" column="20" lean-forward="true" selection-start-line="526" selection-start-column="20" selection-end-line="526" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/historics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="1228" column="49" lean-forward="false" selection-start-line="1228" selection-start-column="25" selection-end-line="1228" selection-end-column="49" />
+        <state relative-caret-position="256">
+          <caret line="975" column="25" lean-forward="false" selection-start-line="975" selection-start-column="25" selection-end-line="975" selection-end-column="25" />
           <folding>
-            <marker date="1487767772671" expanded="true" signature="1789:1834" ph="..." />
-            <marker date="1487767772671" expanded="true" signature="1861:1874" ph="..." />
-            <marker date="1487767772671" expanded="true" signature="1956:1988" ph="..." />
-            <marker date="1487767772671" expanded="true" signature="2054:2098" ph="..." />
-            <marker date="1487767772671" expanded="true" signature="2126:2154" ph="..." />
-            <marker date="1487767772671" expanded="true" signature="2248:2280" ph="..." />
-            <marker date="1487767772671" expanded="true" signature="2346:2390" ph="..." />
-            <marker date="1487767772671" expanded="true" signature="2402:2431" ph="..." />
-            <marker date="1487767772671" expanded="true" signature="2826:2870" ph="..." />
-            <marker date="1487767772671" expanded="true" signature="2898:2926" ph="..." />
-            <marker date="1487767772671" expanded="true" signature="3020:3052" ph="..." />
-            <marker date="1487767772671" expanded="true" signature="3119:3163" ph="..." />
-            <marker date="1487767772671" expanded="true" signature="3175:3204" ph="..." />
-            <marker date="1487767772671" expanded="true" signature="3474:3518" ph="..." />
-            <marker date="1487767772671" expanded="true" signature="3530:3559" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="1789:1834" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="1861:1874" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="1956:1988" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="2054:2098" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="2126:2154" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="2248:2280" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="2346:2390" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="2402:2431" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="2826:2870" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="2898:2926" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="3020:3052" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="3119:3163" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="3175:3204" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="3474:3518" ph="..." />
+            <marker date="1487769278698" expanded="true" signature="3530:3559" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/historics/historics.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="517" column="96" lean-forward="false" selection-start-line="517" selection-start-column="96" selection-end-line="517" selection-end-column="96" />
-          <folding />
         </state>
       </provider>
     </entry>

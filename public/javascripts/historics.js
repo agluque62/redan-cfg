@@ -683,19 +683,19 @@ function todayDateTime(data){
     var month = date.getMonth();
     month++;
     var year = date.getFullYear()
-    var hour = date.getHours();
-    var mins = date.getMinutes();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
 
     if(day.toString().length == 1)
         day = '0' + day;
     if(month.toString().length == 1)
         month = '0' + month;
-    if(hour.toString().length == 1)
-        day = '0' + day;
-    if(mins.toString().length == 1)
-        month = '0' + month;
+	if(hours.toString().length == 1)
+	 	hours = '0' + hours;
+ 	if(minutes.toString().length == 1)
+        minutes = '0' + minutes;
 
-    field.value=year+'-'+month+'-'+day+'T'+hour+':'+mins;
+    field.value=year+'-'+month+'-'+day+'T'+hours+':'+minutes;
 }
 
 function startHistoricDate(data) {
@@ -705,17 +705,11 @@ function startHistoricDate(data) {
     var month = date.getMonth();
     month++;
     var year = date.getFullYear()
-    //var hour = date.getHours();
-    //var mins = date.getMinutes();
 
     if(day.toString().length == 1)
         day = '0' + day;
     if(month.toString().length == 1)
         month = '0' + month;
-    /*if(hour.toString().length == 1)
-        day = '0' + day;
-    if(mins.toString().length == 1)
-        month = '0' + month;*/
 
     field.value=year+'-'+month+'-'+day+'T00:00';
 }
@@ -725,13 +719,6 @@ function startStatisticsDate(data) {
     var date = new Date();
 
     var year = date.getFullYear()
-    //var hour = date.getHours();
-    //var mins = date.getMinutes();
-
-    /*if(hour.toString().length == 1)
-        day = '0' + day;
-    if(mins.toString().length == 1)
-        month = '0' + month;*/
 
     field.value=year+'-01-01T00:00';
 }
@@ -744,7 +731,7 @@ function ShowFilterDate(){
 	$('#AddFilterComponent').hide();
 
     startHistoricDate('IDateStart');
-	todayDateTime('IDateEnd');
+    todayDateTime('IDateEnd');
 
 	$('#DivHistorics').animate({width: '223px'});
 	$('#tdFilter').attr('style','vertical-align:top;display:table-cell');
