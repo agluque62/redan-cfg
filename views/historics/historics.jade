@@ -509,13 +509,13 @@ div(id="FormStatiscs", style="display: none; width: 350px")
 										label.labelNucleo(tkey='StartingDate')
 								tr
 									td
-										input#IDateStartStatisticsComponent(type='datetime-local' onchange='selectEndingDate(IDateStartStatisticsComponent,IDateEndStatisticsComponent)')
+										input#IDateStartStatisticsComponent(type='datetime-local' value='')
 								tr
 									td
 										label.labelNucleo(tkey='EndingDate')
 								tr
 									td
-										input#IDateEndStatisticsComponent(type='datetime-local')
+										input#IDateEndStatisticsComponent(type='datetime-local' value='')
 							label.labelNucleo(tkey='Component')
 							| 
 							#SComponentStatistics(style='height:120px;width:330px;overflow-y:scroll;border:2px solid #ccc')
@@ -532,13 +532,13 @@ div(id="FormStatiscs", style="display: none; width: 350px")
 										label.labelNucleo(tkey='StartingDate')
 								tr
 									td
-										input#IDateStartStatisticsCode(type='datetime-local' onchange='selectEndingDate(IDateStartStatisticsCode,IDateEndStatisticsCode)')
+										input#IDateStartStatisticsCode(type='datetime-local' value='')
 								tr
 									td
 										label.labelNucleo(tkey='EndingDate')
 								tr
 									td
-										input#IDateEndStatisticsCode(type='datetime-local')
+										input#IDateEndStatisticsCode(type='datetime-local' value='')
 							table
 								tr
 									td

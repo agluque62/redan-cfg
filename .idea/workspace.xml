@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/public/javascripts/historics.js" line="722" mnemonic="1" />
-    <bookmark url="file://$PROJECT_DIR$/public/javascripts/historics.js" line="841" mnemonic="3" />
-    <bookmark url="file://$PROJECT_DIR$/public/javascripts/historics.js" line="967" mnemonic="4" />
+    <bookmark url="file://$PROJECT_DIR$/public/javascripts/historics.js" line="739" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/public/javascripts/historics.js" line="858" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/public/javascripts/historics.js" line="984" mnemonic="4" />
+    <bookmark url="file://$PROJECT_DIR$/public/javascripts/historics.js" line="1159" mnemonic="A" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b67ed5-138a-4677-b334-f4eba7a783b7" name="Default" comment="" />
@@ -25,37 +26,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="historics.jade" pinned="false" current-in-tab="false">
+      <file leaf-file-name="historics.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/historics/historics.jade">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="307">
-              <caret line="406" column="89" lean-forward="false" selection-start-line="406" selection-start-column="89" selection-end-line="406" selection-end-column="89" />
+              <caret line="517" column="96" lean-forward="false" selection-start-line="517" selection-start-column="96" selection-end-line="517" selection-end-column="96" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="historics.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="historics.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/historics.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="975" column="36" lean-forward="true" selection-start-line="975" selection-start-column="36" selection-end-line="975" selection-end-column="36" />
+            <state relative-caret-position="222">
+              <caret line="1228" column="49" lean-forward="false" selection-start-line="1228" selection-start-column="25" selection-end-line="1228" selection-end-column="49" />
               <folding>
-                <marker date="1487766512375" expanded="true" signature="1789:1834" ph="..." />
-                <marker date="1487766512375" expanded="true" signature="1861:1874" ph="..." />
-                <marker date="1487766512375" expanded="true" signature="1956:1988" ph="..." />
-                <marker date="1487766512375" expanded="true" signature="2054:2098" ph="..." />
-                <marker date="1487766512375" expanded="true" signature="2126:2154" ph="..." />
-                <marker date="1487766512375" expanded="true" signature="2248:2280" ph="..." />
-                <marker date="1487766512375" expanded="true" signature="2346:2390" ph="..." />
-                <marker date="1487766512375" expanded="true" signature="2402:2431" ph="..." />
-                <marker date="1487766512375" expanded="true" signature="2826:2870" ph="..." />
-                <marker date="1487766512375" expanded="true" signature="2898:2926" ph="..." />
-                <marker date="1487766512375" expanded="true" signature="3020:3052" ph="..." />
-                <marker date="1487766512375" expanded="true" signature="3119:3163" ph="..." />
-                <marker date="1487766512375" expanded="true" signature="3175:3204" ph="..." />
-                <marker date="1487766512375" expanded="true" signature="3474:3518" ph="..." />
-                <marker date="1487766512375" expanded="true" signature="3530:3559" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="1789:1834" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="1861:1874" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="1956:1988" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="2054:2098" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="2126:2154" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="2248:2280" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="2346:2390" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="2402:2431" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="2826:2870" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="2898:2926" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="3020:3052" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="3119:3163" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="3175:3204" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="3474:3518" ph="..." />
+                <marker date="1487767772671" expanded="true" signature="3530:3559" ph="..." />
               </folding>
             </state>
           </provider>
@@ -133,10 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>logou</find>
-      <find>#{</find>
-      <find>Logout</find>
-      <find>actualShow</find>
       <find>actual</find>
       <find>.show</find>
       <find>alre</find>
@@ -153,16 +150,20 @@
       <find>ShowFilterDate</find>
       <find>$('#IDateStart')</find>
       <find>IDateEnd</find>
-      <find>startHistoricDate</find>
       <find>showFilterCo</find>
-      <find>datetime-local</find>
       <find>IDateStart</find>
       <find>value=''</find>
       <find>IDateStartGroup</find>
       <find>showFilterC</find>
       <find>IDateStartComponent</find>
-      <find>showFilter</find>
       <find>IDateStartCode</find>
+      <find>startHistoricDate</find>
+      <find>datetime-local</find>
+      <find>endHistoricDate</find>
+      <find>endStatisticsDate</find>
+      <find>startStatisticsDate</find>
+      <find>showFilter</find>
+      <find>IDateStartStatisticsCode</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -425,12 +426,12 @@
       <workItem from="1487664211507" duration="137000" />
       <workItem from="1487753114255" duration="6791000" />
       <workItem from="1487763307964" duration="35000" />
-      <workItem from="1487763625837" duration="2966000" />
+      <workItem from="1487763625837" duration="4216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30622000" />
+    <option name="totallyTimeSpent" value="31872000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -499,19 +500,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/javascripts/historics.js</url>
-          <line>845</line>
+          <line>862</line>
           <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/javascripts/historics.js</url>
-          <line>731</line>
+          <line>748</line>
           <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/javascripts/historics.js</url>
-          <line>972</line>
+          <line>989</line>
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
@@ -876,35 +877,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/historics/historics.jade">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/historics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="406" column="89" lean-forward="false" selection-start-line="406" selection-start-column="89" selection-end-line="406" selection-end-column="89" />
-          <folding />
+        <state relative-caret-position="222">
+          <caret line="1228" column="49" lean-forward="false" selection-start-line="1228" selection-start-column="25" selection-end-line="1228" selection-end-column="49" />
+          <folding>
+            <marker date="1487767772671" expanded="true" signature="1789:1834" ph="..." />
+            <marker date="1487767772671" expanded="true" signature="1861:1874" ph="..." />
+            <marker date="1487767772671" expanded="true" signature="1956:1988" ph="..." />
+            <marker date="1487767772671" expanded="true" signature="2054:2098" ph="..." />
+            <marker date="1487767772671" expanded="true" signature="2126:2154" ph="..." />
+            <marker date="1487767772671" expanded="true" signature="2248:2280" ph="..." />
+            <marker date="1487767772671" expanded="true" signature="2346:2390" ph="..." />
+            <marker date="1487767772671" expanded="true" signature="2402:2431" ph="..." />
+            <marker date="1487767772671" expanded="true" signature="2826:2870" ph="..." />
+            <marker date="1487767772671" expanded="true" signature="2898:2926" ph="..." />
+            <marker date="1487767772671" expanded="true" signature="3020:3052" ph="..." />
+            <marker date="1487767772671" expanded="true" signature="3119:3163" ph="..." />
+            <marker date="1487767772671" expanded="true" signature="3175:3204" ph="..." />
+            <marker date="1487767772671" expanded="true" signature="3474:3518" ph="..." />
+            <marker date="1487767772671" expanded="true" signature="3530:3559" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/historics.js">
+    <entry file="file://$PROJECT_DIR$/views/historics/historics.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="975" column="36" lean-forward="true" selection-start-line="975" selection-start-column="36" selection-end-line="975" selection-end-column="36" />
-          <folding>
-            <marker date="1487766512375" expanded="true" signature="1789:1834" ph="..." />
-            <marker date="1487766512375" expanded="true" signature="1861:1874" ph="..." />
-            <marker date="1487766512375" expanded="true" signature="1956:1988" ph="..." />
-            <marker date="1487766512375" expanded="true" signature="2054:2098" ph="..." />
-            <marker date="1487766512375" expanded="true" signature="2126:2154" ph="..." />
-            <marker date="1487766512375" expanded="true" signature="2248:2280" ph="..." />
-            <marker date="1487766512375" expanded="true" signature="2346:2390" ph="..." />
-            <marker date="1487766512375" expanded="true" signature="2402:2431" ph="..." />
-            <marker date="1487766512375" expanded="true" signature="2826:2870" ph="..." />
-            <marker date="1487766512375" expanded="true" signature="2898:2926" ph="..." />
-            <marker date="1487766512375" expanded="true" signature="3020:3052" ph="..." />
-            <marker date="1487766512375" expanded="true" signature="3119:3163" ph="..." />
-            <marker date="1487766512375" expanded="true" signature="3175:3204" ph="..." />
-            <marker date="1487766512375" expanded="true" signature="3474:3518" ph="..." />
-            <marker date="1487766512375" expanded="true" signature="3530:3559" ph="..." />
-          </folding>
+        <state relative-caret-position="307">
+          <caret line="517" column="96" lean-forward="false" selection-start-line="517" selection-start-column="96" selection-end-line="517" selection-end-column="96" />
+          <folding />
         </state>
       </provider>
     </entry>

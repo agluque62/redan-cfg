@@ -546,7 +546,7 @@ function GotoLastPage(){
 function ShowFilterGroups(){
 
     startHistoricDate('IDateStartGroup');
-    endHistoricDate('IDateEndGroup');
+    todayDateTime('IDateEndGroup');
 
 	$('#FormHistorics').show();
 	$('#AddFilterCode').hide();
@@ -676,29 +676,7 @@ function FilteringByGroup(noRange){
 	});
 }
 
-function startHistoricDate(data) {
-    var field = document.getElementById(data);
-    var date = new Date();
-    var day = date.getDate();
-    var month = date.getMonth();
-    month++;
-    var year = date.getFullYear()
-    var hour = date.getHours();
-    var mins = date.getMinutes();
-
-    if(day.toString().length == 1)
-        day = '0' + day;
-    if(month.toString().length == 1)
-        month = '0' + month;
-    if(hour.toString().length == 1)
-        day = '0' + day;
-    if(mins.toString().length == 1)
-        month = '0' + month;
-
-    field.value=year+'-'+month+'-'+day+'T00:00';
-}
-
-function endHistoricDate(data) {
+function todayDateTime(data){
     var field = document.getElementById(data);
     var date = new Date();
     var day = date.getDate();
@@ -720,6 +698,45 @@ function endHistoricDate(data) {
     field.value=year+'-'+month+'-'+day+'T'+hour+':'+mins;
 }
 
+function startHistoricDate(data) {
+    var field = document.getElementById(data);
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth();
+    month++;
+    var year = date.getFullYear()
+    //var hour = date.getHours();
+    //var mins = date.getMinutes();
+
+    if(day.toString().length == 1)
+        day = '0' + day;
+    if(month.toString().length == 1)
+        month = '0' + month;
+    /*if(hour.toString().length == 1)
+        day = '0' + day;
+    if(mins.toString().length == 1)
+        month = '0' + month;*/
+
+    field.value=year+'-'+month+'-'+day+'T00:00';
+}
+
+function startStatisticsDate(data) {
+    var field = document.getElementById(data);
+    var date = new Date();
+
+    var year = date.getFullYear()
+    //var hour = date.getHours();
+    //var mins = date.getMinutes();
+
+    /*if(hour.toString().length == 1)
+        day = '0' + day;
+    if(mins.toString().length == 1)
+        month = '0' + month;*/
+
+    field.value=year+'-01-01T00:00';
+}
+
+
 function ShowFilterDate(){
 	$('#FormHistorics').show();
 	$('#AddFilterCode').hide();
@@ -727,7 +744,7 @@ function ShowFilterDate(){
 	$('#AddFilterComponent').hide();
 
     startHistoricDate('IDateStart');
-	endHistoricDate('IDateEnd');
+	todayDateTime('IDateEnd');
 
 	$('#DivHistorics').animate({width: '223px'});
 	$('#tdFilter').attr('style','vertical-align:top;display:table-cell');
@@ -840,7 +857,7 @@ function FilteringByDate(noRange){
 
 function ShowFilterComponent(){
     startHistoricDate('IDateStartComponent');
-    endHistoricDate('IDateEndComponent');
+    todayDateTime('IDateEndComponent');
 	$('#FormHistorics').show();
 	$('#AddFormHistorics').hide();
 	$('#DivHistorics').animate({width: '223px'});
@@ -967,7 +984,7 @@ function FilteringByComponent(noRange){
 
 function ShowFilterCode(){
     startHistoricDate('IDateStartCode');
-    endHistoricDate('IDateEndCode');
+    todayDateTime('IDateEndCode');
 	$('#FormHistorics').show();
 	$('#AddFormHistorics').hide();
 	$('#DivHistorics').animate({width: '223px'});
@@ -1139,6 +1156,8 @@ function FilteringByDateStatistics(){
 }
 
 function ShowFilterComponentStatiscs(){
+    startStatisticsDate('IDateStartStatisticsComponent');
+    todayDateTime('IDateEndStatisticsComponent');
 	$('#FormStatiscs').show();
 	$('#AddFormStatistics').hide();
 
@@ -1207,6 +1226,8 @@ function FilteringByComponentStatistics(){
 }
 
 function ShowFilterCodeStatiscs(){
+    startStatisticsDate('IDateStartStatisticsCode');
+    todayDateTime('IDateEndStatisticsCode');
 	$('#FormStatiscs').show();
 	$('#AddFormStatistics').hide();
 
