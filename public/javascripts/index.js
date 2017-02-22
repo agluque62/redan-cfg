@@ -127,14 +127,13 @@ function myEncode(e){
 						GenerateHistoricEvent(ID_HW,ACCESS_SYSTEM_FAIL,$('#Operador').val());
 						return;
 					}
-					var userName = getAuthenticatedUser(usuario);
-					if (userName !== ""){
-						$('#AlreadyLogin').show();
-						$('#UserAlreadyLogin').show();
-						$('#UserAlreadyLogin').text(': '+userName);
-						GenerateHistoricEvent(ID_HW,ACCESS_SYSTEM_FAIL,$('#Operador').val());
-						return;
-					}
+					if(usuario.alreadyLoggedUserName !== "none") {
+                            $('#AlreadyLogin').show();
+                            $('#UserAlreadyLogin').show();
+                            $('#UserAlreadyLogin').text(': '+usuario.alreadyLoggedUserName);
+                            GenerateHistoricEvent(ID_HW, ACCESS_SYSTEM_FAIL, $('#Operador').val());
+                            return;
+                    }
 
 					var perfilVisualizacion        = ((usuario.perfil & 1)   ?true:false);
 					var perfilMando                = ((usuario.perfil & 2)   ?true:false);
