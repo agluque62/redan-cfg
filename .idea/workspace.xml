@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/public/javascripts/configurations.js" line="158" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/public/javascripts/configurations.js" line="493" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/public/javascripts/configurations.js" line="536" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/public/javascripts/configurations.js" line="610" mnemonic="4" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b67ed5-138a-4677-b334-f4eba7a783b7" name="Default" comment="" />
     <ignored path="UG5K-Serv.iws" />
@@ -30,12 +36,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postGateway.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="postGateway.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/services/postGateway.jade">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="368">
               <caret line="180" column="13" lean-forward="true" selection-start-line="180" selection-start-column="13" selection-end-line="180" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configurations.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/configurations.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="159" column="60" lean-forward="false" selection-start-line="159" selection-start-column="50" selection-end-line="159" selection-end-column="60" />
+              <folding>
+                <marker date="1487838261399" expanded="true" signature="1170:1183" ph="..." />
+                <marker date="1487838261399" expanded="true" signature="1375:1387" ph="..." />
+                <marker date="1487838261399" expanded="true" signature="5133:5161" ph="..." />
+                <marker date="1487838261399" expanded="true" signature="5410:5422" ph="..." />
+                <marker date="1487838261399" expanded="true" signature="6792:6820" ph="..." />
+                <marker date="1487838261399" expanded="true" signature="7069:7081" ph="..." />
+                <marker date="1487838261399" expanded="true" signature="17124:17150" ph="..." />
+                <marker date="1487838261399" expanded="true" signature="17301:17350" ph="..." />
+                <marker date="1487838261399" expanded="true" signature="18872:18898" ph="..." />
+                <marker date="1487838261399" expanded="true" signature="19049:19098" ph="..." />
+                <marker date="1487838261399" expanded="true" signature="21372:21398" ph="..." />
+                <marker date="1487838261399" expanded="true" signature="21532:21576" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sites.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/sites.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="142" column="29" lean-forward="true" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
+              <folding>
+                <marker date="1487839303706" expanded="true" signature="1292:1305" ph="..." />
+                <marker date="1487839303706" expanded="true" signature="1525:1537" ph="..." />
+                <marker date="1487839303706" expanded="true" signature="3864:3892" ph="..." />
+                <marker date="1487839303706" expanded="true" signature="4310:4338" ph="..." />
+                <marker date="1487839303706" expanded="true" signature="4957:4985" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,12 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>d</find>
-      <find>selectEndingDate</find>
-      <find>#IDateStart</find>
-      <find>FilteringByDate</find>
-      <find>load</find>
-      <find>207px</find>
       <find>ShowFilterDate</find>
       <find>$('#IDateStart')</find>
       <find>IDateEnd</find>
@@ -104,6 +143,12 @@
       <find>FilteringByComponentStatistics</find>
       <find>ValidateUser</find>
       <find>User already logged.</find>
+      <find>ff8c1a</find>
+      <find>ShowHardwareGatewa</find>
+      <find>value.</find>
+      <find>&lt;/a&gt;</find>
+      <find>data-texto</find>
+      <find>VALORRRRRR</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -133,6 +178,8 @@
         <option value="$PROJECT_DIR$/lib/users.js" />
         <option value="$PROJECT_DIR$/public/javascripts/index.js" />
         <option value="$PROJECT_DIR$/views/services/postGateway.jade" />
+        <option value="$PROJECT_DIR$/public/javascripts/configurations.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/sites.js" />
       </list>
     </option>
   </component>
@@ -385,12 +432,12 @@
       <workItem from="1487763307964" duration="35000" />
       <workItem from="1487763625837" duration="4216000" />
       <workItem from="1487768941089" duration="6586000" />
-      <workItem from="1487834170935" duration="950000" />
+      <workItem from="1487834170935" duration="5184000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39408000" />
+    <option name="totallyTimeSpent" value="43642000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -408,7 +455,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24296875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23523094" sideWeight="0.5125" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924962" sideWeight="0.496875" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.496875" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2729234" sideWeight="0.4875" order="2" side_tool="false" content_ui="tabs" />
@@ -492,11 +539,17 @@
           <line>590</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/javascripts/configurations.js</url>
+          <line>158</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="41" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSConfigurationType">
@@ -506,13 +559,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/javascripts/historics.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13755">
-          <caret line="917" column="43" lean-forward="false" selection-start-line="917" selection-start-column="43" selection-end-line="917" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/imported.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -653,13 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/configurations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/backups.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -750,6 +789,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18360">
           <caret line="1080" column="12" lean-forward="false" selection-start-line="1080" selection-start-column="12" selection-end-line="1080" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -764,6 +804,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16507">
           <caret line="971" column="134" lean-forward="false" selection-start-line="971" selection-start-column="134" selection-end-line="971" selection-end-column="134" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -785,6 +826,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17782">
           <caret line="1046" column="0" lean-forward="false" selection-start-line="1046" selection-start-column="0" selection-end-line="1046" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -873,6 +915,41 @@
         <state relative-caret-position="368">
           <caret line="180" column="13" lean-forward="true" selection-start-line="180" selection-start-column="13" selection-end-line="180" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/configurations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="159" column="60" lean-forward="false" selection-start-line="159" selection-start-column="50" selection-end-line="159" selection-end-column="60" />
+          <folding>
+            <marker date="1487838261399" expanded="true" signature="1170:1183" ph="..." />
+            <marker date="1487838261399" expanded="true" signature="1375:1387" ph="..." />
+            <marker date="1487838261399" expanded="true" signature="5133:5161" ph="..." />
+            <marker date="1487838261399" expanded="true" signature="5410:5422" ph="..." />
+            <marker date="1487838261399" expanded="true" signature="6792:6820" ph="..." />
+            <marker date="1487838261399" expanded="true" signature="7069:7081" ph="..." />
+            <marker date="1487838261399" expanded="true" signature="17124:17150" ph="..." />
+            <marker date="1487838261399" expanded="true" signature="17301:17350" ph="..." />
+            <marker date="1487838261399" expanded="true" signature="18872:18898" ph="..." />
+            <marker date="1487838261399" expanded="true" signature="19049:19098" ph="..." />
+            <marker date="1487838261399" expanded="true" signature="21372:21398" ph="..." />
+            <marker date="1487838261399" expanded="true" signature="21532:21576" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/sites.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="142" column="29" lean-forward="true" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
+          <folding>
+            <marker date="1487839303706" expanded="true" signature="1292:1305" ph="..." />
+            <marker date="1487839303706" expanded="true" signature="1525:1537" ph="..." />
+            <marker date="1487839303706" expanded="true" signature="3864:3892" ph="..." />
+            <marker date="1487839303706" expanded="true" signature="4310:4338" ph="..." />
+            <marker date="1487839303706" expanded="true" signature="4957:4985" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
