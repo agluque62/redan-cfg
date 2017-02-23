@@ -250,6 +250,10 @@ html
 
 			function Logout(){
 				authentication();
+				var index = BodyRedan.baseURI.indexOf('#');
+				if( index > -1)
+					BodyRedan.baseURI = BodyRedan.baseURI.substr(0, index-1);
+
 				window.location.href=$('#BodyRedan').data('actualLocation')	
 				GenerateHistoricEvent(ID_HW,USER_LOGOUT_SYSTEM,$('#loggedUser').text(),$('#loggedUser').text());
 			}
