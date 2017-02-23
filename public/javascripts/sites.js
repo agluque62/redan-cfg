@@ -34,6 +34,7 @@ var UpdateSynchroStateInSites = function(data){
 	})
 }
 
+
 function ShowSites(data,f){
 	$("#listSites").empty();
 	$('#AddFormsite').hide();
@@ -46,7 +47,7 @@ function ShowSites(data,f){
 	$.each(data.data, function(index, value){
 		if (value.idEMPLAZAMIENTO != 1){
 			var item = $('<li>' + 
-							'<a data-site=' + value.idEMPLAZAMIENTO + ' ondrop="dropGatewayToSite(event)" ondragover="allowDrop(event)" style="display:block" onclick="CheckingAnyChange(\'GeneralContent\', function(){ShowSite(\'' + value.name + '\',\'' + value.idEMPLAZAMIENTO + '\')})" >' + value.name + '</a>' +
+							'<a data-site=' + value.idEMPLAZAMIENTO + ' ondrop="dropGatewayToSite(event)" ondragover="getOverDropS(event)" style="display:block" onclick="CheckingAnyChange(\'GeneralContent\', function(){ShowSite(\'' + value.name + '\',\'' + value.idEMPLAZAMIENTO + '\')})" >' + value.name + '</a>' +
 							'<ul class="gtwList" id="gtw-' + value.name + '" style="display:none"></ul>' + 
 						'</li>');
 			item.appendTo($("#listSites"));
@@ -55,6 +56,10 @@ function ShowSites(data,f){
 
 	if (f != null)
 		f();
+}
+
+function getOverDropS(ev){
+	//window.alert('Desde Sites');
 }
 
 function ShowSite(site,id){

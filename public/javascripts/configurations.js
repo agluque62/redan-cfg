@@ -3,6 +3,9 @@
 /****** Module: configurations.js												*******************************/
 /****** Description: Módulo de soporte a la gestion de configuraciones			*******************************/
 /**************************************************************************************************************/
+
+var blockDrag = false;
+
 var GetConfigurations = function(f) {
 	var cfgString = '';
 	translateWord('Configurations',function(result){
@@ -28,7 +31,7 @@ var GetConfigurations = function(f) {
 
 					$.each(data.result, function(index, value){
 						var item = $('<li>' + 
-							'<a data-cfg=' + value.idCFG + ' ondrop="dropSiteToCfg(event)" ondragover="allowDrop(event)" style="display:block" onclick=\'CheckingAnyChange("GeneralContent", function(){ShowCfg(' + JSON.stringify(value) + ')})\'>' + value.name + '</a>' +
+							'<a data-cfg=' + value.idCFG + ' ondrop="dropSiteToCfg(event)" ondragover="getOverDropC(event)" style="display:block" onclick=\'CheckingAnyChange("GeneralContent", function(){ShowCfg(' + JSON.stringify(value) + ')})\'>' + value.name + '</a>' +
 								'<ul class="gtwList" id="cfg-' + value.name + '" style="display:none"></ul>' + 
 								'</li>');
 						if (value.activa)
@@ -158,7 +161,7 @@ var ShowCfg = function(cfg){
 		 				if (data != 'Configuration not found.'){
 							$.each(data.result, function(index, value){
 								var item = $('<li data-texto="' + value.idEMPLAZAMIENTO + '"  >' + 
-												'<a draggable="true" ondragstart="dragGatewayToSite(event)" ondrop="dropGatewayToSite(event)" ondragover="allowDrop(event)" style="display:block; color:#b70028" onclick="CheckingAnyChange(\'GeneralContent\', function(){ShowSite(\'' + value.nameSite + '\',\'' + value.idEMPLAZAMIENTO + '\')})"' + '>' + value.nameSite + '</a>' +
+												'<a draggable="true" ondragstart="dragGatewayToSite(event)" ondrop="dropGatewayToSite(event)" ondragover="getOverDropC(event)" style="display:block; color:#b70028" onclick="CheckingAnyChange(\'GeneralContent\', function(){ShowSite(\'' + value.nameSite + '\',\'' + value.idEMPLAZAMIENTO + '\')})"' + '>' + value.nameSite + '</a>' +
 												'<ul class="gtwList" id="site-' + value.idEMPLAZAMIENTO + '" style="display:none"></ul>' + 
 											'</li>');
 								
@@ -920,6 +923,27 @@ var GenerateData = function(idCfg, f){
 		}
 	});
 };
+//allowDrop(ev)
+function getOverDropC(ev){
+	if(blockDrag === false){
+        ev.preventDefault();
+        var config = {idCFG:0, name:"", description:"", activa:null, ts_activa:""};
+        //ev.target.nextElementSibling.style.display = "block;";
+        //config.idCFG = ev.target.attributes[0].nodeValue;
+        //config.name = ev.target.innerText;
+        config.idCFG = ev.target.attributes[0].nodeValue;
+        config.name = ev.target.innerText;
+        //config.description = "";
+        //config.activa = 1;
+        //config.ts_activa = "2017-01-31T09:02:40.000Z";
+
+        ShowCfg(config);
+
+        //ShowCfg({"idCFG":107,"name":"FGB_PRUEBA","description":"","activa":1,"ts_activa":"2017-01-31T09:02:40.000Z"})
+
+		blockDrag=true;
+	}
+}
 
 function getBase64Image(img) {
   var canvas = document.createElement("canvas");
