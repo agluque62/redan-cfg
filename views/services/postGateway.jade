@@ -176,6 +176,9 @@ script.
 			if ($(element).val()!='' && matchIp == null){
 				Fade(element,label)
 			}
+			if ($(element).length > 32){
+				Fade(element,label)
+			}
 		}
 
 		function ValidateIpPort(element,label){

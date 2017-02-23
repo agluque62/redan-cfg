@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/views/services/postUsuario.jade" line="28" mnemonic="1" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b67ed5-138a-4677-b334-f4eba7a783b7" name="Default" comment="" />
     <ignored path="UG5K-Serv.iws" />
@@ -26,18 +23,18 @@
       <file leaf-file-name="postUsuario.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/services/postUsuario.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="29" column="56" lean-forward="true" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+            <state relative-caret-position="215">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postGateway.jade" pinned="false" current-in-tab="false">
+      <file leaf-file-name="postGateway.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/services/postGateway.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="166" column="33" lean-forward="true" selection-start-line="166" selection-start-column="33" selection-end-line="166" selection-end-column="33" />
+            <state relative-caret-position="368">
+              <caret line="180" column="13" lean-forward="true" selection-start-line="180" selection-start-column="13" selection-end-line="180" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -46,18 +43,18 @@
       <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="2703">
               <caret line="159" column="49" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="129" column="59" lean-forward="false" selection-start-line="129" selection-start-column="59" selection-end-line="129" selection-end-column="59" />
+            <state relative-caret-position="187">
+              <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
               <folding>
                 <marker date="1487780083058" expanded="true" signature="2056:2072" ph="..." />
               </folding>
@@ -135,6 +132,7 @@
         <option value="$PROJECT_DIR$/lib/historics.js" />
         <option value="$PROJECT_DIR$/lib/users.js" />
         <option value="$PROJECT_DIR$/public/javascripts/index.js" />
+        <option value="$PROJECT_DIR$/views/services/postGateway.jade" />
       </list>
     </option>
   </component>
@@ -386,12 +384,13 @@
       <workItem from="1487753114255" duration="6791000" />
       <workItem from="1487763307964" duration="35000" />
       <workItem from="1487763625837" duration="4216000" />
-      <workItem from="1487768941089" duration="5704000" />
+      <workItem from="1487768941089" duration="6586000" />
+      <workItem from="1487834170935" duration="950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37576000" />
+    <option name="totallyTimeSpent" value="39408000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -476,25 +475,21 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/javascripts/historics.js</url>
           <line>845</line>
-          <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/lib/historics.js</url>
           <line>608</line>
-          <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/lib/historics.js</url>
           <line>599</line>
-          <properties />
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/lib/historics.js</url>
           <line>590</line>
-          <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
@@ -755,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18360">
           <caret line="1080" column="12" lean-forward="false" selection-start-line="1080" selection-start-column="12" selection-end-line="1080" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -763,7 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1054">
           <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -771,7 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16507">
           <caret line="971" column="134" lean-forward="false" selection-start-line="971" selection-start-column="134" selection-end-line="971" selection-end-column="134" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -779,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1921">
           <caret line="113" column="31" lean-forward="false" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -787,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="3196" lean-forward="false" selection-start-line="2" selection-start-column="3182" selection-end-line="2" selection-end-column="3196" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,24 +785,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17782">
           <caret line="1046" column="0" lean-forward="false" selection-start-line="1046" selection-start-column="0" selection-end-line="1046" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/historics/package.json" />
-    <entry file="file://$PROJECT_DIR$/views/services/postGateway.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="166" column="33" lean-forward="true" selection-start-line="166" selection-start-column="33" selection-end-line="166" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/historics/historics.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="191" column="29" lean-forward="true" selection-start-line="191" selection-start-column="29" selection-end-line="191" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -844,15 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="524" column="94" lean-forward="false" selection-start-line="524" selection-start-column="64" selection-end-line="524" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/services/postUsuario.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="29" column="56" lean-forward="true" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -868,13 +839,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
           <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="2703">
           <caret line="159" column="49" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="49" />
           <folding />
         </state>
@@ -882,11 +852,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="129" column="59" lean-forward="false" selection-start-line="129" selection-start-column="59" selection-end-line="129" selection-end-column="59" />
+        <state relative-caret-position="187">
+          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
           <folding>
             <marker date="1487780083058" expanded="true" signature="2056:2072" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/services/postUsuario.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/services/postGateway.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="180" column="13" lean-forward="true" selection-start-line="180" selection-start-column="13" selection-end-line="180" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
