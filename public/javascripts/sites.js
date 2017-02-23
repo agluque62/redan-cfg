@@ -124,22 +124,22 @@ function ShowSite(site,id){
 		 			if (data.data != 'NO_DATA'){
 						$.each(data.data, function(index, value){
 							if(value.name.length > 14 && value.name.length < 28){
-                                var name1 = value.name.substring(0,13);
+                                var name1 = value.name.substring(0,14);
                                 var name2 = value.name.substring(14,28);
                                 var item = $('<li data-texto="' + value.idCGW + '">' +
-                                    '<a draggable="true" ondragstart="dragGatewayToSite(event)" style="display:block; color:#ff8c1a" onclick="CheckingAnyChange(\'GeneralContent\', function(){ShowHardwareGateway(\'' + value.idCGW + '\',\'' + value.name + '\')})"' + '>' + name1 + '<br>' + name2 + '</a></li>');
+                                    '<a draggable="true" ondragstart="dragGatewayToSite(event)" style="display:block; color:#89001e" onclick="CheckingAnyChange(\'GeneralContent\', function(){ShowHardwareGateway(\'' + value.idCGW + '\',\'' + value.name + '\')})"' + '>' + name1 + '<br>' + name2 + '</a></li>');
 							}
 							else if(value.name.length < 14){
                                 var item = $('<li data-texto="' + value.idCGW + '">' +
-                                    '<a draggable="true" ondragstart="dragGatewayToSite(event)" style="display:block; color:#ff8c1a" onclick="CheckingAnyChange(\'GeneralContent\', function(){ShowHardwareGateway(\'' + value.idCGW + '\',\'' + value.name + '\')})"' + '>' + value.name + '</a></li>');
+                                    '<a draggable="true" ondragstart="dragGatewayToSite(event)" style="display:block; color:#89001e" onclick="CheckingAnyChange(\'GeneralContent\', function(){ShowHardwareGateway(\'' + value.idCGW + '\',\'' + value.name + '\')})"' + '>' + value.name + '</a></li>');
 
                             }
 							else{
-                                var name1 = value.name.substring(0,13);
+                                var name1 = value.name.substring(0,14);
                                 var name2 = value.name.substring(14,28);
-                                var name3 = value.name.substring(29,31);
+                                var name3 = value.name.substring(28,31);
                                 var item = $('<li data-texto="' + value.idCGW + '">' +
-                                    '<a draggable="true" ondragstart="dragGatewayToSite(event)" style="display:block; color:#ff8c1a" onclick="CheckingAnyChange(\'GeneralContent\', function(){ShowHardwareGateway(\'' + value.idCGW + '\',\'' + value.name + '\')})"' + '>' + name1 + '<br>' + name2 + '<br>' + name3 + '</a></li>');
+                                    '<a draggable="true" ondragstart="dragGatewayToSite(event)" style="display:block; color:#89001e" onclick="CheckingAnyChange(\'GeneralContent\', function(){ShowHardwareGateway(\'' + value.idCGW + '\',\'' + value.name + '\')})"' + '>' + name1 + '<br>' + name2 + '<br>' + name3 + '</a></li>');
 							}
 							item.appendTo($(lista));
 						});
