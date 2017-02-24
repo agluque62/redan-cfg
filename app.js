@@ -188,7 +188,7 @@ setImmediate(function(){
 });
 
 setInterval(function(){
-    logging.LoggingDate('Running once a day. Historics deep: ' + config.Ulises.HistoricsDeep + ' days.');
+    logging.LoggingDate('Running once a day. Historics deep: ' + config.Ulises.HistoricsDeep + ' days.')    ;
     //logging.LoggingDate('[' + new Date().toString() + ']' + 'Running once a day. Historics deep: ' + config.Ulises.HistoricsDeep + ' days.');
     myLibHistorics.deepHistorics(config.Ulises.HistoricsDeep,function(result){
         logging.LoggingDate('Historics record removed: ' + result.affectedRows);

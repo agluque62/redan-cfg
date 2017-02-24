@@ -925,24 +925,7 @@ var GenerateData = function(idCfg, f){
 };
 //allowDrop(ev)
 function getOverDropC(ev){
-	if(blockDrag === false){
-        ev.preventDefault();
-        var config = {idCFG:0, name:"", description:"", activa:null, ts_activa:""};
-        //ev.target.nextElementSibling.style.display = "block;";
-        //config.idCFG = ev.target.attributes[0].nodeValue;
-        //config.name = ev.target.innerText;
-        config.idCFG = ev.target.attributes[0].nodeValue;
-        config.name = ev.target.innerText;
-        //config.description = "";
-        //config.activa = 1;
-        //config.ts_activa = "2017-01-31T09:02:40.000Z";
-
-        ShowCfg(config);
-
-        //ShowCfg({"idCFG":107,"name":"FGB_PRUEBA","description":"","activa":1,"ts_activa":"2017-01-31T09:02:40.000Z"})
-
-		blockDrag=true;
-	}
+	
 }
 
 function getBase64Image(img) {
