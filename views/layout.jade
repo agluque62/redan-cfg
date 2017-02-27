@@ -33,24 +33,24 @@ html
 			function startTime() {
 				var ESdays = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sabado'];
 				var ENdays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-			    var today=new Date();
-			    var h=today.getHours();
-			    var m=today.getMinutes();
-			    var s=today.getSeconds();
+				var today=new Date();
+				var h=today.getHours();
+				var m=today.getMinutes();
+				var s=today.getSeconds();
 
-			    var y=today.getFullYear();
-			    var month=today.getMonth() + 1;
-			    var d=today.getDate();
+				var y=today.getFullYear();
+				var month=today.getMonth() + 1;
+				var d=today.getDate();
 
-			    var weekDay = navigator.languages[0].substr (0, 2) == 'es' ? ESdays[today.getDay()] : ENdays[today.getDay()];
-			    m = checkTime(m);
-			    s = checkTime(s);
-			    document.getElementById('_hsolohora').innerHTML = h+":"+m+":"+s;
-			    document.getElementById('_hfecha').innerHTML = d + "/" + month + "/" + y + " (" + weekDay + ")";
-			    var t = setTimeout(function(){startTime()},500);
+				var weekDay = navigator.languages[0].substr (0, 2) == 'es' ? ESdays[today.getDay()] : ENdays[today.getDay()];
+				m = checkTime(m);
+				s = checkTime(s);
+				document.getElementById('_hsolohora').innerHTML = h+":"+m+":"+s;
+				document.getElementById('_hfecha').innerHTML = d + "/" + month + "/" + y + " (" + weekDay + ")";
+				var t = setTimeout(function(){startTime()},500);
 
-			    if (checkCookie)
-			    	CheckCookie();
+				if (checkCookie)
+					CheckCookie();
 			}
 
 			function CheckCookie(){
@@ -64,8 +64,8 @@ html
 			}
 
 			function checkTime(i) {
-			    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
-			    return i;
+				if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+				return i;
 			}
 
 			function RefreshCookie(){
@@ -194,10 +194,10 @@ html
 
 			function hide(){
 				if (($('#BodyRedan').data('perfil') & 64) != 64){
-				 	window.location=$('#BodyRedan').data('actualLocation');
-				 	checkCookie = false;
-				 	document.cookie = 'U5K-G=; expires=Thu, 01 Jan 1970 00:00:00 UTC';
-				 	return;
+					window.location=$('#BodyRedan').data('actualLocation');
+					checkCookie = false;
+					document.cookie = 'U5K-G=; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+					return;
 				}
 
 				if (actual != ''){
@@ -217,12 +217,12 @@ html
 				}
 				if ($('#MenuHistoricos').is(':visible')){
 					$('#MenuHistoricos').fadeOut(500,function(){
-				 		$('#MenuFiltros').attr('style','display:table-column');
-				 		$('#MenuPasarelas').attr('style','display:table-column');
+						$('#MenuFiltros').attr('style','display:table-column');
+						$('#MenuPasarelas').attr('style','display:table-column');
 						$('#Menu').fadeIn(500,function(){
 							$('#MenuGeneral').attr('style','width:11%;display:table-cell');
 						});
-				 	});
+					});
 				}
 				if ($('#MenuBackup').is(':visible')){
 					$('#MenuBackup').fadeOut(500,function(){
@@ -254,7 +254,7 @@ html
 				if( index > -1)
 					BodyRedan.baseURI = BodyRedan.baseURI.substr(0, index-1);
 
-				window.location.href=$('#BodyRedan').data('actualLocation')	
+				window.location.href=$('#BodyRedan').data('actualLocation')
 				GenerateHistoricEvent(ID_HW,USER_LOGOUT_SYSTEM,$('#loggedUser').text(),$('#loggedUser').text());
 			}
 

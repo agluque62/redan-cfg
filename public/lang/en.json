@@ -119,7 +119,7 @@
 	"EnableADAGC"			: "Enable A/D AGC",
 	"HardwareParameters"	: "Hardware parameters",
 	"BWLists"				: "B/W Lists",
-	"BWGlobalList"			: "URIs AVAILABLE",	
+	"BWGlobalList"			: "Available URIs",
 	"Telephonic"			: "Telephonic",
 	"AddURI"				: "Add URI",
 	"AddResource"			: "Add resource",
