@@ -322,12 +322,32 @@ script.
 		}
 
 		function ValidateFid(element,label){
-			var regx_fid = /^(1|2|3)[0-9]{2}\.[0-9]{2}(0|5)$/;
+			/*
+			Banda
+			VHF:        /-- 118.000 137.000 --/
+
+			Banda
+			UHF:        /-- 225.000 400.000 --/
+			*/
+			var isError=false;
+			var regx_fid = /^(1|2|3|4)[0-9]{2}\.[0-9]{2}(0|5)$/;
+			var number = parseFloat($(element).val());
+
+			if (number < 118.000)
+				isError = true;
+			if (number > 137.000 && number < 225.000)
+				isError = true;
+			if (number > 400.000)
+				isError = true;
 
 			var matchVal = $(element).val().match(regx_fid);
+
 			if ($(element).val()!='' && matchVal == null){
-				Fade(element,label)
+				isError = true;
 			}
+
+			if(isError)
+				Fade(element,label)
 		}
 
 		function ValidateUpdatePeriod(element,label){
