@@ -250,6 +250,7 @@
 	"AlreadyLogin"			: "Usuario ya conectado",
 	"UserAlreadyLogin"		: ": ",
     "Users" 				: "Usuarios",
+	"MenuVersion"			: "Versión",
     "Configurations"		: "Configuraciones",
 	"Gateways" 				: "Pasarelas",
 	"Hardware" 				: "Hardware",

@@ -10,6 +10,7 @@ html
 		script(type='text/javascript' src='/pdfmake/vfs_fonts.js')
 		script(type='text/javascript' src='/javascripts/tableBss.js')
 		script(type='text/javascript' src='/javascripts/authentication.js')
+		script(type='text/javascript' src='/javascripts/version.js')
 		script.
 			var actual='';
 			var actualShow='';
@@ -321,7 +322,9 @@ html
 									//li
 									//	a(onclick="CheckingAnyChange(\'GeneralContent\', function(){hidePrevious(\'#FormRadioDestinations\',\'#AddFormDestinations\',\'#DivDestinations\'); GetRadioDestinations()})" tkey='RadioDestinations') 
 									li.menuListDisabled
-										a(onclick="CheckingAnyChange(\'GeneralContent\', function(){hidePrevious(\'#FormOperador\',\'#AddFormUser\',\'#DivOperador\'); GetUsuarios()})", tkey='Users') 
+										a(onclick="CheckingAnyChange(\'GeneralContent\', function(){hidePrevious(\'#FormOperador\',\'#AddFormUser\',\'#DivOperador\'); GetUsuarios()})", tkey='Users')
+									li.menuListDisabled
+										a(onclick="CheckingAnyChange(\'GeneralContent\', function(){hidePrevious(\'#FormVersion\',\'#AddFormVersion\',\'#DivVersion\'); GetVersion()})", tkey='MenuVersion')
 									li(style='margin-top:100px')
 										a( onclick="CheckingAnyChange(\'GeneralContent\', function(){hide()})", tkey='Exit') 
 						td#GeneralDiv
@@ -342,6 +345,8 @@ html
 							// FORM SITES
 							block sites
 							include ./services/postSites.jade
+							block version
+							include ./version/version.jade
 							// FORM RADIO DESTINATIONS
 								//block destinations
 								//include ./services/postRadioDestination.jade
