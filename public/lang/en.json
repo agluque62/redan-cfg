@@ -127,7 +127,7 @@
 	"RemoveResource"		: "Remove resource",
 	"EnableRegister"		: "Enable register",
 	"AutomaticCall"			: "Automatic call",
-	"Restriction"			: "Restriction",
+	"Restriction"			: "Add Restriction: ",
 	"ResourceType"			: "Resource type",
 	"SelectCodec"			: "Select codec",
 	"AddDestination"		: "Add destination",

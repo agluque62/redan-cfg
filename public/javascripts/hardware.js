@@ -45,7 +45,7 @@ function LoadUri(data){
 }
 
 function LoadAssignedUriList(data){
-    var optionsAssigned = '<option value="0">Select URI</option>';
+    var optionsAssigned = '<option value="0">Selecciona URI</option>';
 
     for (var i = 0; data != 'NO_DATA' && i < data.uris.length; i++) {
 		optionsAssigned += '<option value="' + data.uris[i].idURILISTAS + '">' + data.uris[i].ip.substring(4) + '</option>';

@@ -510,21 +510,22 @@ div(id="FormParameters")
 							select#ListUris(type='select' style='width:150px')
 						td.New(colspan=2)
 							input.UriTextbox#NewUri(style='display:none' placeholder="resourceName@IP" onblur='ValidateUriNoSIP(this,"ErrorURI")' onfocus='this.oldValue=this.value')
-					tr
 						td.New
-							a.ButtonNucleo#BtnAddUri(onclick='AddUri(this)' style='position:relative' tkey='AddURI')						
+							a.ButtonNucleo#BtnAddUri(onclick='AddUri(this)' style='position:relative' tkey='AddURI')
 						td.New
 							a.ButtonNucleo#BtnRemoveUri(onclick='RemoveUri()' style='position:relative' tkey='RemoveURI')
-					tr
-						td.New			
+				div(style='border-top: 1px solid black; width:97%;padding-top:5px')
+				br
+				br
+				br
 				label(style='color:black' tkey='BWLists')
 				div(style='border-top: 1px solid black; width:97%;padding-top:5px;padding-bottom: 10px')
 					table
 						tr#BlackWhiteRow
 							td(style='border: none' tkey='Restriction')
 							td.New(style='border: none')
-								select#SRestriccion(style='width:100px' onchange='OnChangeRestriccion(this)')
-									option(value=0) None
+								select#SRestriccion(style='width:110px' onchange='OnChangeRestriccion(this)')
+									option(value=0) Ninguna
 									option(value=1) Lista Negra
 									option(value=2) Lista Blanca
 
