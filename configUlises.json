@@ -15,6 +15,10 @@
       {
         "Name": "package.json",
         "Path": "/"
+      },
+      {
+        "Name": "configUlises.json",
+        "Path": "/"
       }
     ]
   }
