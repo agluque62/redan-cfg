@@ -4,6 +4,16 @@
     "LoginTimeOut": 0,
     "Region": "Región Centro",
     "BackupServiceDomain": "localhost:8082",
-    "Version": "V 9.0"
+    "Version": "V 9.0",
+    "Files": [
+      {
+        "Name": "app.js",
+        "Path": "/"
+      },
+      {
+        "Name": "package.json",
+        "Path": "/"
+      }
+    ]
   }
 }
