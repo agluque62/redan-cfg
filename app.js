@@ -18,6 +18,7 @@ var sites = require('./routes/sites/sites');
 var tableBss = require('./routes/tableBss/tableBss');
 var radioDestinations = require('./routes/destinations/radioDestinations');
 var historics = require('./routes/historics/historics');
+var version = require('./routes/version/version');
 var logging = require('./lib/loggingDate.js');
 
 
@@ -143,6 +144,7 @@ app.use('/resources',resources);
 app.use('/sites',sites);
 app.use('/destinations',radioDestinations);
 app.use('/historics',historics);
+app.use('/version',version);
 app.use('/tableBss',tableBss);
 
 // catch 404 and forward to error handler
