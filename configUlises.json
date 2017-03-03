@@ -5,6 +5,8 @@
     "Region": "Región Centro",
     "BackupServiceDomain": "localhost:8082",
     "Version": "V 9.0",
+    "SubVersion": "Beta 2",
+    "Date": "03/02/2017",
     "Files": [
       {
         "Name": "app.js",

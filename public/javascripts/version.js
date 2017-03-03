@@ -8,8 +8,8 @@ var GetVersion = function() {
 			url: '/version'})
 		.done(function(data){
 			$("#listVersions").empty();
-			for(var i=0; i<5; i++){
-				var item = $("<li>Fichero: MD5 "+data.version+"</li>");
+			for(var i=0; i<2; i++){
+				var item = $("<li>Fichero: "+data.files[i].Name+"  MD5 "+data.version+"</li>");
 				item.appendTo($("#listVersions"));
 			}
 		});
