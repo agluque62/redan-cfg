@@ -1472,8 +1472,8 @@ function ShowRadioParamsOfResource(data){
 		$('#LblAD').show();
 		$('#TbAdGain').show();
 	}
-
-
+		
+	
 	// Parametros jitter
 	// $('#TbMin').val(data.parametros.Buffer_jitter.min);
 	// $('#TbMax').val(data.parametros.Buffer_jitter.max);
@@ -1509,6 +1509,10 @@ function ShowRadioParamsOfResource(data){
 		// La selección del Metodo BSS representa una disponibilidad de métodos (locales) o 
 		// un método preferido (remotos)
 		// Ocultar/Mostrar tab listas dependiendo de si esta seleccionada o no la restricción
+		if(data.parametros.radio.tipo != 4 ||  data.parametros.radio.tipo != 6)
+			$('#EnableRecordingRow').attr('style','display:table-column');		//Hide
+		else
+			$('#EnableRecordingRow').attr('style','display:table-row');		//Show
 		if (data.parametros.radio.tipo >= 0 && data.parametros.radio.tipo <=3){
 			// Recursos radio locales
 			
@@ -1518,7 +1522,7 @@ function ShowRadioParamsOfResource(data){
 			$('#ListMenuParameters li:nth-child(5)').show();
 			$('#ListMenuParameters li:nth-child(4)').hide();
 			$('#BSSAvailableRow').attr('style','display:table-row');	// Show
-			$('#EnableRecordingRow').attr('style','display:table-row');		// Show
+			//$('#EnableRecordingRow').attr('style','display:table-row');		// Show
 			$('#InternalDelayRow').attr('style','display:table-column');	// Hide
 			$('#BSSMethodRow').attr('style','display:table-column');	// Hide
 			$('#BssAvailableRow').attr('style','display:table-row');	// Show
@@ -1580,8 +1584,8 @@ function ShowRadioParamsOfResource(data){
 			$('#PttPriorityRow').attr('style','display:table-column');	// Hide
 			$('#SipPriorityRow').attr('style','display:table-column');	// Hide
 
-			if (data.parametros.radio.tipo != 5)
-				$('#EnableRecordingRow').attr('style','display:table-row');
+			//if (data.parametros.radio.tipo != 5)
+			//	$('#EnableRecordingRow').attr('style','display:table-row');
 
 			$('#ListMenuParameters li:nth-child(5)').hide();
 			$('#ListMenuParameters li:nth-child(4)').show();
@@ -1786,6 +1790,9 @@ function ShowTelParamsOfResource(data){
 		else
 			$('#ReleaseRow').hide();
 		
+		/*if (data.parametros.telefonia.tipo === 1)
+			$('#CbVox').hide();
+		*/
 		ShowOptions($('#LbTypeTel option:selected').val());
 	}
 }
