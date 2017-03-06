@@ -1790,9 +1790,6 @@ function ShowTelParamsOfResource(data){
 		else
 			$('#ReleaseRow').hide();
 		
-		/*if (data.parametros.telefonia.tipo === 1)
-			$('#CbVox').hide();
-		*/
 		ShowOptions($('#LbTypeTel option:selected').val());
 	}
 }

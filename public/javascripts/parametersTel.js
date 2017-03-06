@@ -9,7 +9,8 @@ function ResetTelParameters(){
 	
 
 	// Ocultar/Mostrar tab ATS dependiendo del tipo de recurso telefonico
-	if ($('#LbTypeTel option:selected').val() == 3 || $('#LbTypeTel option:selected').val() == 4)
+	if ($('#LbTypeTel option:selected').val() == 3 ||
+		$('#LbTypeTel option:selected').val() == 4)
 		$('#ListMenuParameters li:nth-child(5)').hide();
 	else
 		$('#ListMenuParameters li:nth-child(5)').show();
@@ -54,12 +55,12 @@ function ShowOptions(tipo){
 			$('#TbUmbral').prop('disabled',false);
 			$('#TbInactividad').prop('disabled',false);
 			break;
-		case '1':// BC
+		/*case '1':// BC
 			$('.BL').attr('style','display:table-row');
 			$('#CbVox').prop('disabled',false);
 			$('#TbUmbral').prop('disabled',CbVox.checked ? false : 'disabled');
 			$('#TbInactividad').prop('disabled',CbVox.checked ? false : 'disabled');
-			break;
+			break;*/
 		case '3': 	// R2
 		case '4': 	// N5
 			$('.ATS').attr('style','display:table-row');
