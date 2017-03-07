@@ -359,9 +359,35 @@ gatewaysRouter.route('/:gateway/all')
 						});
 					}
 					else{
-						res.status(422).json({error:null, ipv: ipv});		//	Unprocessable Entity
-						logging.loggingError('(422). Gateway ' + req.params.gateway + ' is not in active configuration.');
-						return;
+						//
+						// Crear configuracion de la pasarela
+						//
+						myLibConfigurations.postConfigurationFromGateway(req, res, general, servicios, hardware, function(result){
+							if (result.error)	{
+								logging.loggingError('Error adding gateway configuration from gateway ' + req.params.gateway);
+							}
+							else{
+								myLibHardwareGateways.setResources(result.slaves,recursos,function(result){
+									
+									if (req.body.fechaHora != ''){
+										var dia=(req.body.fechaHora).split("/")[0];
+										var mes=(req.body.fechaHora).split("/")[1];
+										var anio=(req.body.fechaHora).split("/")[2].split(" ")[0];
+										var hora=(req.body.fechaHora).split("/")[2].split(" ")[1];
+										var nuevaFecha=anio + '/'+ mes + '/' + dia + ' ' + hora;
+										
+										myLibGateways.setLastUpdateToGateway(req.body.idConf, nuevaFecha, req.params.gateway, function(result){
+											if (result)
+												logging.LoggingSuccess('Gateway ' + req.params.gateway + ' updated.');
+											else
+												logging.loggingError('Configuration ' + req.body.idConf + ' is not in data base.');
+										});
+									}
+									else
+										logging.loggingError('fechaHora field empty.');
+								});
+							}
+						});
 					}
 				});
 			}
