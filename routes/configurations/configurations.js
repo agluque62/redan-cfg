@@ -15,6 +15,23 @@ var logging = require('../../lib/loggingDate.js');
 // Nesting routers by attaching them as middleware:
 var gatewaysRouter=express.Router({mergeParams:true});
 
+function generatesRandomName(name)
+{
+	var myDate = new Date();
+	var hashArray = ['A','B','C','D','E','F','G','H','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+		'1','2','3','4','5','6','7','8','9','0','A','B','C','D','E','F','G','H','J','K','L','M','N','O','P','Q','R','S','T',
+		'U','V','W','X','Y','Z','0'];
+	
+	var monthNumber = myDate.getMonth()+1;
+	var dayNumber = myDate.getDay()+1;
+	var hourNumber = myDate.getHours()+1;
+	var minNumber = myDate.getMinutes()+1;
+	var secNumber = myDate.getSeconds()+1;
+	
+	return(name+'#'+hashArray[monthNumber]+hashArray[dayNumber]+hashArray[hourNumber]+
+	hashArray[minNumber]+hashArray[secNumber]);
+}
+
 router.use('/:configuration/gateways',gatewaysRouter);
 
 router.route('/')	// The root path is relative the path where it's mounted in app.js (app.use('/configurations',configurations'))
@@ -362,6 +379,8 @@ gatewaysRouter.route('/:gateway/all')
 						//
 						// Crear configuracion de la pasarela
 						//
+						var randName=generatesRandomName(req.body.general.name);
+						req.body.general.name = randName;
 						myLibConfigurations.postConfigurationFromGateway(req, res, general, servicios, hardware, function(result){
 							if (result.error)	{
 								logging.loggingError('Error adding gateway configuration from gateway ' + req.params.gateway);
