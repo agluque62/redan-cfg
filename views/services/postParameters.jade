@@ -379,7 +379,7 @@ div(id="FormParameters")
 														select#CBFacedTelResources(style='width:140px;')
 									tr
 										td.New(style='padding-top: 8px;vertical-align:top')
-											input.UriTextbox#TbRemoteUri(type='text' placeholder="resourceName@IP" onblur='ValidateUriNoSIP(this,"ErrorURI")' onfocus='this.oldValue=this.value')
+											input.UriTextbox#TbRemoteUri(type='text' placeholder="<resourceName@IP:port>" onblur='ValidateUriNoSIP(this,"ErrorURI")' onfocus='this.oldValue=this.value')
 										td.New(align='right' style='vertical-align: top;')
 											a.ButtonNucleo(onclick='MakeFacedTelUri("#TbRemoteUri")') <
 									//
@@ -509,7 +509,7 @@ div(id="FormParameters")
 						td.New
 							select#ListUris(type='select' style='width:150px')
 						td.New(colspan=2)
-							input.UriTextbox#NewUri(style='display:none' placeholder="resourceName@IP" onblur='ValidateUriNoSIP(this,"ErrorURI")' onfocus='this.oldValue=this.value')
+							input.UriTextbox#NewUri(style='display:none' placeholder="<resourceName@IP:port>" onblur='ValidateUriNoSIP(this,"ErrorURI")' onfocus='this.oldValue=this.value')
 						td.New
 							a.ButtonNucleo#BtnAddUri(onclick='AddUri(this)' style='position:relative' tkey='AddURI')
 						td.New
@@ -563,14 +563,14 @@ div(id="FormParameters")
 																	td
 																		label URI A:
 																	td.New
-																		input.UriTextbox#UriTxA(type="text" placeholder="resourceName@IP" onblur='ValidateUriNoSIP(this,"ErrorURI")' onfocus='this.oldValue=this.value')
+																		input.UriTextbox#UriTxA(type="text" placeholder="<resourceName@IP:port>" onblur='ValidateUriNoSIP(this,"ErrorURI")' onfocus='this.oldValue=this.value')
 																	td.New
 																		a.ButtonNucleo#BtnSelectTxA(onclick='MakeFacedUri("#UriTxA")') <
 																tr#TxBRow
 																	td
 																		label URI B:
 																	td.New
-																		input.UriTextbox#UriTxB(type="text" placeholder="resourceName@IP" onblur='ValidateUriNoSIP(this,"ErrorURI")' onfocus='this.oldValue=this.value')
+																		input.UriTextbox#UriTxB(type="text" placeholder="<resourceName@IP:port>" onblur='ValidateUriNoSIP(this,"ErrorURI")' onfocus='this.oldValue=this.value')
 																	td.New
 																		a.ButtonNucleo#BtnSelectTxB(onclick='MakeFacedUri("#UriTxB")') <
 												tr(align="center")
@@ -582,14 +582,14 @@ div(id="FormParameters")
 																	td
 																		label URI A:
 																	td.New
-																		input.UriTextbox#UriRxA(type="text" placeholder="resourceName@IP" onblur='ValidateUriNoSIP(this,"ErrorURI")' onfocus='this.oldValue=this.value')
+																		input.UriTextbox#UriRxA(type="text" placeholder="<resourceName@IP:port>" onblur='ValidateUriNoSIP(this,"ErrorURI")' onfocus='this.oldValue=this.value')
 																	td.New
 																		a.ButtonNucleo#BtnSelectRxA(onclick='MakeFacedUri("#UriRxA")') <
 																tr#RxBRow
 																	td
 																		label URI B:
 																	td.New
-																		input.UriTextbox#UriRxB(type="text" placeholder="resourceName@IP" onblur='ValidateUriNoSIP(this,"ErrorURI")' onfocus='this.oldValue=this.value')
+																		input.UriTextbox#UriRxB(type="text" placeholder="<resourceName@IP:port>" onblur='ValidateUriNoSIP(this,"ErrorURI")' onfocus='this.oldValue=this.value')
 																	td.New
 																		a.ButtonNucleo#BtnSelectRxB(onclick='MakeFacedUri("#UriRxB")') <
 									tr
