@@ -11,17 +11,11 @@ var GetVersion = function() {
 			$("#IdSubVersion").text(data.subversion);
 			$("#IdVersionDate").text(data.date);
 			$("#listVersions").empty();
-			$("#listFileNames").empty();
-			$("#listMd5").empty();
 			
 			$.each(data.file, function(index, value){
-				var itemName = $("<td align='center' style='font-size:10px;font-weight:bold'>"+value.Name+
-					"</td>");
-				var itemMd5 = $("<td align='center'>"+value.md5.toUpperCase()+"</td>");
-				var item = $("<tr><td align='center' style='font-size:10px;font-weight:bold'>"+value.Name+
-					"</td><td align='center'>"+value.md5.toUpperCase()+"</td></tr>");
-				itemName.appendTo($("#listFileNames"));
-				itemMd5.appendTo($("#listMd5"));
+				var item = $("<br>Fichero: "+value.Name+"<ul><li>MD5: "+value.md5.toUpperCase()+"</li>" +
+					"<li>Tamaño: "+value.fileSizeInBytes+" bytes</li></ul>");
+				
 				item.appendTo($("#listVersions"));
 			});
 		});
