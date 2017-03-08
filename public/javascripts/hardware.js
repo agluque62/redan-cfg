@@ -1509,10 +1509,10 @@ function ShowRadioParamsOfResource(data){
 		// La selección del Metodo BSS representa una disponibilidad de métodos (locales) o 
 		// un método preferido (remotos)
 		// Ocultar/Mostrar tab listas dependiendo de si esta seleccionada o no la restricción
-		if(data.parametros.radio.tipo != 4 ||  data.parametros.radio.tipo != 6)
-			$('#EnableRecordingRow').attr('style','display:table-column');		//Hide
+		if(data.parametros.radio.tipo === 4 ||  data.parametros.radio.tipo === 6)
+			$('#EnableRecordingRow').attr('style','display:table-row');		//show
 		else
-			$('#EnableRecordingRow').attr('style','display:table-row');		//Show
+			$('#EnableRecordingRow').attr('style','display:table-column');		//Hide
 		if (data.parametros.radio.tipo >= 0 && data.parametros.radio.tipo <=3){
 			// Recursos radio locales
 			
