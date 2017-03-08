@@ -7,10 +7,21 @@ var GetVersion = function() {
 	$.ajax({type: 'GET',
 			url: '/version'})
 		.done(function(data){
-			$("#Idversion").text(data.version);
+			$("#IdVersion").text(data.version);
+			$("#IdSubVersion").text(data.subversion);
+			$("#IdVersionDate").text(data.date);
 			$("#listVersions").empty();
+			$("#listFileNames").empty();
+			$("#listMd5").empty();
+			
 			$.each(data.file, function(index, value){
-				var item = $("<li>Fichero: "+value.Name+"<br>MD5 "+value.md5.toUpperCase()+"</li>");
+				var itemName = $("<td align='center' style='font-size:10px;font-weight:bold'>"+value.Name+
+					"</td>");
+				var itemMd5 = $("<td align='center'>"+value.md5.toUpperCase()+"</td>");
+				var item = $("<tr><td align='center' style='font-size:10px;font-weight:bold'>"+value.Name+
+					"</td><td align='center'>"+value.md5.toUpperCase()+"</td></tr>");
+				itemName.appendTo($("#listFileNames"));
+				itemMd5.appendTo($("#listMd5"));
 				item.appendTo($("#listVersions"));
 			});
 		});

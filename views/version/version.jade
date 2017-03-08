@@ -1,5 +1,6 @@
 block versions
 
+    - var droids = ["R2D2", "C3PO", "BB8"];
 
 div(id="FormVersion", style="display: none; width: 450px")
     div.menu.fadeNucleo#DivVersion(style='position:relative;display:yes')
@@ -7,9 +8,19 @@ div(id="FormVersion", style="display: none; width: 450px")
         table(style='table-layout:fixed')
             tr(style="height: 20px")
                 td(style="width: 50%;padding:10px 5px")
-                    label(tkey='TableId')
+                    label(tkey='IdVersion')
                 td.New
-                    label#Idversion(style='color:black')
+                    label#IdVersion(style='color:black')
+            tr(style="height: 20px")
+                td(style="width: 50%;padding:10px 5px")
+                    label(tkey='Subversion')
+                td.New
+                    label#IdSubVersion(style='color:black')
+            tr(style="height: 20px")
+                td(style="width: 50%;padding:10px 5px")
+                    label(tkey='VersGenDate')
+                td.New
+                    label#IdVersionDate(style='color:black')
             tr
                 td(colspan='2')
                     table.gradienttable#TableValuesFiles(style='width:100%;table-layout:fixed')
@@ -17,5 +28,8 @@ div(id="FormVersion", style="display: none; width: 450px")
                             th(style='width:50%') FICHERO
                             th(style='width:50%') MD5
                         tr(style='height:20px')
-                            td(align="center " style='font-size:10px;font-weight:bold')
-                            td.New(align="center")
+                            td(align="center " style='font-size:10px;font-weight:bold') 0
+                            td.New(align="center") 1
+                        tr(style='height:20px')
+                            td(align="center " style='font-size:10px;font-weight:bold') 11
+                            td.New(align="center") 12
