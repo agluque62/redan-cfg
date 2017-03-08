@@ -13,8 +13,8 @@ var GetVersion = function() {
 			$("#listVersions").empty();
 			
 			$.each(data.file, function(index, value){
-				var item = $("<br>Fichero: "+value.Name+"<ul><li>MD5: "+value.md5.toUpperCase()+"</li>" +
-					"<li>Tamaño: "+value.fileSizeInBytes+" bytes</li></ul>");
+				var item = $("<br>Fichero: <b>"+value.Name+"</b><ul><li>MD5: "+value.md5.toUpperCase()+"</li>" +
+					"<li>Tamaño: "+value.fileSizeInBytes+" bytes</li><li>Fecha: "+value.date+"</li></ul>");
 				
 				item.appendTo($("#listVersions"));
 			});
