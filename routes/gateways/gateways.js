@@ -48,6 +48,14 @@ router.route('/activeCfg/:gtw')
 		});
 	});
 
+router.route('/changesite/:gateway/:idSite')
+	.post(function(req,res){
+		logging.LoggingDate('POST /changesite/:' + req.params.gateway + '/:' + req.params.idSite);
+		myLibGateways.changeGateWaySite(req.params.gateway,req.params.idSite,function(result){
+			res.json(result);
+		});
+	});
+
 router.route('/operator/:idOperator')
 	.get(function(req,res){
 		logging.LoggingDate(req.method + ': ' + req.baseUrl + req.url);

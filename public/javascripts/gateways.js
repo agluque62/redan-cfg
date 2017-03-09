@@ -8,6 +8,43 @@ var listOfGateways = '';
 var link_enlaces = [];
 var link_enlaces_libres = [];
 
+var ChangeGateWaySite = function(data){
+	var oldIndex = data[data.oldValue].value;
+	var newIndex = data[data.selectedIndex].value;
+	var idCgw = $('#DivGateways').data('idCgw');
+	alertify.confirm('Ulises G 5000 R', "¿Quiere cambiar la pasarela del emplazamiento \"" + data[data.oldValue].outerText +
+		"\" al emplazamiento \"" + data[data.selectedIndex].outerText + "\"?",
+		function(){
+			$.ajax({type: 'POST',
+				url: '/gateways/changesite/'+idCgw+'/'+newIndex,
+				success: function(data){
+					var a = 1;
+					/*if (data.data == 0)
+						alertify.error('Una pasarela asignada a la configuración activa no puede ser eliminada.');
+					else{
+						GenerateHistoricEvent(ID_HW,REMOVE_GATEWAY,$('#nameGw').val(),$('#loggedUser').text());
+						
+						alertify.success('Gateway \"' + $('#nameGw').val() + '\" eliminada.');
+						
+						ShowSite($('#IdSite').val(),$('#IdSite').data('idSite'));
+						
+						//GetGateways();
+						// Ocultar div con los datos de una CGW
+						//$('#GeneralContent,#TableToolsGateway').hide();
+						//$('#DivComponents').attr('class','fadeNucleo divNucleo');
+					}*/
+				},
+				error: function(data){
+					alertify.error('Error en la operacion');
+				}
+			});
+			//alertify.success('Ok');
+		},
+		function(){ alertify.error('Cancelado');}
+	);
+	
+};
+
 var DelGateway = function(){
 
 	alertify.confirm('Ulises G 5000 R', "¿Eliminar la gateway \"" + $('#LblIdGateway').text() + "\"?", 
@@ -578,7 +615,14 @@ var GetGateway = function (gtw,lastUpdate,f){
 				success: function(gtw) {
 					// Recoger el idCGW de la pasarela
 					$('#DivGateways').data('idCgw',gtw.general.idCGW);
-
+					
+					$.ajax({type: 'GET',
+						url: '/sites',
+						success: function(data) {
+							// Load Site list
+							loadSiteList(data.data, gtw.general.EMPLAZAMIENTO_idEMPLAZAMIENTO);
+						}
+					});
 					ReinitFormGateways();
 
 					/* Si la función es llamada desde site form no se muestra FormGateway */
@@ -1261,6 +1305,20 @@ function RenderSipService(sip,visible){
 	}
 	$('#RegistrarsList').html(options);
 	$('#RegistrarsList option:eq(1)');
+}
+
+function loadSiteList(data, gtwSite){
+	// Load proxys list
+	$('#ListSites').empty();
+	var options = '';
+	for (var i = 0; i < data.length; i++) {
+		if(data[i].idEMPLAZAMIENTO === gtwSite)
+			options += '<option selected="true" value="' + data[i].idEMPLAZAMIENTO + '">' + data[i].nameCfg + '-' + data[i].name + '</option>';
+		else
+			options += '<option value="' + data[i].idEMPLAZAMIENTO + '">' + data[i].nameCfg + '-' + data[i].name + '</option>';
+	}
+	$('#ListSites').html(options);
+	//$('#ListSites').refresh();
 }
 
 function RenderWebService(web,visible){
