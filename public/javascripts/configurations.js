@@ -1181,3 +1181,9 @@ var ExportCfgToPdf = function(idCfg){
 		}
 	});
 };
+
+function ChangeCGWSite(button) {
+	if ($('#ChangeSite').is(':visible')) {
+		$(button).text('Modificar');
+	}
+}

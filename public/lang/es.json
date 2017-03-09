@@ -29,6 +29,7 @@
 	"AddSite"				: "Añadir colateral",
 	"AddCfg"				: "Añadir configuración",
 	"UpdateSite"			: "Actualizar colateral",
+	"ChangeSite"			: "Cambiar empl.",
 	"FreeResources"			: "Recursos libres",
 	"AssignedResource"		: "Recurso asignado",
 	"Reserve"				: "Reserva",
