@@ -198,7 +198,7 @@ function myEncode(e){
 						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
 						$('#MenuOpciones ul li').removeClass('menuListDisabled');
 						$('#MenuOpciones ul li:nth-child(1)').addClass('menuListDisabled');
-						$('#MenuOpciones ul li:nth-child(2)').addClass('menuListDisabled'); 
+						$('#MenuOpciones ul li:nth-child(2)').addClass('menuListDisabled');
 
 						$('.New').addClass('NotAllowedTd');
 						$('.New *:first-child').addClass('NotAllowedBtn');
@@ -235,6 +235,7 @@ function myEncode(e){
 						$('#MenuOpciones ul li').removeClass('menuListDisabled');
 						$('#MenuOpciones ul li:nth-child(2)').addClass('menuListDisabled'); //deshabilitar tabla audio
 						$('#MenuOpciones ul li:nth-child(3)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
+						$('#MenuOpciones ul li:nth-child(4)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
 						$('.New').addClass('NotAllowedTd');
 						$('.New *:first-child').addClass('NotAllowedBtn');
 						$('.ActivateCfg').addClass('NotAllowedTd');
@@ -247,6 +248,7 @@ function myEncode(e){
 						$('#MenuOpciones ul li').removeClass('menuListDisabled');
 						$('#MenuOpciones ul li:nth-child(2)').addClass('menuListDisabled'); //deshabilitar tabla audio
 						$('#MenuOpciones ul li:nth-child(3)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
+						$('#MenuOpciones ul li:nth-child(4)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
 						$('.ActivateCfg').addClass('NotAllowedTd');
 						$('.ActivateCfg *:first-child').addClass('NotAllowedBtn');
 						return;
@@ -257,6 +259,7 @@ function myEncode(e){
 						$('#MenuOpciones ul li').removeClass('menuListDisabled');
 						$('#MenuOpciones ul li:nth-child(2)').addClass('menuListDisabled'); //deshabilitar tabla audio
 						$('#MenuOpciones ul li:nth-child(3)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
+						$('#MenuOpciones ul li:nth-child(4)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
 						$('.New').addClass('NotAllowedTd');
 						$('.New *:first-child').addClass('NotAllowedBtn');
 						return;
@@ -267,7 +270,8 @@ function myEncode(e){
 						$('#MenuOpciones ul li').removeClass('menuListDisabled');
 						$('#MenuOpciones ul li:nth-child(1)').addClass('menuListDisabled');
 						$('#MenuOpciones ul li:nth-child(2)').addClass('menuListDisabled'); //deshabilitar tabla audio
-						$('#MenuOpciones ul li:nth-child(3)').removeClass('menuListDisabled'); 
+						$('#MenuOpciones ul li:nth-child(3)').removeClass('menuListDisabled');
+						$('#MenuOpciones ul li:nth-child(4)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
 						return;
 					}
 						
