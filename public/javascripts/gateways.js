@@ -18,21 +18,8 @@ var ChangeGateWaySite = function(data){
 			$.ajax({type: 'POST',
 				url: '/gateways/changesite/'+idCgw+'/'+newIndex,
 				success: function(data){
-					var a = 1;
-					/*if (data.data == 0)
-						alertify.error('Una pasarela asignada a la configuración activa no puede ser eliminada.');
-					else{
-						GenerateHistoricEvent(ID_HW,REMOVE_GATEWAY,$('#nameGw').val(),$('#loggedUser').text());
-						
-						alertify.success('Gateway \"' + $('#nameGw').val() + '\" eliminada.');
-						
-						ShowSite($('#IdSite').val(),$('#IdSite').data('idSite'));
-						
-						//GetGateways();
-						// Ocultar div con los datos de una CGW
-						//$('#GeneralContent,#TableToolsGateway').hide();
-						//$('#DivComponents').attr('class','fadeNucleo divNucleo');
-					}*/
+					alertify.success('La pasarela ha sido cambiada de emplazamiento.');
+					ShowSite($('#IdSite').val(),$('#IdSite').data('idSite'));
 				},
 				error: function(data){
 					alertify.error('Error en la operacion');
