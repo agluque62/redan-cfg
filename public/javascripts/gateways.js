@@ -8,6 +8,30 @@ var listOfGateways = '';
 var link_enlaces = [];
 var link_enlaces_libres = [];
 
+var ChangeGateWaySite = function(data){
+	var oldIndex = data[data.oldValue].value;
+	var newIndex = data[data.selectedIndex].value;
+	var idCgw = $('#DivGateways').data('idCgw');
+	alertify.confirm('Ulises G 5000 R', "¿Quiere cambiar la pasarela del emplazamiento \"" + data[data.oldValue].outerText +
+		"\" al emplazamiento \"" + data[data.selectedIndex].outerText + "\"?",
+		function(){
+			$.ajax({type: 'POST',
+				url: '/gateways/changesite/'+idCgw+'/'+newIndex,
+				success: function(data){
+					alertify.success('La pasarela ha sido cambiada de emplazamiento.');
+					ShowSite($('#IdSite').val(),$('#IdSite').data('idSite'));
+				},
+				error: function(data){
+					alertify.error('Error en la operacion');
+				}
+			});
+			//alertify.success('Ok');
+		},
+		function(){ alertify.error('Cancelado');}
+	);
+	
+};
+
 var DelGateway = function(){
 
 	alertify.confirm('Ulises G 5000 R', "¿Eliminar la gateway \"" + $('#LblIdGateway').text() + "\"?", 
@@ -578,7 +602,14 @@ var GetGateway = function (gtw,lastUpdate,f){
 				success: function(gtw) {
 					// Recoger el idCGW de la pasarela
 					$('#DivGateways').data('idCgw',gtw.general.idCGW);
-
+					
+					$.ajax({type: 'GET',
+						url: '/sites',
+						success: function(data) {
+							// Load Site list
+							loadSiteList(data.data, gtw.general.EMPLAZAMIENTO_idEMPLAZAMIENTO);
+						}
+					});
 					ReinitFormGateways();
 
 					/* Si la función es llamada desde site form no se muestra FormGateway */
@@ -1261,6 +1292,20 @@ function RenderSipService(sip,visible){
 	}
 	$('#RegistrarsList').html(options);
 	$('#RegistrarsList option:eq(1)');
+}
+
+function loadSiteList(data, gtwSite){
+	// Load proxys list
+	$('#ListSites').empty();
+	var options = '';
+	for (var i = 0; i < data.length; i++) {
+		if(data[i].idEMPLAZAMIENTO === gtwSite)
+			options += '<option selected="true" value="' + data[i].idEMPLAZAMIENTO + '">' + data[i].nameCfg + '-' + data[i].name + '</option>';
+		else
+			options += '<option value="' + data[i].idEMPLAZAMIENTO + '">' + data[i].nameCfg + '-' + data[i].name + '</option>';
+	}
+	$('#ListSites').html(options);
+	//$('#ListSites').refresh();
 }
 
 function RenderWebService(web,visible){

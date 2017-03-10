@@ -7,9 +7,15 @@ var GetVersion = function() {
 	$.ajax({type: 'GET',
 			url: '/version'})
 		.done(function(data){
+			$("#IdVersion").text(data.version);
+			$("#IdSubVersion").text(data.subversion);
+			$("#IdVersionDate").text(data.date);
 			$("#listVersions").empty();
+			
 			$.each(data.file, function(index, value){
-				var item = $("<li>Fichero: "+value.Name+"<br>MD5 "+value.md5.toUpperCase()+"</li>");
+				var item = $("<br>Fichero: <b>"+value.Name+"</b><ul><li>MD5: "+value.md5.toUpperCase()+"</li>" +
+					"<li>Tamaño: "+value.fileSizeInBytes+" bytes</li><li>Fecha: "+value.date+"</li></ul>");
+				
 				item.appendTo($("#listVersions"));
 			});
 		});

@@ -15,6 +15,23 @@ var logging = require('../../lib/loggingDate.js');
 // Nesting routers by attaching them as middleware:
 var gatewaysRouter=express.Router({mergeParams:true});
 
+function generatesRandomName(name)
+{
+	var myDate = new Date();
+	var hashArray = ['A','B','C','D','E','F','G','H','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+		'1','2','3','4','5','6','7','8','9','0','A','B','C','D','E','F','G','H','J','K','L','M','N','O','P','Q','R','S','T',
+		'U','V','W','X','Y','Z','0'];
+	
+	var monthNumber = myDate.getMonth()+1;
+	var dayNumber = myDate.getDay()+1;
+	var hourNumber = myDate.getHours()+1;
+	var minNumber = myDate.getMinutes()+1;
+	var secNumber = myDate.getSeconds()+1;
+	
+	return(name+'#'+hashArray[monthNumber]+hashArray[dayNumber]+hashArray[hourNumber]+
+	hashArray[minNumber]+hashArray[secNumber]);
+}
+
 router.use('/:configuration/gateways',gatewaysRouter);
 
 router.route('/')	// The root path is relative the path where it's mounted in app.js (app.use('/configurations',configurations'))
@@ -359,9 +376,37 @@ gatewaysRouter.route('/:gateway/all')
 						});
 					}
 					else{
-						res.status(422).json({error:null, ipv: ipv});		//	Unprocessable Entity
-						logging.loggingError('(422). Gateway ' + req.params.gateway + ' is not in active configuration.');
-						return;
+						//
+						// Crear configuracion de la pasarela
+						//
+						var randName=generatesRandomName(req.body.general.name);
+						req.body.general.name = randName;
+						myLibConfigurations.postConfigurationFromGateway(req, res, general, servicios, hardware, function(result){
+							if (result.error)	{
+								logging.loggingError('Error adding gateway configuration from gateway ' + req.params.gateway);
+							}
+							else{
+								myLibHardwareGateways.setResources(result.slaves,recursos,function(result){
+									
+									if (req.body.fechaHora != ''){
+										var dia=(req.body.fechaHora).split("/")[0];
+										var mes=(req.body.fechaHora).split("/")[1];
+										var anio=(req.body.fechaHora).split("/")[2].split(" ")[0];
+										var hora=(req.body.fechaHora).split("/")[2].split(" ")[1];
+										var nuevaFecha=anio + '/'+ mes + '/' + dia + ' ' + hora;
+										
+										myLibGateways.setLastUpdateToGateway(req.body.idConf, nuevaFecha, req.params.gateway, function(result){
+											if (result)
+												logging.LoggingSuccess('Gateway ' + req.params.gateway + ' updated.');
+											else
+												logging.loggingError('Configuration ' + req.body.idConf + ' is not in data base.');
+										});
+									}
+									else
+										logging.loggingError('fechaHora field empty.');
+								});
+							}
+						});
 					}
 				});
 			}

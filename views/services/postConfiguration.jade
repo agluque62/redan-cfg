@@ -215,7 +215,10 @@ div(id="FormConfiguration", style="display: none; width: 350px")
 																	td(style="width: 120px; padding:10px 5px")
 																		label(tkey='Site')
 																	td.New
-																		label#LblEmplazamiento(style='color:black')
+																		//label#LblEmplazamiento(style='color:black')
+																		select#ListSites.toReset(style='width:18em' onchange='ChangeGateWaySite(this)' onmousedown='this.oldValue=this.selectedIndex')
+																	//td.New
+																	//	button.ButtonNucleo#ChangeSite(type="button" onclick='ChangeCGWSite(this)' tkey='ChangeSite')
 																tr
 																	td(style="width: 120px; padding:5px 10px")
 																		label(tkey='VirtualIP')
