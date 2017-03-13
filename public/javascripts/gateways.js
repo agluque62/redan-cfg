@@ -911,8 +911,16 @@ function dropAssignedGateway(ev) {
 		if (link_enlaces_libres[data].valor.Activa == -1 ||	// Puede que la pasarela esté en la lista de 'No Asignadas' pero aún no se haya activado la configuración.
 			!isIpvIn(link_enlaces_libres[data].valor.ipv,link_enlaces)){
 			ev.target.appendChild(document.getElementById(data));
-		    $('.dropable').removeClass('target');
-			postGatewayToConfig($('#idCFG').val(),data);
+			alertify.confirm('Ulises G 5000 R', "¿Desea mover la pasarela a esta configuración?",
+				function() {
+					$('.dropable').removeClass('target');
+					postGatewayToConfig($('#idCFG').val(), data);
+				},
+				function(){
+					alertify.error('Cancelado');
+					ev.target.removeChild(document.getElementById(data));
+				}
+			);
 		}
 		else{
 			translateWord('ErrorGatewayAlreadyAssigned',function(result){
@@ -927,14 +935,14 @@ function dropAssignedGateway(ev) {
 /*** a una configuración			**/
 /*************************************/
 function dropFreeGateway(ev) {
-    ev.preventDefault();
-    $('.dropable').removeClass('target');
-
+	ev.preventDefault();
+	$('.dropable').removeClass('target');
+	
 	var data = ev.dataTransfer.getData("itemDragging");
-	if (link_enlaces[data] != null){
+	if (link_enlaces[data] != null) {
 		//document.getElementById(data).classList.remove('sincro');
 		ev.target.appendChild(document.getElementById(data));
-	    deleteGatewayFromConfig(link_enlaces[data].idCFG, link_enlaces[data].valor.idCGW);
+		deleteGatewayFromConfig(link_enlaces[data].idCFG, link_enlaces[data].valor.idCGW);
 	}
 }
 
