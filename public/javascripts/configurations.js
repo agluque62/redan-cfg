@@ -495,7 +495,7 @@ var ClickCBFreeGateways = function(){
 
 							var _cfgJson={idCFG:value.idCFG,name:value.nameCfg,description:value.description,activa:value.activa,ts_activa:value.ts_activa};
 							var item = $('<li data-texto="' + value.idCGW + '"><div onclick=\'CheckingAnyChange("GeneralContent", function(){ShowCfg(' + JSON.stringify(_cfgJson) + '),ShowSite("' + value.site + '","' + value.EMPLAZAMIENTO_idEMPLAZAMIENTO + '") , ShowHardwareGateway("' + value.idCGW + '","' + value.name + '")})\' style="width:300px;cursor:pointer" class="' +
-										clase + '" id="' +  value.idCGW + '" draggable="true" ondragstart="dragGateway(event)">' + value.name + 
+										clase + '" id="' +  value.idCGW + '" draggable="true" ondragstart="dragGateway(event)" ondragend="checkDraggableItem()">' + value.name +
 										'<div style="color:black' + '; font-size: 8px; margin-right: 0">' +  value.site + '</div>' +'</li>');
 							item.appendTo($("#freeGatewaysList"));
 						});
@@ -924,8 +924,8 @@ var GenerateData = function(idCfg, f){
 	});
 };
 //allowDrop(ev)
-function getOverDropC(ev){
-	
+function checkDraggableItem(){
+	alertify.alert('Ulises G 5000 R',"Estas seguro?");
 }
 
 function getBase64Image(img) {

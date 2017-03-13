@@ -1576,10 +1576,14 @@ function ShowRadioParamsOfResource(data){
 			}
 		}
 		else{
+			if(data.parametros.radio.tipo === 5 )
+				$('#BSSMethodRow').attr('style','display:table-column');
+			
+			else
+				$('#BSSMethodRow').attr('style','display:table-row');	// Show
 			// Recurso radio remotos
 			$('#BSSAvailableRow').attr('style','display:table-column');
 			$('#InternalDelayRow').attr('style','display:table-row');
-			$('#BSSMethodRow').attr('style','display:table-row');	// Show
 			$('#BssAvailableRow').attr('style','display:table-column');	// Hide
 			$('#PttPriorityRow').attr('style','display:table-column');	// Hide
 			$('#SipPriorityRow').attr('style','display:table-column');	// Hide
@@ -1908,7 +1912,10 @@ function SelectBss(){
 		$('#BSSAvailableRow').attr('style','display:table-column');
 		$('#InternalDelayRow').attr('style','display:table-row');
 		$('#BSSAvailableRow').hide();
-		$('#BSSMethodRow').show();
+		if ($('#LbTypeRadio option:selected').val() == 5) {
+			$('#BSSMethodRow').hide();
+		}
+		
 		
 		if ($('#LbTypeRadio option:selected').val() == 6){
 			$('#TbGrsInternalDelay').prop('disabled',true);		
