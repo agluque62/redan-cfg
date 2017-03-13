@@ -706,9 +706,8 @@ function ShowDataOfResource(data,f){
 
 		$('#TbNameResource')//.prop('disabled','disabled')
 							.val(data.recursos[0].name);
-		var firstChunk = data.recursos[1].ip.substring(data.recursos[1].ip.indexOf('@'), data.recursos[1].ip.length);
-		var ip2Add = firstChunk.substring(0, firstChunk.indexOf(':'));
-		$('#LblUriSip').text(data.recursos[0].name+(ip2Add));
+		
+		$('#LblUriSip').text(data.recursos[0].name+'@'+$('#ipv').val());
 		
 		
 		$('#UriSipRow').attr('style','display:table-row');
