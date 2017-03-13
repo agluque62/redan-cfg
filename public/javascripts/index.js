@@ -18,7 +18,7 @@ var MODIFY_HARDWARE_RESOURCE_PARAM			=	115;
 var MODIFY_HARDWARE_RESOURCE_LOGIC_PARAM	=	116;
 var REMOVE_CALIFICATION_AUDIO_TABLE			=	117;
 
-var ID_HW	=	'CFG';
+var ID_HW	=	'CFG'; 
 
 var script = document.createElement('script');
 script.src = 'http://code.jquery.com/jquery-1.11.2.min.js';
