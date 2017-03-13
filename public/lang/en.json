@@ -127,6 +127,7 @@
 	"Parameters"			: "Parameters",
 	"RemoveResource"		: "Remove resource",
 	"EnableRegister"		: "Enable register",
+	"UriSip"				: "URI - Sip: ",
 	"AutomaticCall"			: "Automatic call",
 	"Restriction"			: "Add Restriction: ",
 	"ResourceType"			: "Resource type",
