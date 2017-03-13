@@ -150,6 +150,7 @@ function ShowSite(site,id){
 						});
 					}
 			 	}
+	//TimeStamp de las pasarelas
 	});	
 }
 
