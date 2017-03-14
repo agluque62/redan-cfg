@@ -22,8 +22,3 @@ var GetVersion = function(isFirstLoad) {
 			});
 		});
 }
-
-
-function BuildVersionInfo(){
-	
-}
