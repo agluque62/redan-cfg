@@ -206,9 +206,20 @@ function myEncode(e){
 					if (perfilMando) {
 						
 					}
+					if (perfilReconAlarmas) {
+						
+					}
 					if (perfilGestUsuarios){
 						$('#MenuOpciones').attr('style','display:table-cell;width:11%');
 						$('#MenuOpciones ul li:nth-child(3)').removeClass('menuListDisabled');
+					}
+					if (perfilVerLocalGateway) {
+						$('#MenuOpciones ul li:nth-child(1)').removeClass('menuListDisabled');
+					}
+					if (perfilAdminLocalGateway) {
+						$('#MenuOpciones ul li:nth-child(1)').removeClass('menuListDisabled');
+						$('.New').removeClass('NotAllowedTd');
+						$('.New *:first-child').removeClass('NotAllowedBtn');
 					}
 					
 					/*if (perfilHistoricos && perfilBackup && perfilVisualizacion){

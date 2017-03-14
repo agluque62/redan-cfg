@@ -183,8 +183,8 @@ var GetUsuario = function (ind,valor){
 								$('#' + (Math.pow(2,i))).prop('checked',true);
 								$('#' + (Math.pow(2,i))).prop('disabled', false);
 							}							
-							else
-								$('#' + (Math.pow(2,i))).prop('disabled', true);
+							//else
+								//$('#' + (Math.pow(2,i))).prop('disabled', true);
 						}
 						valor >>>= 1;
 					}
@@ -400,10 +400,10 @@ var ShowGateways = function(){
 		});
 	}
 
-	/*Habilitar o deshabilitar perfiles para que no se pueda asignar mas de uno a un usuario */
-	for (var i=0;i<16;i++){
-		/*La posicion 3 es el reconocimiento de alarmas que ya no se usa pero se mantienen  la posición del resto por compatibilidad con otras aplicaciones*/
-		/*Con la 5 pasa lo mismo, era el perfil ingenieria*/
+	//Habilitar o deshabilitar perfiles para que no se pueda asignar mas de uno a un usuario
+	/*for (var i=0;i<16;i++){
+		//La posicion 3 es el reconocimiento de alarmas que ya no se usa pero se mantienen  la posición del resto por compatibilidad con otras aplicaciones
+		//Con la 5 pasa lo mismo, era el perfil ingenieria
 		if ((i!=2) && (i!=5)) {
 			var valor = Math.pow(2,i);
 			if (perfil != 0){
@@ -420,7 +420,7 @@ var ShowGateways = function(){
 			}
 		
 		}
-	}
+	}*/
 };
 
 var GetGatewaysToOp = function(idOperador,f){
