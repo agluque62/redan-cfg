@@ -1,9 +1,10 @@
 
-var GetVersion = function() {
+var GetVersion = function(isFirstLoad) {
 	$('#DivVersion').animate({width: '535px'});
-	$("#AddFormVersion").show();
-	$("#FormVersion").show();
-	
+	if(!isFirstLoad) {
+		$("#AddFormVersion").show();
+		$("#FormVersion").show();
+	}
 	$.ajax({type: 'GET',
 			url: '/version'})
 		.done(function(data){

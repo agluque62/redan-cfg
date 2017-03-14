@@ -167,7 +167,7 @@ function myEncode(e){
 					$('#BodyRedan').data('region',$('#Login-Operador').data('region'));
 					$('#BodyRedan').data('urlbackupservice',$('#Login-Operador').data('urlbackupservice'));
 					$('#BodyRedan').data('version',$('#Login-Operador').data('version'));
-					SetVersion();
+					GetVersion(true);//Obtiene la versión para el footer al ser primera carga
 					
 					GenerateHistoricEvent(ID_HW,ACCESS_SYSTEM_OK,$('#Operador').val());
 
