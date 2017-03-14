@@ -186,15 +186,32 @@ function myEncode(e){
 
 					$('#Login-Operador').hide();
 					$('#loggedUser').text(usuario.name);
-
-
+				
+					$('#MenuGeneral').addClass('menuListDisabled')
+					$('#MenuOpciones ul li').addClass('menuListDisabled');
+					$('.New').addClass('NotAllowedTd');
+					$('.New *:first-child').addClass('NotAllowedBtn');
+					
 					if (perfilAdministracion){
 						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
-						$('#MenuOpciones ul li').removeClass('menuListDisabled');					
+						$('#MenuGeneral').removeClass('menuListDisabled')
+						$('#MenuOpciones ul li').removeClass('menuListDisabled');
+						$('.New').removeClass('NotAllowedTd');
+						$('.New *:first-child').removeClass('NotAllowedBtn');
 						return;
 					}
-
-					if (perfilHistoricos && perfilBackup && perfilVisualizacion){
+					if (perfilVisualizacion) {
+						$('#MenuOpciones ul li:nth-child(1)').removeClass('menuListDisabled');
+					}
+					if (perfilMando) {
+						
+					}
+					if (perfilGestUsuarios){
+						$('#MenuOpciones').attr('style','display:table-cell;width:11%');
+						$('#MenuOpciones ul li:nth-child(3)').removeClass('menuListDisabled');
+					}
+					
+					/*if (perfilHistoricos && perfilBackup && perfilVisualizacion){
 						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
 						$('#MenuOpciones ul li').removeClass('menuListDisabled');
 						$('#MenuOpciones ul li:nth-child(1)').addClass('menuListDisabled');
@@ -274,11 +291,11 @@ function myEncode(e){
 						$('#MenuOpciones ul li:nth-child(4)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
 						return;
 					}
-						
+					*/
 					
 					//si es un perfil no controlado
-					$('#MenuGeneral').attr('style','display:table-cell;width:11%');
-					$('#MenuOpciones ul li').removeClass('menuListDisabled');
+					//$('#MenuGeneral').attr('style','display:table-cell;width:11%');
+					//$('#MenuOpciones ul li').removeClass('menuListDisabled');
 
 					return;
 
