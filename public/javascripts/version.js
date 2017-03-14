@@ -11,6 +11,7 @@ var GetVersion = function() {
 			$("#IdSubVersion").text(data.subversion);
 			$("#IdVersionDate").text(data.date);
 			$("#listVersions").empty();
+			$("#hVersion").text(data.version);
 			
 			$.each(data.file, function(index, value){
 				var item = $("<br>Fichero: <b>"+value.Name+"</b><ul><li>MD5: "+value.md5.toUpperCase()+"</li>" +
