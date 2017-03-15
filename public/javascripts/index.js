@@ -201,7 +201,15 @@ function myEncode(e){
 						return;
 					}
 					if (perfilVisualizacion) {
-						$('#MenuOpciones ul li:nth-child(1)').removeClass('menuListDisabled');
+						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
+						$('#MenuGeneral').removeClass('menuListDisabled')
+						$('#MenuGeneral ul li:nth-child(2)').addClass('menuListDisabled');
+						$('#MenuGeneral ul li:nth-child(3)').addClass('menuListDisabled');
+						$('#MenuOpciones ul li').removeClass('menuListDisabled');
+						$('#MenuOpciones ul li:nth-child(2)').addClass('menuListDisabled');
+						$('#MenuOpciones ul li:nth-child(3)').addClass('menuListDisabled');
+						$('#MenuOpciones ul li:nth-child(4)').addClass('menuListDisabled');
+						$('#MenuOpciones ul li:nth-child(5)').addClass('menuListDisabled');
 					}
 					if (perfilMando) {
 						
