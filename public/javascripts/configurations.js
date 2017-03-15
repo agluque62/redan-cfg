@@ -118,7 +118,7 @@ var ShowCfg = function(cfg){
 	$('#DivConfigurations').data('idCFG',cfg.idCFG);
 	$('#DivConfigurations').data('cfgJson',cfg);
 	$('#DivConfigurations').animate({width: '1150px'});
-
+ 
 	$('#Component').text(cfg.name);
 	$('#name').val(cfg.name);
 	$('#AddFormsite').fadeOut(500,function(){
