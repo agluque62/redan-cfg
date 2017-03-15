@@ -1,7 +1,7 @@
 {
 	"Communications"		: "Comunicaciones",
 	"None"					: "Ninguno",
-	"Exit"					: "Salir",
+	"Exit"					: "Volver",
     "Configuration" 		: "Configuración",
 	"IPBound"				: "IP BOND",
 	"Visual"				: "Visualización",
@@ -238,7 +238,7 @@
 	"Remove"				: "Eliminar",
 	"Copy"					: "Copiar",
 	"Activate"				: "Aplicar cambios",
-	"LoadConfig"            : "Cargar configuración",
+	"LoadConfig"            : "Activar configuración",
 	"ActivationTS"			: "Fecha/Hora Activación",
 	"Active"				: "Activa",
 	"Activo"				: "Activo",

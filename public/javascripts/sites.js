@@ -450,7 +450,8 @@ function GotoResource(row,col,update){
 									$('#ButtonCommit').attr('onclick',"AddResource('" + $('.Slave'+ col).data('idSLAVE') + "','" + col + "','" + row + "',function(){AddGatewayToList($(\'#DivGateways\').data(\'idCgw\'))})")
 									$('#FormParameters').hide();
 									$('#BtnRemoveResource').hide();
-
+									$('#UriSipRow').hide();
+									
 									var t = ($('.Res' + row + col).offset().top - 94) + 'px';
 									var l = ($('.Res' + row + col).offset().left - 145) + 'px';
 									$('#BigSlavesZone').data('t',t);

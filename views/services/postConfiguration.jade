@@ -675,6 +675,10 @@ div(id="FormConfiguration", style="display: none; width: 350px")
 								tr
 									td(colspan=2 align='center')
 										label#LblIdResouce(style='font-size:14px;font-weight:bold')
+								tr#UriSipRow
+									td(colspan=2 align='center')
+										label(tkey='UriSip')
+										label#LblUriSip(style='font-size:14px;font-weight:bold')
 								tr(style='height:60px')
 									td#Resource(rowspan=5 style='background: white; width:22%; vertical-align:top')
 										.menu(style='height:443px;width:100%')
@@ -725,10 +729,6 @@ div(id="FormConfiguration", style="display: none; width: 350px")
 												//
 													td(align='center' style='border: none')
 														a.ButtonNucleo#BtnResourceParameters(style='width: 80px' onclick='ResourceParameters()' tkey='Parameters')
-												tr#UriSipRow
-													td(style='border: none' tkey='UriSip')
-													td.New(style='border: none')
-														label#LblUriSip(style='color:black;font-size:10px;font-weight:bold')
 												tr
 													td(colspan=2 style='border:none')
 														table(style='width:100%')
