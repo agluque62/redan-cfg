@@ -744,7 +744,7 @@ function ShowDataOfResource(data,f){
 
 		//$('#SRestriccion').prop('disabled','disabled');
 		$('#SRestriccion option[value="' + data.recursos[0].restriccion +'"]').prop('selected', true);
-		
+	
 		$('#TbEnableRegister')//.prop('disabled','disabled')
 								.prop('checked',data.recursos[0].enableRegistro != null && data.recursos[0].enableRegistro != '0');
 
