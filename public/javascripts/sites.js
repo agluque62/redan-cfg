@@ -408,13 +408,18 @@ function ShowHardwareGateway(id,name){
 
 function GotoResource(row,col,update, loadIndex, totalIndex){
 	
-	if(!update && loadIndex > 6){
+	if(update)
+		$('#SResourceType').prop("disabled", true);
+	else
+		$('#SResourceType').prop("disabled", false);
+	
+	if(!update && loadIndex > 6){//JADO!!!!
 		alertify.error('Error en la operacion');
 	}
 	else {
-		if (totalIndex === 0)
-			alertify.error("Un momento por favor. Se están actualizando los datos...");//Demasiado rapido
-		else {
+		//if (totalIndex === 0)
+		//	alertify.error("Un momento por favor. Se están actualizando los datos...");//Demasiado rapido
+		//else {
 			$('#AddFormsite').addClass('disabledDiv')
 			$('#SitesList').addClass('disabledDiv')
 			$('#NavMenu').addClass('disabledDiv')
@@ -437,11 +442,19 @@ function GotoResource(row,col,update, loadIndex, totalIndex){
 			// 					if (i++ == col){
 			GetResource($('.Res' + row + col).data('idResource'), function () {
 				if (update == true) {
-					if ($('#SResourceType option:selected').val() == 1)
-						$('#ButtonCommit').attr('onclick', "UpdateResource('" + $('.Slave' + col).data('idSLAVE') + "','" + col + "','" + row + "','" + loadIndex + "','" + totalIndex + "',function(){AddGatewayToList($(\'#DivGateways\').data(\'idCgw\'))}); AddRadioParameters()")
-					else
-						$('#ButtonCommit').attr('onclick', "UpdateResource('" + $('.Slave' + col).data('idSLAVE') + "','" + col + "','" + row + "','" + loadIndex + "','" + totalIndex + "'function(){AddGatewayToList($(\'#DivGateways\').data(\'idCgw\'))}); AddPhoneParameters()")
-					
+					$('#ButtonCommit').attr('onclick', "UpdateResource('" + $('.Slave' + col).data('idSLAVE') + "','" + col + "','" + row + "','" + loadIndex + "','" + totalIndex + "',function(){AddGatewayToList($(\'#DivGateways\').data(\'idCgw\'))}); AddRadioParameters()")
+					//if ($('#SResourceType option:selected').val() == 1) {
+						//$('#ButtonCommit').attr('onclick', "UpdateResource('" + $('.Slave' + col).data('idSLAVE') + "','" + col + "','" + row + "','" + loadIndex + "','" + totalIndex + "',function(){AddGatewayToList($(\'#DivGateways\').data(\'idCgw\'))}); AddRadioParameters()")
+						//$('#ButtonCommit').on('click', function (e) {
+						//	alertify.error('No es posible modificar el recurso. Elimínelo y creelo de nuevo.');
+						//});
+					//}
+					/*else {
+						//$('#ButtonCommit').attr('onclick', "UpdateResource('" + $('.Slave' + col).data('idSLAVE') + "','" + col + "','" + row + "','" + loadIndex + "','" + totalIndex + "'function(){AddGatewayToList($(\'#DivGateways\').data(\'idCgw\'))}); AddPhoneParameters()")
+						$('#ButtonCommit').on('click', function (e) {
+							alertify.error('No es posible modificar el recurso. Elimínelo y creelo de nuevo.');
+						});
+					}*/
 					$('#FormParameters').show();
 					$('#BtnRemoveResource').show();
 					
@@ -489,7 +502,7 @@ function GotoResource(row,col,update, loadIndex, totalIndex){
 			// 	}
 			// });
 		}
-	}
+	//}
 }
 
 function Close(){
