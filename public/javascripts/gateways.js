@@ -589,7 +589,7 @@ var GetGateway = function (gtw,lastUpdate,f){
 //	if ($('#AddFormGateway').is(':visible')){
 //			$('#DivGateways').animate({width: '145px'});
 //		}
-
+	totalRecursos=0;
 	$('#AddFormGateway').show();
 	$('#AddFormsite').animate({width: '790px', height: '410px'});
 	$('#DivGateways').animate({width: '1015px'});

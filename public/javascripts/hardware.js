@@ -753,7 +753,7 @@ function ShowDataOfResource(data,f){
 			$('#TbKey').val(data.recursos[0].szClave);
 		}
 		else
-			 $('.resource tr:nth-child(5').hide();
+			 $('.resource tr:nth-child(5)').hide();
 
 		//$('#SFrecuencia').prop('disabled','disabled');
 		//$('#SFrecuencia option:eq(0)').prop('selected', true);
@@ -1276,7 +1276,7 @@ function AddResource(slaveId, col, fila, f){
 	}
 }
 
-function UpdateResource(slaveId,col,fila,f){
+function UpdateResource(slaveId,col,fila, loadIndex, totalIndex, f){
 	var idSlave = slaveId; // $('#SlaveId').val();
 	//$('#DivHardware').animate({width: '712px'})
 	//$('#BigSlavesZone').animate({width: '505px'});
@@ -1295,14 +1295,14 @@ function UpdateResource(slaveId,col,fila,f){
 				}
 				// Radio
 				DeleteResourceFromDestination($('table.resource').data('idRecurso'),$('#IdDestination').val(),function(){
-					PostResourceToDestination($('table.resource').data('idRecurso'),$('#IdDestination').val());	
+					PostResourceToDestination($('table.resource').data('idRecurso'),$('#IdDestination').val());
 				});
 			}
 
-			$.ajax({type: 'PUT', 
-					dataType: 'json', 
+			$.ajax({type: 'PUT',
+					dataType: 'json',
 					contentType:'application/json',
-					url: '/resources/resource', 
+					url: '/resources/resource',
 					data: JSON.stringify({
 						rsc:{
 							idRECURSO: $('table.resource').data('idRecurso'),
