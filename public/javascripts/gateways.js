@@ -1524,7 +1524,7 @@ function UpdateAssignedSlaves(data){
 																				.data('idResource',null)
 																				.attr('draggable',false)
 																				.attr('ondragstart',"");
-														$('.Res' + i + j).attr('onclick',"GotoResource('" + i + "','" + j + "',false)");													}
+														$('.Res' + i + j).attr('onclick',"GotoResource('" + i + "','" + j + "',false," + loadIndex + ")");													}
 												}
 											}
 										});
@@ -1683,7 +1683,7 @@ function ShowResourcesFromSlave(idSlave,slave, data, f){
 									.data('pos',r.POS_idPOS)
 									.attr('draggable',true)
 									.attr('ondragstart',"dragResource(event," + r.POS_idPOS + "," + fila + "," + idSlave + ")")
-									.attr('onclick',"GotoResource('" + fila + "','" + col + "',true)");
+									.attr('onclick',"GotoResource('" + fila + "','" + col + "',true," + loadIndex + ")");
 									//.attr('onclick',"UpdateResource('" + idSlave + "','" + fila + "')");
 				}
 				else{
