@@ -405,70 +405,86 @@ function ShowHardwareGateway(id,name){
 	})
 }
 
-function GotoResource(row,col,update){
-	$('#AddFormsite').addClass('disabledDiv')
-	$('#SitesList').addClass('disabledDiv')
-	$('#NavMenu').addClass('disabledDiv')
-	$('#listConfigurations').addClass('disabledDiv')
-	$('#Add').addClass('disabledDiv')
-
-	ResetResourcePanel();
-
-	$('#LblIdResouce').text('Slot: ' +  col + ' Interfaz: ' + row);
-
-
-	// $.ajax({type: 'GET', 
-	// 	// Pasar la ipv de la pasarela
-	// 	url: '/gateways/' + $('#ipv').val() + '/hardware',
-	// 	success: function(data){
-	// 		var i = 0;
-	// 		ResetHardware(function(){
-	// 			if (data.hardware != null && data.hardware.length > 0){
-	// 				ShowAssignedSlaves(data,function(){
-	// 					if (i++ == col){
-							GetResource($('.Res' + row + col).data('idResource'),function(){
-								if (update == true){
-									if ($('#SResourceType option:selected').val() == 1)
-										$('#ButtonCommit').attr('onclick',"UpdateResource('" + $('.Slave'+ col).data('idSLAVE') + "','" + col + "','" + row + "',function(){AddGatewayToList($(\'#DivGateways\').data(\'idCgw\'))}); AddRadioParameters()")
-									else
-										$('#ButtonCommit').attr('onclick',"UpdateResource('" + $('.Slave'+ col).data('idSLAVE') + "','" + col + "','" + row + "',function(){AddGatewayToList($(\'#DivGateways\').data(\'idCgw\'))}); AddPhoneParameters()")
-
-									$('#FormParameters').show();
-									$('#BtnRemoveResource').show();
-
-									var t = ($('.Res' + row + col).offset().top - 94) + 'px';
-									var l = ($('.Res' + row + col).offset().left - 145) + 'px';
-									$('#BigSlavesZone').data('t',t);
-									$('#BigSlavesZone').data('l',l);
-						 			$('#BigSlavesZone').attr('style','display:none;position:absolute;width:0px;height:0px;top:' + t + ';left:' + l);
-									$('#BigSlavesZone').show();
-									$('#BigSlavesZone').animate({top:'40px',left:'90px',width: '90%', height: '510px'},500,function(){
-											$('#BigSlavesZone').addClass('divNucleo')
-									})
-								}
-								else{
-									$('#ButtonCommit').attr('onclick',"AddResource('" + $('.Slave'+ col).data('idSLAVE') + "','" + col + "','" + row + "',function(){AddGatewayToList($(\'#DivGateways\').data(\'idCgw\'))})")
-									$('#FormParameters').hide();
-									$('#BtnRemoveResource').hide();
-									$('#UriSipRow').hide();
-									
-									var t = ($('.Res' + row + col).offset().top - 94) + 'px';
-									var l = ($('.Res' + row + col).offset().left - 145) + 'px';
-									$('#BigSlavesZone').data('t',t);
-									$('#BigSlavesZone').data('l',l);
-						 			$('#BigSlavesZone').attr('style','position:absolute;width:0px;height:0px;top:' + t + ';left:' + l);
-									$('#BigSlavesZone').show();
-									$('#BigSlavesZone').animate({top:'40px',left:'120px',width: '23%', height: '510px'},500,function(){
-											$('#BigSlavesZone').addClass('divNucleo')
-									})
-								}
-							});
-	// 					}
-	// 				})
-	// 			}
-	// 		});
-	// 	}
-	// });
+function GotoResource(row,col,update, loadIndex){
+	
+	if(!update && loadIndex >= 6){
+		alertify.error('Error en la operacion');
+	}
+	else {
+		$('#AddFormsite').addClass('disabledDiv')
+		$('#SitesList').addClass('disabledDiv')
+		$('#NavMenu').addClass('disabledDiv')
+		$('#listConfigurations').addClass('disabledDiv')
+		$('#Add').addClass('disabledDiv')
+		
+		ResetResourcePanel();
+		
+		$('#LblIdResouce').text('Slot: ' + col + ' Interfaz: ' + row);
+		
+		
+		// $.ajax({type: 'GET',
+		// 	// Pasar la ipv de la pasarela
+		// 	url: '/gateways/' + $('#ipv').val() + '/hardware',
+		// 	success: function(data){
+		// 		var i = 0;
+		// 		ResetHardware(function(){
+		// 			if (data.hardware != null && data.hardware.length > 0){
+		// 				ShowAssignedSlaves(data,function(){
+		// 					if (i++ == col){
+		GetResource($('.Res' + row + col).data('idResource'), function () {
+			if (update == true) {
+				if ($('#SResourceType option:selected').val() == 1)
+					$('#ButtonCommit').attr('onclick', "UpdateResource('" + $('.Slave' + col).data('idSLAVE') + "','" + col + "','" + row + "',function(){AddGatewayToList($(\'#DivGateways\').data(\'idCgw\'))}); AddRadioParameters()")
+				else
+					$('#ButtonCommit').attr('onclick', "UpdateResource('" + $('.Slave' + col).data('idSLAVE') + "','" + col + "','" + row + "',function(){AddGatewayToList($(\'#DivGateways\').data(\'idCgw\'))}); AddPhoneParameters()")
+				
+				$('#FormParameters').show();
+				$('#BtnRemoveResource').show();
+				
+				var t = ($('.Res' + row + col).offset().top - 94) + 'px';
+				var l = ($('.Res' + row + col).offset().left - 145) + 'px';
+				$('#BigSlavesZone').data('t', t);
+				$('#BigSlavesZone').data('l', l);
+				$('#BigSlavesZone').attr('style', 'display:none;position:absolute;width:0px;height:0px;top:' + t + ';left:' + l);
+				$('#BigSlavesZone').show();
+				$('#BigSlavesZone').animate({
+					top: '40px',
+					left: '90px',
+					width: '90%',
+					height: '510px'
+				}, 500, function () {
+					$('#BigSlavesZone').addClass('divNucleo')
+				})
+			}
+			else {
+				$('#ButtonCommit').attr('onclick', "AddResource('" + $('.Slave' + col).data('idSLAVE') + "','" + col + "','" + row + "',function(){AddGatewayToList($(\'#DivGateways\').data(\'idCgw\'))})")
+				$('#FormParameters').hide();
+				$('#BtnRemoveResource').hide();
+				$('#UriSipRow').hide();
+				
+				var t = ($('.Res' + row + col).offset().top - 94) + 'px';
+				var l = ($('.Res' + row + col).offset().left - 145) + 'px';
+				$('#BigSlavesZone').data('t', t);
+				$('#BigSlavesZone').data('l', l);
+				$('#BigSlavesZone').attr('style', 'position:absolute;width:0px;height:0px;top:' + t + ';left:' + l);
+				$('#BigSlavesZone').show();
+				$('#BigSlavesZone').animate({
+					top: '40px',
+					left: '120px',
+					width: '23%',
+					height: '510px'
+				}, 500, function () {
+					$('#BigSlavesZone').addClass('divNucleo')
+				})
+			}
+		});
+		// 					}
+		// 				})
+		// 			}
+		// 		});
+		// 	}
+		// });
+	}
 }
 
 function Close(){
