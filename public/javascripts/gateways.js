@@ -1,5 +1,6 @@
 var dataOfResource = null;
 var listOfGateways = '';
+var totalRecursos = 0;
 
 /******************************************************************************************************/
 /****** Module: gateways.js												*******************************/
@@ -1524,7 +1525,9 @@ function UpdateAssignedSlaves(data){
 																				.data('idResource',null)
 																				.attr('draggable',false)
 																				.attr('ondragstart',"");
-														$('.Res' + i + j).attr('onclick',"GotoResource('" + i + "','" + j + "',false," + loadIndex + ")");													}
+														if(loadIndex>=totalRecursos)
+															totalRecursos = loadIndex;
+														$('.Res' + i + j).attr('onclick',"GotoResource('" + i + "','" + j + "',false," + loadIndex + "," + totalRecursos + ")");													}
 												}
 											}
 										});
@@ -1683,7 +1686,7 @@ function ShowResourcesFromSlave(idSlave,slave, data, f){
 									.data('pos',r.POS_idPOS)
 									.attr('draggable',true)
 									.attr('ondragstart',"dragResource(event," + r.POS_idPOS + "," + fila + "," + idSlave + ")")
-									.attr('onclick',"GotoResource('" + fila + "','" + col + "',true," + loadIndex + ")");
+									.attr('onclick',"GotoResource('" + fila + "','" + col + "',true," + loadIndex + "," + totalRecursos +")");
 									//.attr('onclick',"UpdateResource('" + idSlave + "','" + fila + "')");
 				}
 				else{
@@ -1700,6 +1703,7 @@ function ShowResourcesFromSlave(idSlave,slave, data, f){
 																: $("<img src='/images/iconPhone.gif' style='float: right'/>"));
 			}
 		});
+		//totalRecursos += loadIndex;
 	}
 	
 	if (f != null)
