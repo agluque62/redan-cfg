@@ -1480,6 +1480,7 @@ function UpdateHardware(f){
 }
 
 function UpdateAssignedSlaves(data){
+	var loadIndex = 0;//Indica el índice de carga de la pasarela
 	var idCgw = $('#DivGateways').data('idCgw');
 	// Se utiliza en el click de cambio de recurso entre pasarelas
 	$('#DivGateways').data('noSlaves',true);
@@ -1509,13 +1510,12 @@ function UpdateAssignedSlaves(data){
 											.attr('ondrop',"SlaveAssigned(event," + value.rank + "," + value.idSLAVES + ")")
 											.attr('ondragstart',"dragSlave(event," + value.rank + "," + value.idSLAVES + ")")
 											.data('idSLAVE',value.idSLAVES);
-
 					// Obtener los recursos de la slave
 					$.ajax({type: 'GET', 
 							url: '/hardware/' + value.idSLAVES, 
 							success: function(data){
 										//ShowResourcesFromSlave(value.idSLAVES,value.rank, data, function(){if ( i>=data.hardware.length && f != null) f()});
-										ShowResourcesFromSlave(value.idSLAVES,value.rank, data,function(){
+										loadIndex += ShowResourcesFromSlave(value.idSLAVES,value.rank, data,function(){
 											for (var i = 0; i < 4; i++) {
 												for (var j = 0; j < 4; j++) {
 													if ($('.Res'+i+j).data('updated') == false){
@@ -1629,7 +1629,7 @@ function ShowAssignedSlaves(data){
 						url: '/hardware/' + value.idSLAVES, 
 						success: function(data){
 									//ShowResourcesFromSlave(value.idSLAVES,value.rank, data, function(){if ( i>=data.hardware.length && f != null) f()});
-									ShowResourcesFromSlave(value.idSLAVES,value.rank, data);
+									 ShowResourcesFromSlave(value.idSLAVES,value.rank, data);
 								}
 				});
 			}
@@ -1657,8 +1657,19 @@ function ShowAssignedSlaves(data){
 
 function ShowResourcesFromSlave(idSlave,slave, data, f){
 	//var i = 0;
+	var loadIndex = 0;
 	if (data.hardware != null && data.hardware.length > 0){
 		$.each(data.hardware, function(rowIndex, r) {
+			if(data.hardware[0].tipo === 0)
+				loadIndex++;
+			else
+			{
+				if(data.hardware[0].subtipo === 2 || data.hardware[0].subtipo === 3)
+					loadIndex = loadIndex + 8;
+				else
+					loadIndex = loadIndex + 2;
+			}
+			
 			var fila = r.P_rank;
 			var col = slave;
 			if (r.resource != null){
@@ -1690,9 +1701,10 @@ function ShowResourcesFromSlave(idSlave,slave, data, f){
 			}
 		});
 	}
-
+	
 	if (f != null)
 		f();
+	return loadIndex
 }
 
 function GotoSlave(idSLAVE){
