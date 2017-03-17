@@ -218,9 +218,12 @@ script.
 		function ValidateBssWindow(element,label){
 			var regex = /^[0-9]*(?:\.\d{1,2})?$/; // Números positivos con hasta dos decimales
 
-			if ($(element).val()!='' && ($(element).val().match(regex) == null ||
-				(Number($(element).val()) < 10 || Number($(element).val()) > 1000)))
-				Fade(element,label);
+			if($(element).val()!=0){
+				if ($(element).val()!='' && ($(element).val().match(regex) == null ||
+					(Number($(element).val()) < 10 || Number($(element).val()) > 1000)))
+					Fade(element,label);
+			}
+
 		}
 
 		function ValidateCompensation(element,label){
