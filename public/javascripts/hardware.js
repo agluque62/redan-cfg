@@ -1588,7 +1588,7 @@ function ShowRadioParamsOfResource(data){
 					$('#TxBRow').attr('style','display:table-column');	
 					$('#RxBRow').attr('style','display:table-column');	
 					// Mostrar boton añadir emplazamiento
-					$('#ListMenuSites li:first-child').find("a").text('+');
+					//$('#ListMenuSites li:first-child').find("a").text('+');
 					break;
 			}
 		}
