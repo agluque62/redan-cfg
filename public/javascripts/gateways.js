@@ -1,6 +1,7 @@
 var dataOfResource = null;
 var listOfGateways = '';
 var totalRecursos = 0;
+var cicloCompleto = 0;
 
 /******************************************************************************************************/
 /****** Module: gateways.js												*******************************/
@@ -1516,7 +1517,8 @@ function UpdateAssignedSlaves(data){
 							url: '/hardware/' + value.idSLAVES, 
 							success: function(data){
 										//ShowResourcesFromSlave(value.idSLAVES,value.rank, data, function(){if ( i>=data.hardware.length && f != null) f()});
-										loadIndex += ShowResourcesFromSlave(value.idSLAVES,value.rank, data,function(){
+										//Este es el que lee constantemente
+										loadIndex += ShowResourcesFromSlave(value.idSLAVES,value.rank, data, false, function(){
 											for (var i = 0; i < 4; i++) {
 												for (var j = 0; j < 4; j++) {
 													if ($('.Res'+i+j).data('updated') == false){
@@ -1632,7 +1634,8 @@ function ShowAssignedSlaves(data){
 						url: '/hardware/' + value.idSLAVES, 
 						success: function(data){
 									//ShowResourcesFromSlave(value.idSLAVES,value.rank, data, function(){if ( i>=data.hardware.length && f != null) f()});
-									 ShowResourcesFromSlave(value.idSLAVES,value.rank, data);
+									 ShowResourcesFromSlave(value.idSLAVES,value.rank, true, data);//Aquí lee los 4 primeros slaves
+									cicloCompleto++;
 								}
 				});
 			}
@@ -1655,11 +1658,22 @@ function ShowAssignedSlaves(data){
 			//i++;
 		});
 		//}
+		//
 	}
 }
 
-function ShowResourcesFromSlave(idSlave,slave, data, f){
+function ShowResourcesFromSlave(idSlave,slave, data, isFirstLoad, f){
 	//var i = 0;
+	//if(isFirstLoad && cicloCompleto == 0)
+	//	alertify.error("Cargando datos... Por favor, espere para seleccionar los recursos.");
+	/*if(cicloCompleto == 4){
+		alertify.success("Datos cargados con éxito.");
+		cicloCompleto = 0;
+	}*/
+		
+		
+	
+	//Esto no termina de funcionar bien, ya que aún permite la edición aunque salga el mensaje
 	var loadIndex = 0;
 	if (data.hardware != null && data.hardware.length > 0){
 		$.each(data.hardware, function(rowIndex, r) {
