@@ -1278,9 +1278,21 @@ function AddResource(slaveId, col, fila, f){
 
 function UpdateResource(slaveId,col,fila, loadIndex, totalIndex, f){
 	var idSlave = slaveId; // $('#SlaveId').val();
+	var newIndex=0;
 	//$('#DivHardware').animate({width: '712px'})
 	//$('#BigSlavesZone').animate({width: '505px'});
-
+	
+	if ($('#SResourceType option:selected').val() == 1) { //Radio
+		if ( ($('#LbTypeRadio option:selected').val()==2) || ($('#LbTypeRadio option:selected').val()==3) )
+			newIndex=8;
+		else
+			newIndex=2;
+	}
+	else
+		newIndex=1;
+	
+	var newTotal = parseInt(totalIndex) + (newIndex - parseInt(loadIndex));
+	
 	if (($('#BodyRedan').data('perfil') & 1) != 1){
 		if ($('#TbNameResource').val().length > 0){
 			if ($('#SResourceType option:selected').val() == 1)	{

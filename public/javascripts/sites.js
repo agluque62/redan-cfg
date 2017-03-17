@@ -413,8 +413,8 @@ function GotoResource(row,col,update, loadIndex, totalIndex){
 	else
 		$('#SResourceType').prop("disabled", false);
 	
-	if(!update && loadIndex > 6){//JADO!!!!
-		alertify.error('Error en la operacion');
+	if(!update && loadIndex === 16){
+		alertify.error('No se pueden añadir mas recursos. Índice de carga máximo alcanzado.');
 	}
 	else {
 		//if (totalIndex === 0)
