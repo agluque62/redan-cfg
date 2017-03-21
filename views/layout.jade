@@ -11,6 +11,7 @@ html
 		script(type='text/javascript' src='/javascripts/tableBss.js')
 		script(type='text/javascript' src='/javascripts/authentication.js')
 		script(type='text/javascript' src='/javascripts/version.js')
+		script(type='text/javascript' src='/javascripts/index.js')
 		script.
 			var actual='';
 			var actualShow='';
@@ -178,7 +179,7 @@ html
 					if (menu == "#MenuConfiguration"){
 						translateWord('Activate',function(result){
 							if ($('#listaOpciones li:nth-last-child(2)').text() != result){
-								var item = $('<li style="margin-top:100px"><a onclick="CheckingAnyChange(\'GeneralContent\', function(){GetActiveCfgAndActivate()})">' + result + '</li>');
+								var item = $('<li style="margin-top:100px"><a id="opcionAplCambios2" onclick="CheckingAnyChange(\'GeneralContent\', function(){GetActiveCfgAndActivate()})">' + result + '</li>');
 								item.insertBefore($('#listaOpciones li:last-child'));
 							}
 						})
@@ -260,7 +261,6 @@ html
 				this.document.location.reload();
 			}
 
-
 		table(style='width:100%')
 			tr
 				td(style='width:15%')
@@ -302,11 +302,11 @@ html
 								h3 Menu General
 								ul.menuList(style='height:15%')
 									li
-										a(onclick="hideMenu(\'#MenuConfiguration\',\'#MenuOpciones\')" tkey='Configuration') 
+										a(id="opcionConfig" onclick="hideMenu(\'#MenuConfiguration\',\'#MenuOpciones\')" tkey='Configuration')
 									li
-										a(onclick="hideMenu(\'#MenuHistoricos\',\'#MenuMantenimiento\'); LoadGatewaysInActiveConfiguration()" tkey='Maintenance') 
+										a(id="opcionMant" onclick="hideMenu(\'#MenuHistoricos\',\'#MenuMantenimiento\'); LoadGatewaysInActiveConfiguration()" tkey='Maintenance')
 									li
-										a(onclick="hideMenu(\'#MenuBackup\',\'#MenuCfgBackup\');" tkey='Backup') 
+										a(id="opcionBackup" onclick="hideMenu(\'#MenuBackup\',\'#MenuCfgBackup\');" tkey='Backup')
 
 			#MenuConfiguration
 				table#Principal(style='width:100%')
@@ -316,16 +316,13 @@ html
 								h3(tkey='Options') 
 								ul#listaOpciones.menuList(style='height:inherit')
 									li
-										a(onclick="CheckingAnyChange(\'GeneralContent\', function(){hidePrevious(\'#FormConfiguration\',\'#AddFormConfiguration\',\'#DivConfigurations\'); GetConfigurations()})" tkey='Configurations') 
+										a(id="opcionConfigs" onclick="CheckingAnyChange(\'GeneralContent\', function(){hidePrevious(\'#FormConfiguration\',\'#AddFormConfiguration\',\'#DivConfigurations\'); GetConfigurations()})" tkey='Configurations')
 									li
-										a(onclick="CheckingAnyChange(\'GeneralContent\', function(){hidePrevious(\'#FormTableBss\',\'#AddTableBss\',\'#DivTableBss\'); GetTablesBss()})", tkey='TableBss') 
-									//
-									//li
-									//	a(onclick="CheckingAnyChange(\'GeneralContent\', function(){hidePrevious(\'#FormRadioDestinations\',\'#AddFormDestinations\',\'#DivDestinations\'); GetRadioDestinations()})" tkey='RadioDestinations') 
-									li.menuListDisabled
-										a(onclick="CheckingAnyChange(\'GeneralContent\', function(){hidePrevious(\'#FormOperador\',\'#AddFormUser\',\'#DivOperador\'); GetUsuarios()})", tkey='Users')
-									li.menuListDisabled
-										a(onclick="CheckingAnyChange(\'GeneralContent\', function(){hidePrevious(\'#FormVersion\',\'#AddFormVersion\',\'#DivVersion\'); GetVersion(false)})", tkey='MenuVersion')
+										a(id="opcionTabla" onclick="CheckingAnyChange(\'GeneralContent\', function(){hidePrevious(\'#FormTableBss\',\'#AddTableBss\',\'#DivTableBss\'); GetTablesBss()})", tkey='TableBss')
+									li
+										a(id="opcionUsuarios" onclick="CheckingAnyChange(\'GeneralContent\', function(){hidePrevious(\'#FormOperador\',\'#AddFormUser\',\'#DivOperador\'); GetUsuarios()})", tkey='Users')
+									li(id="lopcionVersion")
+										a(id="opcionVersion" onclick="CheckingAnyChange(\'GeneralContent\', function(){hidePrevious(\'#FormVersion\',\'#AddFormVersion\',\'#DivVersion\'); GetVersion(false)})", tkey='MenuVersion')
 									li(style='margin-top:100px')
 										a( onclick="CheckingAnyChange(\'GeneralContent\', function(){hide()})", tkey='Exit') 
 						td#GeneralDiv
@@ -359,11 +356,11 @@ html
 								h3(tkey='MaintenanceService')
 								ul.menuList#MaintenanceOptionsList(style='height:15%')
 									li
-										a(onclick="showMaintenancePanel('Maintenance')" tkey='Historics')
+										a(id="opcionHistoric" onclick="showMaintenancePanel('Maintenance')" tkey='Historics')
 									li
-										a(onclick="showMaintenancePanel('Estadisticas')" tkey='Statistic')
+										a(id="opcionEstadi" onclick="showMaintenancePanel('Estadisticas')" tkey='Statistic')
 									li
-										a(onclick="showMaintenancePanel('Pasarelas')" tkey='Gateways')
+										a(id="opcionPasarel" onclick="showMaintenancePanel('Pasarelas')" tkey='Gateways')
 									li(style='margin-top:199px')
 										a( onclick="hide()", tkey='Exit') 
 						td#Historicos(rowspan=2)

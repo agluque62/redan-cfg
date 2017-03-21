@@ -60,7 +60,7 @@ function ResetAfterImport(datos){
 	$('#MenuOpciones').attr('style','display:table-cell;width:11%');
 	translateWord('Activate',function(result){
 		if ($('#listaOpciones li:nth-last-child(2)').text() != result){
-			var item = $('<li style="margin-top:100px"><a onclick="CheckingAnyChange(\'GeneralContent\', function(){GetActiveCfgAndActivate()})">' + result + '</li>');
+			var item = $('<li style="margin-top:100px"><a id="opcionAplCambios" onclick="CheckingAnyChange(\'GeneralContent\', function(){GetActiveCfgAndActivate()})">' + result + '</li>');
 			item.insertBefore($('#listaOpciones li:last-child'));
 		}
 	});
@@ -187,29 +187,90 @@ function myEncode(e){
 					$('#Login-Operador').hide();
 					$('#loggedUser').text(usuario.name);
 				
-					$('#MenuGeneral').addClass('menuListDisabled')
+					/*$('#MenuGeneral').addClass('menuListDisabled')
 					$('#MenuOpciones ul li').addClass('menuListDisabled');
 					$('.New').addClass('NotAllowedTd');
 					$('.New *:first-child').addClass('NotAllowedBtn');
+					*/
+					var list = [
+						{id: '#opcionConfig', text: $('#opcionConfig').text(), func: $('#opcionConfig').attr('onclick')},
+						{id: '#opcionMant', text: $('#opcionMant').text(), func: $('#opcionMant').attr('onclick')},
+						{id: '#opcionBackup', text: $('#opcionBackup').text(), func: $('#opcionBackup').attr('onclick')},
+						{id: '#opcionConfigs', text: $('#opcionConfigs').text(), func: $('#opcionConfigs').attr('onclick')},
+						{id: '#opcionTabla', text: $('#opcionTabla').text(), func: $('#opcionTabla').attr('onclick')},
+						{id: '#opcionConfig', text: $('#opcionUsuarios').text(), func: $('#opcionUsuarios').attr('onclick')},
+						{id: '#opcionVersion', text: $('#opcionVersion').text(), func: $('#opcionVersion').attr('onclick')},
+						{id: '#opcionHistoric', text: $('#opcionHistoric').text(), func: $('#opcionHistoric').attr('onclick')},
+						{id: '#opcionEstadi', text: $('#opcionEstadi').text(), func: $('#opcionEstadi').attr('onclick')},
+						{id: '#opcionPasarel', text: $('#opcionPasarel').text(), func: $('#opcionPasarel').attr('onclick')}
+					];
+				
+					$('#MenuGeneral').attr('style','display:table-cell;width:11%');
+					$('#MenuGeneral').removeClass('menuListDisabled')
+					$('#MenuOpciones').removeClass('menuListDisabled');
+				
+					$('.New').addClass('NotAllowedTd');
+					$('.New *:first-child').addClass('NotAllowedBtn');
+				
+					$('#opcionConfig').text('No Disponible');
+					$('#opcionConfig').attr('onclick', '');
+					$('#opcionMant').text('No Disponible');
+					$('#opcionMant').attr('onclick', '');
+					$('#opcionBackup').text('No Disponible');
+					$('#opcionBackup').attr('onclick', '');
+					$('#opcionConfigs').text('No Disponible');
+					$('#opcionConfigs').attr('onclick', '');
+					$('#opcionTabla').text('');
+					$('#opcionTabla').attr('onclick', '');
+					$('#opcionUsuarios').text('No Disponible');
+					$('#opcionUsuarios').attr('onclick', '');
+					$('#opcionVersion').text('');
+					$('#opcionVersion').attr('onclick', '');
+					$('#opcionHistoric').text('No Disponible');
+					$('#opcionHistoric').attr('onclick', '');
+					$('#opcionEstadi').text('No Disponible');
+					$('#opcionEstadi').attr('onclick', '');
+					$('#opcionPasarel').text('No Disponible');
+					$('#opcionPasarel').attr('onclick', '');
 					
+				
 					if (perfilAdministracion){
-						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
-						$('#MenuGeneral').removeClass('menuListDisabled')
-						$('#MenuOpciones ul li').removeClass('menuListDisabled');
-						$('.New').removeClass('NotAllowedTd');
-						$('.New *:first-child').removeClass('NotAllowedBtn');
+						//$('.New').removeClass('NotAllowedTd');
+						//$('.New *:first-child').removeClass('NotAllowedBtn');
+						
+						$('#opcionConfig').text(list[0].text);
+						$('#opcionConfig').attr('onclick', list[0].func);
+						$('#opcionMant').text(list[1].text);
+						$('#opcionMant').attr('onclick', list[1].func);
+						$('#opcionBackup').text(list[2].text);
+						$('#opcionBackup').attr('onclick', list[2].func);
+						$('#opcionConfigs').text(list[3].text);
+						$('#opcionConfigs').attr('onclick', list[3].func);
+						$('#opcionTabla').text(list[4].text);
+						$('#opcionTabla').attr('onclick', list[4].func);
+						$('#opcionUsuarios').text(list[5].text);
+						$('#opcionUsuarios').attr('onclick', list[5].func);
+						$('#opcionVersion').text(list[6].text);
+						$('#opcionVersion').attr('onclick', list[6].func);
+						$('#opcionHistoric').text(list[7].text);
+						$('#opcionHistoric').attr('onclick', list[7].func);
+						$('#opcionEstadi').text(list[8].text);
+						$('#opcionEstadi').attr('onclick', list[8].func);
+						$('#opcionPasarel').text(list[9].text);
+						$('#opcionPasarel').attr('onclick', list[9].func);
 						return;
 					}
 					if (perfilVisualizacion) {
 						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
-						$('#MenuGeneral').removeClass('menuListDisabled')
-						$('#MenuGeneral ul li:nth-child(2)').addClass('menuListDisabled');
-						$('#MenuGeneral ul li:nth-child(3)').addClass('menuListDisabled');
-						$('#MenuOpciones ul li').removeClass('menuListDisabled');
-						$('#MenuOpciones ul li:nth-child(2)').addClass('menuListDisabled');
-						$('#MenuOpciones ul li:nth-child(3)').addClass('menuListDisabled');
-						$('#MenuOpciones ul li:nth-child(4)').addClass('menuListDisabled');
-						$('#MenuOpciones ul li:nth-child(5)').addClass('menuListDisabled');
+						$('#MenuGeneral').removeClass('menuListDisabled');
+						
+						$('#opcionConfig').text(list[0].text);
+						$('#opcionConfig').attr('onclick', list[0].func);
+						$('#opcionConfigs').text(list[3].text);
+						$('#opcionConfigs').attr('onclick', list[3].func);
+						
+						//$('#opcionAplCambios').text('No Disponible');
+						//$('#opcionAplCambios').attr('onclick', '');
 					}
 					if (perfilMando) {
 						
@@ -218,10 +279,16 @@ function myEncode(e){
 						
 					}
 					if (perfilGestUsuarios){
-						$('#MenuOpciones').attr('style','display:table-cell;width:11%');
-						$('#MenuOpciones ul li:nth-child(3)').removeClass('menuListDisabled');
+						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
+						$('#MenuGeneral').removeClass('menuListDisabled');
+						
+						$('#opcionUsuarios').text(list[5].text);
+						$('#opcionUsuarios').attr('onclick', list[5].func);
+						
+						//$('#opcionAplCambios').text('No Disponible');
+						//$('#opcionAplCambios').attr('onclick', '');
 					}
-					if (perfilVerLocalGateway) {
+					/*if (perfilVerLocalGateway) {
 						$('#MenuOpciones ul li:nth-child(1)').removeClass('menuListDisabled');
 					}
 					if (perfilAdminLocalGateway) {
@@ -229,7 +296,19 @@ function myEncode(e){
 						$('.New').removeClass('NotAllowedTd');
 						$('.New *:first-child').removeClass('NotAllowedBtn');
 					}
-					
+					*/
+					if (perfilHistoricos) {
+						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
+						$('#MenuGeneral').removeClass('menuListDisabled');
+						
+						$('#opcionMant').text(list[1].text);
+						$('#opcionMant').attr('onclick', list[1].func);
+						
+						$('#opcionHistoric').text(list[7].text);
+						$('#opcionHistoric').attr('onclick', list[7].func);
+						$('#opcionEstadi').text(list[8].text);
+						$('#opcionEstadi').attr('onclick', list[8].func);
+					}
 					/*if (perfilHistoricos && perfilBackup && perfilVisualizacion){
 						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
 						$('#MenuOpciones ul li').removeClass('menuListDisabled');
@@ -387,7 +466,7 @@ function EnableOptions(perfil){
 	var perfilBackup            = ((perfil & 1024)?true:false);
 
 
-	if (perfilAdministracion){
+	/*if (perfilAdministracion){
 		$('#MenuGeneral').attr('style','display:table-cell;width:11%');
 		$('#MenuOpciones ul li').removeClass('menuListDisabled');	
 		return;
@@ -414,5 +493,5 @@ function EnableOptions(perfil){
 		return;
 	}
 
-	$('#MenuOpciones ul li').removeClass('menuListDisabled');	
+	$('#MenuOpciones ul li').removeClass('menuListDisabled');	*/
 }
