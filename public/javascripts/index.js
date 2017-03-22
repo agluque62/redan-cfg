@@ -214,24 +214,34 @@ function myEncode(e){
 				
 					$('#opcionConfig').text('No Disponible');
 					$('#opcionConfig').attr('onclick', '');
+					$('#opcionConfig').addClass('hide');
 					$('#opcionMant').text('No Disponible');
 					$('#opcionMant').attr('onclick', '');
+					$('#opcionMant').addClass('hide');
 					$('#opcionBackup').text('No Disponible');
 					$('#opcionBackup').attr('onclick', '');
+					$('#opcionBackup').addClass('hide');
 					$('#opcionConfigs').text('No Disponible');
 					$('#opcionConfigs').attr('onclick', '');
+					$('#opcionConfigs').addClass('hide');
 					$('#opcionTabla').text('');
 					$('#opcionTabla').attr('onclick', '');
+					$('#opcionTabla').addClass('hide');
 					$('#opcionUsuarios').text('No Disponible');
 					$('#opcionUsuarios').attr('onclick', '');
+					$('#opcionUsuarios').addClass('hide');
 					$('#opcionVersion').text('');
 					$('#opcionVersion').attr('onclick', '');
+					$('#opcionVersion').addClass('hide');
 					$('#opcionHistoric').text('No Disponible');
 					$('#opcionHistoric').attr('onclick', '');
+					$('#opcionHistoric').addClass('hide');
 					$('#opcionEstadi').text('No Disponible');
 					$('#opcionEstadi').attr('onclick', '');
+					$('#opcionEstadi').addClass('hide');
 					$('#opcionPasarel').text('No Disponible');
 					$('#opcionPasarel').attr('onclick', '');
+					$('#opcionPasarel').addClass('hide');
 					
 				
 					if (perfilAdministracion){
@@ -240,24 +250,34 @@ function myEncode(e){
 						
 						$('#opcionConfig').text(list[0].text);
 						$('#opcionConfig').attr('onclick', list[0].func);
+						$('#opcionConfig').removeClass('hide');
 						$('#opcionMant').text(list[1].text);
 						$('#opcionMant').attr('onclick', list[1].func);
+						$('#opcionMant').removeClass('hide');
 						$('#opcionBackup').text(list[2].text);
 						$('#opcionBackup').attr('onclick', list[2].func);
+						$('#opcionBackup').removeClass('hide');
 						$('#opcionConfigs').text(list[3].text);
 						$('#opcionConfigs').attr('onclick', list[3].func);
+						$('#opcionConfigs').removeClass('hide');
 						$('#opcionTabla').text(list[4].text);
 						$('#opcionTabla').attr('onclick', list[4].func);
+						$('#opcionTabla').removeClass('hide');
 						$('#opcionUsuarios').text(list[5].text);
 						$('#opcionUsuarios').attr('onclick', list[5].func);
+						$('#opcionUsuarios').removeClass('hide');
 						$('#opcionVersion').text(list[6].text);
 						$('#opcionVersion').attr('onclick', list[6].func);
+						$('#opcionVersion').removeClass('hide');
 						$('#opcionHistoric').text(list[7].text);
 						$('#opcionHistoric').attr('onclick', list[7].func);
+						$('#opcionHistoric').removeClass('hide');
 						$('#opcionEstadi').text(list[8].text);
 						$('#opcionEstadi').attr('onclick', list[8].func);
+						$('#opcionEstadi').removeClass('hide');
 						$('#opcionPasarel').text(list[9].text);
 						$('#opcionPasarel').attr('onclick', list[9].func);
+						$('#opcionPasarel').removeClass('hide');
 						return;
 					}
 					if (perfilVisualizacion) {
@@ -266,8 +286,10 @@ function myEncode(e){
 						
 						$('#opcionConfig').text(list[0].text);
 						$('#opcionConfig').attr('onclick', list[0].func);
+						$('#opcionConfig').removeClass('hide');
 						$('#opcionConfigs').text(list[3].text);
 						$('#opcionConfigs').attr('onclick', list[3].func);
+						$('#opcionConfigs').removeClass('hide');
 						
 						//$('#opcionAplCambios').text('No Disponible');
 						//$('#opcionAplCambios').attr('onclick', '');
@@ -284,6 +306,7 @@ function myEncode(e){
 						
 						$('#opcionUsuarios').text(list[5].text);
 						$('#opcionUsuarios').attr('onclick', list[5].func);
+						$('#opcionUsuarios').removeClass('hide');
 						
 						//$('#opcionAplCambios').text('No Disponible');
 						//$('#opcionAplCambios').attr('onclick', '');
@@ -303,11 +326,14 @@ function myEncode(e){
 						
 						$('#opcionMant').text(list[1].text);
 						$('#opcionMant').attr('onclick', list[1].func);
+						$('#opcionMant').removeClass('hide');
 						
 						$('#opcionHistoric').text(list[7].text);
 						$('#opcionHistoric').attr('onclick', list[7].func);
+						$('#opcionHistoric').removeClass('hide');
 						$('#opcionEstadi').text(list[8].text);
 						$('#opcionEstadi').attr('onclick', list[8].func);
+						$('#opcionEstadi').removeClass('hide');
 					}
 					/*if (perfilHistoricos && perfilBackup && perfilVisualizacion){
 						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
