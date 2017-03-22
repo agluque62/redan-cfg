@@ -737,6 +737,8 @@ var ExistGatewayWithoutResources = function(f){
 			url: '/configurations/' + $('#DivConfigurations').data('idCFG') + '/gateways',
 			success: function(result){
 						var aplicar = true;
+						if(result.general.length == 0)
+							f({Aplicar:true});
 						$.each(result.general, function(index, value){
 							if (aplicar){
 								$.ajax({
@@ -812,8 +814,8 @@ var ActiveCfg = function(){
 										$.ajax({
 											type: 'GET',
 											url: '/configurations/' + $('#DivConfigurations').data('idCFG') + '/activate',
-											success: function(result){
-												if (result){
+											success: function(data){
+												if (data.result){
 													GenerateHistoricEvent(ID_HW,LOAD_REMOTE_CONFIGURATION,$('#name').val(),$('#loggedUser').text());
 													alertify.success('Configuración \"'+ $('#name').val() + '\" activada.');
 													// Generar histórico con cada pasarela que no se pudo configurar
@@ -826,8 +828,12 @@ var ActiveCfg = function(){
 												}
 												else{
 													GenerateHistoricEvent(ID_HW,LOAD_REMOTE_CONFIGURATION_FAIL,$('#name').val(),$('#loggedUser').text());
-													alertify.error('No ha sido posible activar la configuración \"'+ $('#name').val() + '\".');
-													alertify.error('¿Tiene la configuración \"'+ $('#name').val() + '\" alguna pasarela asignada?.');
+													if(data.count == 0)
+														alertify.error('No ha sido posible activar la configuración \"'+ $('#name').val() + '\" al estar vacía.');
+													else {
+														alertify.error('No ha sido posible activar la configuración \"'+ $('#name').val() + '\".');
+														alertify.error('¿Tiene la configuración \"'+ $('#name').val() + '\" alguna pasarela asignada?.');
+													}
 												}
 												// Provocar una actualización  en la lista de configuraciones si hubiera un cambio de configuración activa
 												GetConfigurations();
