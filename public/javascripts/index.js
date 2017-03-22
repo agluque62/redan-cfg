@@ -235,8 +235,8 @@ function myEncode(e){
 					
 				
 					if (perfilAdministracion){
-						//$('.New').removeClass('NotAllowedTd');
-						//$('.New *:first-child').removeClass('NotAllowedBtn');
+						$('.New').removeClass('NotAllowedTd');
+						$('.New *:first-child').removeClass('NotAllowedBtn');
 						
 						$('#opcionConfig').text(list[0].text);
 						$('#opcionConfig').attr('onclick', list[0].func);
