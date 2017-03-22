@@ -260,7 +260,7 @@
 	"Gateways" 				: "Gateways",
 	"Hardware" 				: "Hardware",
 	"RadioDestinations"		: "Frequencies",
-	"RadioDestination"		: "Frequency",
+	"RadioDestination"		: "Frequency MHz",
 	"Sites" 				: "Sites",
 	"Site" 					: "Site",
 	"EnableRecording"		: "Enable recording",

@@ -743,11 +743,22 @@ function ShowDataOfResource(data,f){
 		//$('#SResourceType').prop('disabled','disabled')
 
 		//$('#SRestriccion').prop('disabled','disabled');
+		var rsc=$('table.resource').data('idRecurso');
 		$('#SRestriccion option[value="' + data.recursos[0].restriccion +'"]').prop('selected', true);
-	
+		if(data.recursos[0].restriccion == "1") {
+			$('#SRestriccion option:eq(1)').prop('selected', true);
+			GetListsFromResource(rsc);
+		}
+		else if (data.recursos[0].restriccion == "2") {
+			$('#SRestriccion option:eq(2)').prop('selected', true);
+			GetListsFromResource(rsc);
+		}
+		else
+			$('#SRestriccion option:eq(0)').prop('selected', true);
 		$('#TbEnableRegister')//.prop('disabled','disabled')
 								.prop('checked',data.recursos[0].enableRegistro != null && data.recursos[0].enableRegistro != '0');
-
+		
+		
 		if (data.recursos[0].enableRegistro != null && data.recursos[0].enableRegistro != '0'){
 			$('.resource tr:nth-child(4)').show();
 			$('#TbKey').val(data.recursos[0].szClave);
