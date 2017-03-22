@@ -657,7 +657,11 @@ function FilteringByGroup(noRange){
 
 										if (noRange){
 											translateWord('Group',function(result){
-												AddRecordsForReport(value,result + ': ' + $('#SGroup option:selected').val());
+												translateWord('StartingDate',function(start){
+													translateWord('EndingDate',function(end){
+														AddRecordsForReport(value,start + ': ' + $('#IDateStartGroup').val().toString() + '. ' + end + ': ' + $('#IDateEndGroup').val().toString() +' - '+ result + ': ' + $('#SGroup option:selected').val());
+													});
+												});
 											});
 											//AddRecordsForReport(value,'Group: ' + $('#SGroup option:selected').val());
 											$('#TableToExcel tr:last').after(h);
