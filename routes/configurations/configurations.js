@@ -380,6 +380,11 @@ gatewaysRouter.route('/:gateway/all')
 						// Crear configuracion de la pasarela
 						//
 						var randName=generatesRandomName(req.body.general.name);
+						if(req.body.general.emplazamiento=='') {
+							var randEmp='EMP'+req.body.general.name;
+							req.body.general.emplazamiento=randEmp;
+						}
+							
 						req.body.general.name = randName;
 						myLibConfigurations.postConfigurationFromGateway(req, res, general, servicios, hardware, function(result){
 							if (result.error)	{
