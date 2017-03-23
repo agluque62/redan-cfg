@@ -955,8 +955,12 @@ function FilteringByComponent(noRange){
 												'<td>' + value.Usuario + '</td> </tr>';
 										if (noRange){
 											translateWord('Component',function(result){
-													AddRecordsForReport(value,result + ': ' + $('#SComponent option:selected').val());
+												translateWord('StartingDate',function(start){
+													translateWord('EndingDate',function(end){
+														AddRecordsForReport(value,start + ': ' + $('#IDateStartComponent').val().toString() + '. ' + end + ': ' + $('#IDateEndComponent').val().toString() +' - '+ result + ': ' + $('#SComponent option:selected').val());
+													});
 												});
+											});
 											//AddRecordsForReport(value,'Component: ' + $('#SComponent option:selected').val());
 											$('#TableToExcel tr:last').after(h);
 										}
@@ -1061,8 +1065,12 @@ function FilteringByCode(noRange){
 							'<td>' + value.Usuario + '</td> </tr>';
 
 						if (noRange){
-							translateWord('Code',function(result){
-									AddRecordsForReportEvents(value,result + ': ' + $('#SCode option:selected').val());
+								translateWord('Event',function(result){
+									translateWord('StartingDate',function(start){
+										translateWord('EndingDate',function(end){
+											AddRecordsForReport(value,start + ': ' + $('#IDateStartCode').val().toString() + '. ' + end + ': ' + $('#IDateEndCode').val().toString() +' - '+ result + ': ' + $('#SCode option:selected').text());
+										});
+									});
 								});
 							$('#TableToExcelEvents tr:last').after(h);
 						}
