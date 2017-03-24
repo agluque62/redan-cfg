@@ -2333,7 +2333,7 @@ function OnChangeRestriccion(sel){
 function OnCbBssMethod(obj){
 	// Las tablas de calificación sólo estarán disponibles para los recursos 
 	// radio remotos con método Bss seleccionado RSSI y si son Rx o RxTx.
-	if (obj.value == 0 && ($('#LbTypeRadio option:selected').val()==4 || $('#LbTypeRadio option:selected').val()==6 ))
+	if (($('#LbTypeRadio option:selected').val()==4 || $('#LbTypeRadio option:selected').val()==6 ))
 		$('#BSSMethodRow .SoloRssi').show();
 	else
 		$('#BSSMethodRow .SoloRssi').hide();
