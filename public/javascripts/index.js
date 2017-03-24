@@ -212,34 +212,34 @@ function myEncode(e){
 					$('.New').addClass('NotAllowedTd');
 					$('.New *:first-child').addClass('NotAllowedBtn');
 				
-					$('#opcionConfig').text('No Disponible');
+					$('#opcionConfig').text('');
 					$('#opcionConfig').attr('onclick', '');
 					$('#opcionConfig').addClass('hide');
-					$('#opcionMant').text('No Disponible');
+					$('#opcionMant').text('');
 					$('#opcionMant').attr('onclick', '');
 					$('#opcionMant').addClass('hide');
-					$('#opcionBackup').text('No Disponible');
+					$('#opcionBackup').text('');
 					$('#opcionBackup').attr('onclick', '');
 					$('#opcionBackup').addClass('hide');
-					$('#opcionConfigs').text('No Disponible');
+					$('#opcionConfigs').text('');
 					$('#opcionConfigs').attr('onclick', '');
 					$('#opcionConfigs').addClass('hide');
 					$('#opcionTabla').text('');
 					$('#opcionTabla').attr('onclick', '');
 					$('#opcionTabla').addClass('hide');
-					$('#opcionUsuarios').text('No Disponible');
+					$('#opcionUsuarios').text('');
 					$('#opcionUsuarios').attr('onclick', '');
 					$('#opcionUsuarios').addClass('hide');
 					$('#opcionVersion').text('');
 					$('#opcionVersion').attr('onclick', '');
 					$('#opcionVersion').addClass('hide');
-					$('#opcionHistoric').text('No Disponible');
+					$('#opcionHistoric').text('');
 					$('#opcionHistoric').attr('onclick', '');
 					$('#opcionHistoric').addClass('hide');
-					$('#opcionEstadi').text('No Disponible');
+					$('#opcionEstadi').text('');
 					$('#opcionEstadi').attr('onclick', '');
 					$('#opcionEstadi').addClass('hide');
-					$('#opcionPasarel').text('No Disponible');
+					$('#opcionPasarel').text('');
 					$('#opcionPasarel').attr('onclick', '');
 					$('#opcionPasarel').addClass('hide');
 					
@@ -294,12 +294,7 @@ function myEncode(e){
 						//$('#opcionAplCambios').text('No Disponible');
 						//$('#opcionAplCambios').attr('onclick', '');
 					}
-					if (perfilMando) {
-						
-					}
-					if (perfilReconAlarmas) {
-						
-					}
+					
 					if (perfilGestUsuarios){
 						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
 						$('#MenuGeneral').removeClass('menuListDisabled');
@@ -334,6 +329,10 @@ function myEncode(e){
 						$('#opcionEstadi').text(list[8].text);
 						$('#opcionEstadi').attr('onclick', list[8].func);
 						$('#opcionEstadi').removeClass('hide');
+					}
+				
+					if (perfilBackup) {
+						
 					}
 					/*if (perfilHistoricos && perfilBackup && perfilVisualizacion){
 						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
