@@ -429,8 +429,8 @@ function GotoResource(row,col,update, loadIndex, totalIndex){
 			ResetResourcePanel();
 			
 			$('#LblIdResouce').text('Slot: ' + col + ' Interfaz: ' + row);
-			
-			
+		
+		
 			// $.ajax({type: 'GET',
 			// 	// Pasar la ipv de la pasarela
 			// 	url: '/gateways/' + $('#ipv').val() + '/hardware',
@@ -441,6 +441,10 @@ function GotoResource(row,col,update, loadIndex, totalIndex){
 			// 				ShowAssignedSlaves(data,function(){
 			// 					if (i++ == col){
 			GetResource($('.Res' + row + col).data('idResource'), function () {
+				if($('#TbEnableRegister').prop('checked'))
+					$('#KeyRow').show();
+				else
+					$('#KeyRow').hide();
 				if (update == true) {
 					$('#ButtonCommit').attr('onclick', "UpdateResource('" + $('.Slave' + col).data('idSLAVE') + "','" + col + "','" + row + "','" + loadIndex + "','" + totalIndex + "',function(){AddGatewayToList($(\'#DivGateways\').data(\'idCgw\'))}); AddRadioParameters()")
 					//if ($('#SResourceType option:selected').val() == 1) {
