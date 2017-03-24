@@ -1288,41 +1288,47 @@ function AddResource(slaveId, col, fila, f){
 }
 
 function UpdateResource(slaveId,col,fila, loadIndex, totalIndex, f){
-	var idSlave = slaveId; // $('#SlaveId').val();
-	var newIndex=0;
-	//$('#DivHardware').animate({width: '712px'})
-	//$('#BigSlavesZone').animate({width: '505px'});
 	
-	if ($('#SResourceType option:selected').val() == 1) { //Radio
-		if ( ($('#LbTypeRadio option:selected').val()==2) || ($('#LbTypeRadio option:selected').val()==3) )
-			newIndex=8;
+	//if($('#LbTypeRadio option:selected').val()==0 && ($('#UriRxA option:selected').val()=='')
+	//	|| ($('#UriRxA option:selected').val()==null)){
+	//	alertify.error('El campo URI Rx debe de tener un valor.');
+	//}
+	//else {
+		var idSlave = slaveId; // $('#SlaveId').val();
+		var newIndex=0;
+		//$('#DivHardware').animate({width: '712px'})
+		//$('#BigSlavesZone').animate({width: '505px'});
+		
+		if ($('#SResourceType option:selected').val() == 1) { //Radio
+			if ( ($('#LbTypeRadio option:selected').val()==2) || ($('#LbTypeRadio option:selected').val()==3) )
+				newIndex=8;
+			else
+				newIndex=2;
+		}
 		else
-			newIndex=2;
-	}
-	else
-		newIndex=1;
-	
-	var newTotal = parseInt(totalIndex) + (newIndex - parseInt(loadIndex));
-	
-	if (($('#BodyRedan').data('perfil') & 1) != 1){
-		if ($('#TbNameResource').val().length > 0){
-			if ($('#SResourceType option:selected').val() == 1)	{
-				if ($('#IdDestination').val() == ''){
-					alertify.error('El recurso radio debe estar asignado a una frecuencia.');
-					return;
+			newIndex=1;
+		
+		var newTotal = parseInt(totalIndex) + (newIndex - parseInt(loadIndex));
+		
+		if (($('#BodyRedan').data('perfil') & 1) != 1){
+			if ($('#TbNameResource').val().length > 0){
+				if ($('#SResourceType option:selected').val() == 1)	{
+					if ($('#IdDestination').val() == ''){
+						alertify.error('El recurso radio debe estar asignado a una frecuencia.');
+						return;
+					}
+					else if (($('#LbTypeRadio option:selected').val()==4 || $('#LbTypeRadio option:selected').val()==6 ) &&
+						$('#CbBssMethod option:selected').val() == 0 && $('#CbBssAudioTable option:selected').val() == -1){
+						alertify.error('El recurso radio debe tener asignado una tabla de calificación de audio.');
+						return;
+					}
+					// Radio
+					DeleteResourceFromDestination($('table.resource').data('idRecurso'),$('#IdDestination').val(),function(){
+						PostResourceToDestination($('table.resource').data('idRecurso'),$('#IdDestination').val());
+					});
 				}
-				else if (($('#LbTypeRadio option:selected').val()==4 || $('#LbTypeRadio option:selected').val()==6 ) &&
-							$('#CbBssMethod option:selected').val() == 0 && $('#CbBssAudioTable option:selected').val() == -1){
-					alertify.error('El recurso radio debe tener asignado una tabla de calificación de audio.');
-					return;
-				}
-				// Radio
-				DeleteResourceFromDestination($('table.resource').data('idRecurso'),$('#IdDestination').val(),function(){
-					PostResourceToDestination($('table.resource').data('idRecurso'),$('#IdDestination').val());
-				});
-			}
-
-			$.ajax({type: 'PUT',
+				
+				$.ajax({type: 'PUT',
 					dataType: 'json',
 					contentType:'application/json',
 					url: '/resources/resource',
@@ -1349,11 +1355,11 @@ function UpdateResource(slaveId,col,fila, loadIndex, totalIndex, f){
 								else
 									AddPhoneParameters();
 							}
-
+							
 							// Si existe f, se añade la gateway a la lista para actualizar su configuración con 'Aplicar cambios'
 							if (f != null)
 								f();
-
+							
 							GenerateHistoricEvent(ID_HW,MODIFY_HARDWARE_RESOURCE_PARAM,data.data.rsc.name,$('#loggedUser').text());
 							alertify.success('El recurso \"' + data.data.rsc.name + '\" ha sido actualizado.');
 							blockZone = false;
@@ -1364,20 +1370,21 @@ function UpdateResource(slaveId,col,fila, loadIndex, totalIndex, f){
 					error: function(data){
 						alertify.error('El recurso \"' + data.data.rsc.name + '\" no existe.');
 					}
-			});
+				});
+			}
+			else{
+				alertify.error('Nombre de recurso no válido.');
+			}
 		}
 		else{
-			alertify.error('Nombre de recurso no válido.');
+			blockZone = false;
+			//GetSlave(idSlave);
 		}
-	}
-	else{
-		blockZone = false;
-		//GetSlave(idSlave);
-	}
-
-	// $('#BtnRemoveResource').hide();
-	// $('#BtnResourceParameters').hide();
-	// $('#BtnListasBN').hide();
+		
+		// $('#BtnRemoveResource').hide();
+		// $('#BtnResourceParameters').hide();
+		// $('#BtnListasBN').hide();
+	//}
 }
 
 function RemoveResource(f){
