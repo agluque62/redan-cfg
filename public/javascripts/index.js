@@ -332,7 +332,12 @@ function myEncode(e){
 					}
 				
 					if (perfilBackup) {
+						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
+						$('#MenuGeneral').removeClass('menuListDisabled');
 						
+						$('#opcionBackup').text(list[2].text);
+						$('#opcionBackup').attr('onclick', list[2].func);
+						$('#opcionBackup').removeClass('hide');
 					}
 					/*if (perfilHistoricos && perfilBackup && perfilVisualizacion){
 						$('#MenuGeneral').attr('style','display:table-cell;width:11%');

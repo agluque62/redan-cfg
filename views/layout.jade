@@ -179,13 +179,17 @@ html
 					if (menu == "#MenuConfiguration"){
 						translateWord('Activate',function(result){
 							if ($('#listaOpciones li:nth-last-child(2)').text() != result){
-								var item = $('<li style="margin-top:100px"><a id="opcionAplCambios2" onclick="CheckingAnyChange(\'GeneralContent\', function(){GetActiveCfgAndActivate()})">' + result + '</li>');
+								var item = $('<li id="aplicaCambios" style="margin-top:100px"><a id="opcionAplCambios" onclick="CheckingAnyChange(\'GeneralContent\', function(){GetActiveCfgAndActivate()})">' + result + '</li>');
 								item.insertBefore($('#listaOpciones li:last-child'));
 							}
 						})
+						if (($('#BodyRedan').data('perfil')) == 64 )
+							$('#aplicaCambios').removeClass('menuListDisabled');
+						else
+							$('#aplicaCambios').addClass('menuListDisabled');
 
 						if (($('#BodyRedan').data('perfil') & 16) == 16){
-							$('#MenuOpciones').attr('style','display:table-cell;width:11%')
+							$('#MenuOpciones').attr('style','display:table-cell;width:11%');
 							EnableOptions($('#BodyRedan').data('perfil'));
 						}
 						else
