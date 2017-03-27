@@ -219,7 +219,14 @@ var PostConfiguration = function (){
 		alertify.error("Identificador de la configuración no válido.");
 		return;
 	}
-
+	
+	for (var i = 0; i < $("#listConfigurations").children().length; i++) {
+		if ($('#name').val() == ($("#listConfigurations").children()[i]).childNodes[0].text) {
+			alertify.alert('Ulises G 5000 R', "Ya existe una configuración con ese nombre.");
+			alertify.error("Identificador de la configuración no válido.");
+			return;
+		}
+	}
 	$.ajax({type: 'POST', 
 		dataType: 'json', 
 		contentType:'application/json',
@@ -687,7 +694,15 @@ var CopyConfiguration = function(){
 		alertify.error("Identificador de la configuración no válido.");
 		return;
 	}
-
+	
+	for (var i = 0; i < $("#listConfigurations").children().length; i++) {
+		if($('#nameCopy').val() == ($("#listConfigurations").children()[i]).childNodes[0].text) {
+			alertify.alert('Ulises G 5000 R',"Ya existe una configuración con ese nombre.");
+			alertify.error("Identificador de la configuración no válido.");
+			return;
+		}
+	}
+	
 	alertify.success('Copia de configuración en curso');
 
 	$.ajax({type: 'POST', 

@@ -396,7 +396,7 @@ function myEncode(e){
 
 function EnableAplicarCambiosPerfil(perfil) {
 	var perfilAdministracion 	= ((perfil & 64) ? true : false);
-	var perfilCargaConfiguraciones = ((usuario.perfil & 32768)?true:false);
+	var perfilCargaConfiguraciones = ((perfil & 32768)?true:false);
 	
 	if(perfilAdministracion || perfilCargaConfiguraciones)
 		return true;
