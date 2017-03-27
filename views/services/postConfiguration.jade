@@ -40,11 +40,13 @@ script.
 	function EnableAplicarCambios(){
 		translateWord('Activate',function(result){
 			if ($('#listaOpciones li:nth-last-child(2) a ').text() == result){
-				if (listOfGateways.length == 0)		
+				if (listOfGateways.length == 0)
 					$('#listaOpciones li:nth-last-child(2)').addClass('menuListDisabled');
 				else
-					$('#listaOpciones li:nth-last-child(2)').removeClass('menuListDisabled');
-				
+					if(EnableAplicarCambiosPerfil($('#BodyRedan').data('perfil')))
+						$('#listaOpciones li:nth-last-child(2)').removeClass('menuListDisabled');
+					else
+						$('#listaOpciones li:nth-last-child(2)').addClass('menuListDisabled');
 			}
 			setTimeout(function(){EnableAplicarCambios()},1000);
 		});

@@ -483,6 +483,24 @@ function myEncode(e){
 	}
 }
 
+function EnableAplicarCambiosPerfil(perfil) {
+		
+		var perfilVisualizacion 	= ((perfil & 1) ? true : false);
+	var perfilMando 			= ((perfil & 2) ? true : false);
+	var perfilReconAlarmas 		= ((perfil & 8) ? true : false);
+	var perfilGestUsuarios 		= ((perfil & 16) ? true : false);
+	var perfilAdministracion 	= ((perfil & 64) ? true : false);
+	var perfilVerLocalGateway 	= ((perfil & 128) ? true : false);
+	var perfilAdminLocalGateway = ((perfil & 256) ? true : false);
+	var perfilHistoricos 		= ((perfil & 512) ? true : false);
+	var perfilBackup 			= ((perfil & 1024) ? true : false);
+	
+	if(perfilAdministracion)
+		return true;
+	else
+		return false;
+	
+}
 function EnableOptions(perfil){
 
 	var perfilVisualizacion     = ((perfil & 1)   ?true:false);
@@ -495,7 +513,7 @@ function EnableOptions(perfil){
 	var perfilHistoricos        = ((perfil & 512) ?true:false);
 	var perfilBackup            = ((perfil & 1024)?true:false);
 
-
+	
 	/*if (perfilAdministracion){
 		$('#MenuGeneral').attr('style','display:table-cell;width:11%');
 		$('#MenuOpciones ul li').removeClass('menuListDisabled');	
