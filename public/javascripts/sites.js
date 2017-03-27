@@ -413,10 +413,10 @@ function GotoResource(row,col,update, loadIndex, totalIndex){
 	else
 		$('#SResourceType').prop("disabled", false);
 	
-	if(!update && loadIndex === 16){
-		alertify.error('No se pueden añadir mas recursos. Índice de carga máximo alcanzado.');
-	}
-	else {
+	//if(!update && loadIndex == 16){
+	//	alertify.error('No se pueden añadir mas recursos. Índice de carga máximo alcanzado.');
+	//}
+	//else {
 		//if (totalIndex === 0)
 		//	alertify.error("Un momento por favor. Se están actualizando los datos...");//Demasiado rapido
 		//else {
@@ -505,7 +505,7 @@ function GotoResource(row,col,update, loadIndex, totalIndex){
 			// 		});
 			// 	}
 			// });
-		}
+	//	}
 	//}
 }
 
