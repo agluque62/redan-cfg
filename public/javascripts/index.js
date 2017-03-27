@@ -280,7 +280,7 @@ function myEncode(e){
 						$('#opcionPasarel').removeClass('hide');
 						return;
 					}
-					if (perfilVisualizacion) {
+					if (perfilVisualizacion || perfilConfiguraciones) {
 						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
 						$('#MenuGeneral').removeClass('menuListDisabled');
 						
@@ -291,8 +291,10 @@ function myEncode(e){
 						$('#opcionConfigs').attr('onclick', list[3].func);
 						$('#opcionConfigs').removeClass('hide');
 						
-						//$('#opcionAplCambios').text('No Disponible');
-						//$('#opcionAplCambios').attr('onclick', '');
+						if(perfilConfiguraciones) {
+							$('.New').removeClass('NotAllowedTd');
+							$('.New *:first-child').removeClass('NotAllowedBtn');
+						}
 					}
 					
 					if (perfilGestUsuarios){
@@ -302,19 +304,8 @@ function myEncode(e){
 						$('#opcionUsuarios').text(list[5].text);
 						$('#opcionUsuarios').attr('onclick', list[5].func);
 						$('#opcionUsuarios').removeClass('hide');
-						
-						//$('#opcionAplCambios').text('No Disponible');
-						//$('#opcionAplCambios').attr('onclick', '');
 					}
-					/*if (perfilVerLocalGateway) {
-						$('#MenuOpciones ul li:nth-child(1)').removeClass('menuListDisabled');
-					}
-					if (perfilAdminLocalGateway) {
-						$('#MenuOpciones ul li:nth-child(1)').removeClass('menuListDisabled');
-						$('.New').removeClass('NotAllowedTd');
-						$('.New *:first-child').removeClass('NotAllowedBtn');
-					}
-					*/
+
 					if (perfilHistoricos) {
 						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
 						$('#MenuGeneral').removeClass('menuListDisabled');
@@ -339,87 +330,7 @@ function myEncode(e){
 						$('#opcionBackup').attr('onclick', list[2].func);
 						$('#opcionBackup').removeClass('hide');
 					}
-					/*if (perfilHistoricos && perfilBackup && perfilVisualizacion){
-						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
-						$('#MenuOpciones ul li').removeClass('menuListDisabled');
-						$('#MenuOpciones ul li:nth-child(1)').addClass('menuListDisabled');
-						$('#MenuOpciones ul li:nth-child(2)').addClass('menuListDisabled');
-
-						$('.New').addClass('NotAllowedTd');
-						$('.New *:first-child').addClass('NotAllowedBtn');
-						return;
-					}
-
-					if ((perfilHistoricos && perfilBackup) || (perfilHistoricos && perfilVisualizacion) || (perfilVisualizacion && perfilBackup))
-					{
-						$('#MenuGeneral').attr('style','display:table-cell;width:11%');
-						if (!perfilVisualizacion){
-							$('#MenuGeneral ul li:nth-child(1)').addClass('menuListDisabled');
-						}
-						if (!perfilHistoricos){
-							$('#MenuGeneral ul li:nth-child(2)').addClass('menuListDisabled');
-						}
-						if (!perfilBackup){
-							$('#MenuGeneral ul li:nth-child(3)').addClass('menuListDisabled');
-						}
-						return;
-					}
-
-					if (perfilHistoricos){
-						$('#MenuMantenimiento').attr('style','display:table-cell;width:11%');
-						return;
-					}
-
-					if (perfilBackup){
-						$('#MenuCfgBackup').attr('style','display:table-cell;width:11%');
-						return;
-					}
-
-					if (perfilVisualizacion){
-						$('#MenuOpciones').attr('style','display:table-cell;width:11%');
-						$('#MenuOpciones ul li').removeClass('menuListDisabled');
-						$('#MenuOpciones ul li:nth-child(2)').addClass('menuListDisabled'); //deshabilitar tabla audio
-						$('#MenuOpciones ul li:nth-child(3)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
-						$('#MenuOpciones ul li:nth-child(4)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
-						$('.New').addClass('NotAllowedTd');
-						$('.New *:first-child').addClass('NotAllowedBtn');
-						$('.ActivateCfg').addClass('NotAllowedTd');
-						$('.ActivateCfg *:first-child').addClass('NotAllowedBtn');
-						return;
-					}
-
-					if (perfilConfiguraciones){
-						$('#MenuOpciones').attr('style','display:table-cell;width:11%');
-						$('#MenuOpciones ul li').removeClass('menuListDisabled');
-						$('#MenuOpciones ul li:nth-child(2)').addClass('menuListDisabled'); //deshabilitar tabla audio
-						$('#MenuOpciones ul li:nth-child(3)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
-						$('#MenuOpciones ul li:nth-child(4)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
-						$('.ActivateCfg').addClass('NotAllowedTd');
-						$('.ActivateCfg *:first-child').addClass('NotAllowedBtn');
-						return;
-					}
-
-					if (perfilCargaConfiguraciones){
-						$('#MenuOpciones').attr('style','display:table-cell;width:11%');
-						$('#MenuOpciones ul li').removeClass('menuListDisabled');
-						$('#MenuOpciones ul li:nth-child(2)').addClass('menuListDisabled'); //deshabilitar tabla audio
-						$('#MenuOpciones ul li:nth-child(3)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
-						$('#MenuOpciones ul li:nth-child(4)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
-						$('.New').addClass('NotAllowedTd');
-						$('.New *:first-child').addClass('NotAllowedBtn');
-						return;
-					}
-
-					if (perfilGestUsuarios){
-						$('#MenuOpciones').attr('style','display:table-cell;width:11%');
-						$('#MenuOpciones ul li').removeClass('menuListDisabled');
-						$('#MenuOpciones ul li:nth-child(1)').addClass('menuListDisabled');
-						$('#MenuOpciones ul li:nth-child(2)').addClass('menuListDisabled'); //deshabilitar tabla audio
-						$('#MenuOpciones ul li:nth-child(3)').removeClass('menuListDisabled');
-						$('#MenuOpciones ul li:nth-child(4)').addClass('menuListDisabled'); //deshabilitar opcion Usuarios
-						return;
-					}
-					*/
+					
 					
 					//si es un perfil no controlado
 					//$('#MenuGeneral').attr('style','display:table-cell;width:11%');
@@ -484,18 +395,10 @@ function myEncode(e){
 }
 
 function EnableAplicarCambiosPerfil(perfil) {
-		
-		var perfilVisualizacion 	= ((perfil & 1) ? true : false);
-	var perfilMando 			= ((perfil & 2) ? true : false);
-	var perfilReconAlarmas 		= ((perfil & 8) ? true : false);
-	var perfilGestUsuarios 		= ((perfil & 16) ? true : false);
 	var perfilAdministracion 	= ((perfil & 64) ? true : false);
-	var perfilVerLocalGateway 	= ((perfil & 128) ? true : false);
-	var perfilAdminLocalGateway = ((perfil & 256) ? true : false);
-	var perfilHistoricos 		= ((perfil & 512) ? true : false);
-	var perfilBackup 			= ((perfil & 1024) ? true : false);
+	var perfilCargaConfiguraciones = ((usuario.perfil & 32768)?true:false);
 	
-	if(perfilAdministracion)
+	if(perfilAdministracion || perfilCargaConfiguraciones)
 		return true;
 	else
 		return false;
