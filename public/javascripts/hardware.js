@@ -1287,7 +1287,25 @@ function AddResource(slaveId, col, fila, f){
 	}
 }
 
-function UpdateResource(slaveId, col, fila, loadIndex, totalIndex, f) {
+function UpdateResource(slaveId, col, fila, f) {
+	if($('#SResourceType option:selected').val() == 1) { //Recurso Radio
+		
+	}
+	if($('#SResourceType option:selected').val() == 2) { //Recurso Telefonía
+		if( $('#TbRemoteUri')[0].value == null  || $('#TbRemoteUri')[0].value == '' ) {
+			alertify.confirm('Ulises G 5000 R', "El campo URI remota tiene que tener un valor",
+				function(){
+					GotoResource(fila, col, true)
+				},
+				function(){ alertify.error('Cancelado');}
+			);
+		}
+		else
+			UpdateResourceReally(slaveId, col, fila, f);
+	}
+}
+
+/*function UpdateResource(slaveId, col, fila, loadIndex, totalIndex, f) {
 	if ($('#LbTypeRadio option:selected').val() == 0 && ( ($('#UriRxA')[0].value == '')
 		|| ($('#UriRxA')[0].value == null) ) && ( ($('#UriTxA')[0].value == '')
 		|| ($('#UriTxA')[0].value == null) ) ) {
@@ -1300,16 +1318,16 @@ function UpdateResource(slaveId, col, fila, loadIndex, totalIndex, f) {
 	}
 	else
 		UpdateResourceReally(slaveId, col, fila, loadIndex, totalIndex, f);
-}
+}*/
 
-function UpdateResourceReally(slaveId, col, fila, loadIndex, totalIndex, f){
+function UpdateResourceReally(slaveId, col, fila, f){
 	
 	var idSlave = slaveId; // $('#SlaveId').val();
-	var newIndex=0;
+	//var newIndex=0;
 	//$('#DivHardware').animate({width: '712px'})
 	//$('#BigSlavesZone').animate({width: '505px'});
 	
-	if ($('#SResourceType option:selected').val() == 1) { //Radio
+	/*if ($('#SResourceType option:selected').val() == 1) { //Radio
 		if ( ($('#LbTypeRadio option:selected').val()==2) || ($('#LbTypeRadio option:selected').val()==3) )
 			newIndex=8;
 		else
@@ -1318,7 +1336,7 @@ function UpdateResourceReally(slaveId, col, fila, loadIndex, totalIndex, f){
 	else
 		newIndex=1;
 	
-	var newTotal = parseInt(totalIndex) + (newIndex - parseInt(loadIndex));
+	var newTotal = parseInt(totalIndex) + (newIndex - parseInt(loadIndex));*/
 	
 	if (($('#BodyRedan').data('perfil') & 1) != 1){
 		if ($('#TbNameResource').val().length > 0){
@@ -1746,8 +1764,8 @@ function GetAtsRange(rsc){
 }
 
 function ShowRangeAts(data){
-	var indexOrigen = 1;
-	var indexDestino = 1;
+	//var indexOrigen = 1;
+	//var indexDestino = 1;
 	var cuantos = $('#rangeAtsOrigin tr').length;
 	var i=0;
 	for (i=2;i<cuantos;i++)

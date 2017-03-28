@@ -1482,7 +1482,7 @@ function UpdateHardware(f){
 }
 
 function UpdateAssignedSlaves(data){
-	var loadIndex = 0;//Indica el índice de carga de la pasarela
+	//var loadIndex = 0;//Indica el índice de carga de la pasarela
 	var idCgw = $('#DivGateways').data('idCgw');
 	// Se utiliza en el click de cambio de recurso entre pasarelas
 	$('#DivGateways').data('noSlaves',true);
@@ -1518,7 +1518,7 @@ function UpdateAssignedSlaves(data){
 							success: function(data){
 										//ShowResourcesFromSlave(value.idSLAVES,value.rank, data, function(){if ( i>=data.hardware.length && f != null) f()});
 										//Este es el que lee constantemente
-										loadIndex += ShowResourcesFromSlave(value.idSLAVES,value.rank, data, false, function(){
+										ShowResourcesFromSlave(value.idSLAVES,value.rank, data, false, function(){
 											for (var i = 0; i < 4; i++) {
 												for (var j = 0; j < 4; j++) {
 													if ($('.Res'+i+j).data('updated') == false){
@@ -1527,9 +1527,9 @@ function UpdateAssignedSlaves(data){
 																				.data('idResource',null)
 																				.attr('draggable',false)
 																				.attr('ondragstart',"");
-														if(loadIndex>=totalRecursos)
-															totalRecursos = loadIndex;
-														$('.Res' + i + j).attr('onclick',"GotoResource('" + i + "','" + j + "',false," + loadIndex + "," + totalRecursos + ")");													}
+														//if(loadIndex>=totalRecursos)
+														//	totalRecursos = loadIndex;
+														$('.Res' + i + j).attr('onclick',"GotoResource('" + i + "','" + j + "',false" + ")");													}
 												}
 											}
 										});
@@ -1674,10 +1674,10 @@ function ShowResourcesFromSlave(idSlave,slave, data, isFirstLoad, f){
 		
 	
 	//Esto no termina de funcionar bien, ya que aún permite la edición aunque salga el mensaje
-	var loadIndex = 0;
+	//var loadIndex = 0;
 	if (data.hardware != null && data.hardware.length > 0){
 		$.each(data.hardware, function(rowIndex, r) {
-			if(data.hardware[0].tipo === 0)
+			/*if(data.hardware[0].tipo === 0)
 				loadIndex++;
 			else
 			{
@@ -1685,7 +1685,7 @@ function ShowResourcesFromSlave(idSlave,slave, data, isFirstLoad, f){
 					loadIndex = loadIndex + 8;
 				else
 					loadIndex = loadIndex + 2;
-			}
+			}*/
 			
 			var fila = r.P_rank;
 			var col = slave;
@@ -1700,7 +1700,7 @@ function ShowResourcesFromSlave(idSlave,slave, data, isFirstLoad, f){
 									.data('pos',r.POS_idPOS)
 									.attr('draggable',true)
 									.attr('ondragstart',"dragResource(event," + r.POS_idPOS + "," + fila + "," + idSlave + ")")
-									.attr('onclick',"GotoResource('" + fila + "','" + col + "',true," + loadIndex + "," + totalRecursos +")");
+									.attr('onclick',"GotoResource('" + fila + "','" + col + "',true" + ")");
 									//.attr('onclick',"UpdateResource('" + idSlave + "','" + fila + "')");
 				}
 				else{
@@ -1722,7 +1722,6 @@ function ShowResourcesFromSlave(idSlave,slave, data, isFirstLoad, f){
 	
 	if (f != null)
 		f();
-	return loadIndex
 }
 
 function GotoSlave(idSLAVE){
