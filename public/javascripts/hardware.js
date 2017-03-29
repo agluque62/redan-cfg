@@ -1293,10 +1293,8 @@ function UpdateResource(slaveId, col, fila, f) {
 	}
 	if($('#SResourceType option:selected').val() == 2) { //Recurso Telefonía
 		if( $('#TbRemoteUri')[0].value == null  || $('#TbRemoteUri')[0].value == '' ) {
-			alertify.confirm('Ulises G 5000 R', "El campo URI remota tiene que tener un valor",
-				function(){
-					GotoResource(fila, col, true);
-				},
+			alertify.alert('Ulises G 5000 R', "Para un recurso telefónico, el campo URI remota tiene " +
+				"que tener un valor correcto.",
 				function(){
 					GotoResource(fila, col, true);
 				}
