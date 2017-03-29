@@ -1295,9 +1295,11 @@ function UpdateResource(slaveId, col, fila, f) {
 		if( $('#TbRemoteUri')[0].value == null  || $('#TbRemoteUri')[0].value == '' ) {
 			alertify.confirm('Ulises G 5000 R', "El campo URI remota tiene que tener un valor",
 				function(){
-					GotoResource(fila, col, true)
+					GotoResource(fila, col, true);
 				},
-				function(){ alertify.error('Cancelado');}
+				function(){
+					GotoResource(fila, col, true);
+				}
 			);
 		}
 		else
