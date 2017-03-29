@@ -1377,12 +1377,12 @@ function UpdateResourceReally(slaveId, col, fila, f){
 				}),
 				success: function(data){
 					if (data.error === null) {
-						if (originalResourceType != $('#SResourceType option:selected').val()){
+						//if (originalResourceType != $('#SResourceType option:selected').val()){
 							if ($('#SResourceType option:selected').val() == 1)
 								AddRadioParameters();
 							else
 								AddPhoneParameters();
-						}
+						//}
 						
 						// Si existe f, se añade la gateway a la lista para actualizar su configuración con 'Aplicar cambios'
 						if (f != null)
