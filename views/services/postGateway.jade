@@ -51,6 +51,7 @@ script.
 					$('#AddFormGateway').hide();
 					$('#ServicesFormGateway').hide();
 					$('#ResourcesFormGateway').hide();
+					loadingContent();
 					break;
 				case "ResourcesFormGateway":
 					tabs=document.getElementById('ListMenuGateways').getElementsByTagName("a");
@@ -103,6 +104,17 @@ script.
 				else
 					tabs[i].className="";
 			}
+		}
+
+		function loadingContent() {
+			$('#loader').show();
+			$('#loading').show();
+			$('#dimScreen').show();
+			setTimeout(function(){
+				$('#loader').hide();
+				$('#loading').hide();
+				$('#dimScreen').hide();
+			}, 2500);
 		}
 
 		function ClickDualCPU(element){
@@ -378,3 +390,7 @@ div(id="FormGateway", style="display: none; width: 350px")
 								td.New
 									a.ButtonNucleo(id="NewGateway", onclick='GetGateway()', style="color:#bf2a36; width: 80px" tkey='New')
 				td(style='vertical-align:top')
+
+div(id="loader" class="hide")
+div(id="dimScreen" class="hide")
+div(id="loading" class="hide") Cargando contenido...
