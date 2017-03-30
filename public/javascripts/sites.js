@@ -376,8 +376,8 @@ function ShowHardwareGateway(id,name){
 				})
 		})
 	})
-
-
+	
+	
 	$('#IdSite').data('gatewayName',name)
 	$('#IdSite').data('gatewayId',id)
 

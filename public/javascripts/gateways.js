@@ -708,7 +708,7 @@ var GetGateway = function (gtw,lastUpdate,f){
 		$('#nameGw').val('');
 		$('#ipv').val('');
 		$('#ips').val('');
-		$('#dual').prop('checked', false);
+		$('#dual').prop('checked', true);
 		// CPU-0
 		$('#lan11').hide();
 		$('#lan21').hide();
@@ -724,7 +724,7 @@ var GetGateway = function (gtw,lastUpdate,f){
 		$('#msb1').val('');
 		// CPU-1
 		//$('#lan12').hide();
-		$('#liCpu2').hide();
+		$('#liCpu2').show();
 		$('#lan12').hide();
 		$('#lan22').hide();
 		$('#nic2').show();
@@ -737,6 +737,11 @@ var GetGateway = function (gtw,lastUpdate,f){
 		$('#ipg2').val('');
 		$('#ipb2').val('');
 		$('#msb2').val('');
+		
+		var title = $('#TitleH3').text().split(" ");
+		var aux = title[1].replace(".	Emplazamientos:", "-");
+		var site = '<option value="">'+aux+title[2].replace(".	Pasarelas:", "")+'</option>';
+		$('#ListSites').html(site);
 	}
 };
 
