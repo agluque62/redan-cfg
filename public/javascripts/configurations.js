@@ -159,6 +159,9 @@ var ShowCfg = function(cfg){
 						});
 						var idCFGCopy='';
 		 				if (data != 'Configuration not found.'){
+							$('#CancelGtwButton').click(function() {
+								ShowSite(data.result.nameSite, data.result.idEMPLAZAMIENTO);
+							});
 							$.each(data.result, function(index, value){
 								var item = $('<li data-texto="' + value.idEMPLAZAMIENTO + '"  >' + 
 												'<a draggable="false" ondragstart="dragGatewayToSite(event)" ondrop="dropGatewayToSite(event)" ondragover="getOverDropC(event)" style="display:block; color:#b70028" onclick="CheckingAnyChange(\'GeneralContent\', function(){ShowSite(\'' + value.nameSite + '\',\'' + value.idEMPLAZAMIENTO + '\')})"' + '>' + value.nameSite + '</a>' +
