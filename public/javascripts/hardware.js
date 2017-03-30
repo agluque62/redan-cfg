@@ -1290,7 +1290,29 @@ function AddResource(slaveId, col, fila, f){
 function UpdateResource(slaveId, col, fila, f) {
 	loadingContent();
 	if($('#SResourceType option:selected').val() == 1) { //Recurso Radio
-		
+		if( $('#LbTypeRadio option:selected').val() == 0 ) {
+			if( ($('#UriTxA')[0].value == null) || ($('#UriTxA')[0].value == '') &&
+				($('#UriRxA')[0].value == null) || ($('#UriRxA')[0].value == '') ) {
+				alertify.alert('Ulises G 5000 R', "Para un recurso radio simple se debe añadir un colateral y rellenar " +
+					"los campos URI Tx y URI Rx con un valor correcto.",
+					function(){
+						GotoResource(fila, col, true);
+					}
+				);
+			}
+			else
+				UpdateResourceReally(slaveId, col, fila, f);
+			
+		}
+		else if( $('#LbTypeRadio option:selected').val() == 1 ) {
+			
+		}
+		else if( $('#LbTypeRadio option:selected').val() == 2 ) {
+			
+		}
+		else if( $('#LbTypeRadio option:selected').val() == 3 ) {
+			
+		}
 	}
 	if($('#SResourceType option:selected').val() == 2) { //Recurso Telefonía
 		if( $('#TbRemoteUri')[0].value == null  || $('#TbRemoteUri')[0].value == '' ) {
@@ -1614,9 +1636,14 @@ function ShowRadioParamsOfResource(data){
 				case 0: // Local simple
 					// Ocultar TX-B y RX-B para locales simple
 					$('#TxBRow').attr('style','display:table-column');	
-					$('#RxBRow').attr('style','display:table-column');	
+					$('#RxBRow').attr('style','display:table-column');
 					// Ocultar boton añadir emplazamiento
-					$('#ListMenuSites li:first-child').find("a").text('Colateral');
+					if( ($('#UriTxA')[0].value == null) || ($('#UriTxA')[0].value == '') &&
+						($('#UriRxA')[0].value == null) || ($('#UriRxA')[0].value == '') )
+						$('#ListMenuSites li:first-child').find("a").text('+');
+					else
+						('#ListMenuSites li:first-child').find("a").text('Colateral');
+					
 					break;
 				case 1:
 					$('#ListMenuSites li:first-child').find("a").text('Colateral');
