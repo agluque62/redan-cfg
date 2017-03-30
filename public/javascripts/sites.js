@@ -510,6 +510,7 @@ function GotoResource(row,col,update){
 }
 
 function Close(){
+	loadingContent();
 	var t = $('#BigSlavesZone').data('t');
 	var l = $('#BigSlavesZone').data('l');
 	$('#BigSlavesZone').animate({left: l, top: t, width: '0px', height: '0px'},500,function(){

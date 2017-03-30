@@ -1288,6 +1288,7 @@ function AddResource(slaveId, col, fila, f){
 }
 
 function UpdateResource(slaveId, col, fila, f) {
+	loadingContent();
 	if($('#SResourceType option:selected').val() == 1) { //Recurso Radio
 		
 	}
