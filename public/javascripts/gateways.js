@@ -596,7 +596,10 @@ var GetGateway = function (gtw,lastUpdate,f){
 	$('#DivGateways').animate({width: '1015px'});
 	$('#GeneralContent').show();
 	$('#TableToolsGateway').show();
-
+	
+	$('#lips').show();
+	$('#ips').show();
+	
 	if (gtw != null){
 		var urlString = '/gateways/'+gtw;
 		$.ajax({type: 'GET', 
@@ -708,6 +711,8 @@ var GetGateway = function (gtw,lastUpdate,f){
 		$('#nameGw').val('');
 		$('#ipv').val('');
 		$('#ips').val('');
+		$('#lips').hide();
+		$('#ips').hide();
 		$('#dual').prop('checked', true);
 		// CPU-0
 		$('#lan11').hide();
