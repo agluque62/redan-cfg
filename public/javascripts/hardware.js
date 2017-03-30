@@ -1305,7 +1305,19 @@ function UpdateResource(slaveId, col, fila, f) {
 			
 		}
 		else if( $('#LbTypeRadio option:selected').val() == 1 ) { //Radio Local P/R 4 campos de URI
-			
+			if( (($('#UriTxA')[0].value == null) || ($('#UriTxA')[0].value == '') &&
+				($('#UriRxA')[0].value == null) || ($('#UriRxA')[0].value == '')) ||
+				(($('#UriTxB')[0].value == null) || ($('#UriTxB')[0].value == '') &&
+				($('#UriRxB')[0].value == null) || ($('#UriRxB')[0].value == '')) ) {
+				alertify.alert('Ulises G 5000 R', "Para un recurso radio simple se debe añadir un colateral y rellenar " +
+					"los campos URI Tx y URI Rx con un valor correcto.",
+					function(){
+						GotoResource(fila, col, true);
+					}
+				);
+			}
+			else
+				UpdateResourceReally(slaveId, col, fila, f);
 		}
 		else if( $('#LbTypeRadio option:selected').val() == 2 ) {
 			
