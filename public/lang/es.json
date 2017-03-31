@@ -274,6 +274,7 @@
 	"ErrorGatewayAlreadyAssigned": "Pasarela ya asignada a la configuración",
 	"ErrorGatewayHaveNoIP"	:	"La pasarela debe tener una dirección IP.",
 	"ErrorGatewayHaveNoName":	"La pasarela debe tener un nombre.",
+	"ErrorGeneratingService":	"Error creando el servicio.",
 	"ConfirmDeleteLog"		: "¿Eliminar definitivamente el archivo log?",
 	"Backup"				: "Backup base de datos",
 	"BackupService"			: "Servicio de Backup",

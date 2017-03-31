@@ -274,6 +274,7 @@
 	"ErrorGatewayAlreadyAssigned": "Gateway already assigned to the configuration",
 	"ErrorGatewayHaveNoIP"	:	"The gateway has no IP address.",
 	"ErrorGatewayHaveNoName":	"The gateway has no name.",
+	"ErrorGeneratingService":	"The service cannot be created.",
 	"ConfirmDeleteLog"		: "Log file will be removed permanently?",
 	"Backup"				: "Data base backup",
 	"BackupService"			: "Backup service",

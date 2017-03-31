@@ -114,67 +114,48 @@ function AddServices(services,reset){
 	}
 }
 
-function EditNewService(button){
-	if (!$('#NewServiceEdit').is(':visible')){
-		$(button).text('Add');
-		$('#CopyButton').hide();
-		$('#RemoveButton').hide();
-		$('#NewServiceEdit').show();
+function EditNewService(cgwName){
+	
+	if ($('#PuertoLocalSIP').val().length==0){
+		alertify.error("Debe introducir el puerto SIP");
+		return false;
 	}
-	else{
-		if ($('#NewServiceEdit').val().length > 0){
-
-			if ($('#PuertoLocalSIP').val().length==0){
-				alertify.error("Debe introducir el puerto SIP");			
-				return;
-			}
-			
-			if ( $('#CbRUpdatePeriod').prop('checked') && $('#TbUpdatePeriod').val().length==0){
-				alertify.error("Debe introducir el periodo de supervisión");			
-				return;
-			}
-
-			if ($("#NtpServersList option:selected").text().length==0){
-				alertify.error("Debe seleccionar un servidor NTP");
-				return;
-			}
-
-			if ($('#wport').val().length==0){
-				alertify.error("Debe introducir el puerto de servicio WEB");			
-				return;
-			}
-			
-			if ($('#stime').val().length==0){
-				alertify.error("Debe introducir el tiempo de seseión WEB");			
-				return;
-			}
-
-			if ($('#snmpp').val().length==0){
-				alertify.error("Debe introducir el puerto SNMP");			
-				return;
-			}
-
-			if ($('#TrapsList').val()==null){
-				alertify.error("Debe introducir algún trap");			
-				return;
-			}
-
-			// Crea servicio vacío sin asignar a ninguna pasarela
-			PostService($('#NewServiceEdit').val());
-			alertify.success('Servicio ' + $('#NewServiceEdit').val() + ' creado.');
-
-			$(button).text('Añadir servicio');
-			//$('#NewServiceEdit').hide();
-			$('#CopyButton').show();
-			$('#RemoveButton').show();
-		}
-		else
-		{
-			translateWord('ErrorIdServicio',function(result){
-				alertify.error(result);			
-			});			
-		}		
+	
+	if ( $('#CbRUpdatePeriod').prop('checked') && $('#TbUpdatePeriod').val().length==0){
+		alertify.error("Debe introducir el periodo de supervisión");
+		return false;
 	}
+	
+	if ($("#NtpServersList option:selected").text().length==0){
+		alertify.error("Debe seleccionar un servidor NTP");
+		return false;
+	}
+	
+	if ($('#wport').val().length==0){
+		alertify.error("Debe introducir el puerto de servicio WEB");
+		return false;
+	}
+	
+	if ($('#stime').val().length==0){
+		alertify.error("Debe introducir el tiempo de seseión WEB");
+		return false;
+	}
+	
+	if ($('#snmpp').val().length==0){
+		alertify.error("Debe introducir el puerto SNMP");
+		return false;
+	}
+	
+	if ($('#TrapsList').val()==null){
+		alertify.error("Debe introducir algún trap");
+		return false;
+	}
+	
+	// Crea servicio vacío sin asignar a ninguna pasarela
+	PostService(cgwName);
+	alertify.success('Servicio creado para la pasarela '+ cgwName);
+	
+	return true;
 }
 
 function CloneService(button){

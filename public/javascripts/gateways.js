@@ -137,7 +137,8 @@ var PostGateway = function (f){
 	var mensaje='';
 	var mensajeNoName='';
 	var mensajeNoIp='';
-
+	var mensajeServiceError='';
+	
 	// RECORDING SERVICE
 	grab={
 		"rtsp_port": $('#rtsp_port').val(),
@@ -180,6 +181,9 @@ var PostGateway = function (f){
 	});
 	translateWord('ErrorGatewayHaveNoIP',function(result){
 		mensajeNoIp = result;
+	});
+	translateWord('ErrorGeneratingService',function(result){
+		mensajeServiceError = result;
 	});
 
 	translateWord('Update',function(result){
@@ -364,24 +368,32 @@ var PostGateway = function (f){
 		}
 		else{
 			// Antes de dar de alta una pasarela es necesario que esta tenga asignado un servicio
-			if ($("#ListServices option:selected").val() == ""){
+			/*if ($("#ListServices option:selected").val() == ""){
 				alertify.error(mensaje);
 				return;
-			}
+			}*/
+			//TODO ya no haria falta
+			
 			if ($('#nameGw').val() == ''){
 				alertify.error(mensajeNoName);
 				return;
 			}
+			//TODO metemos aquí por ahora lo del servicio.
+			if(!EditNewService($('#nameGw').val())) {
+				alertify.error(mensajeServiceError);
+				return;
+			}
+			
 			if ($('#ipv').val() == ''){
 				alertify.error(mensajeNoIp);
 				return;
 			}
-			if ($('#ips').val() == ''){
+			/*if ($('#ips').val() == ''){
 				translateWord('ErrorIPServerConf',function(result){
 						alertify.error(result);
 				});
 				return;
-			}
+			}*/
 		
 			//Comprobar que se han introducido los datos de las CPU
 			//CPU 0
