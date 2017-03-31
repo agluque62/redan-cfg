@@ -1303,7 +1303,7 @@ function UpdateResource(slaveId, col, fila, f) {
 			else
 				UpdateResourceReally(slaveId, col, fila, f);
 			
-		}
+		}//TODO
 		else if( $('#LbTypeRadio option:selected').val() == 1 ) { //Radio Local P/R 4 campos de URI
 			if( (($('#UriTxA')[0].value == null) || ($('#UriTxA')[0].value == '') &&
 				($('#UriRxA')[0].value == null) || ($('#UriRxA')[0].value == '')) ||

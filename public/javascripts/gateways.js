@@ -599,6 +599,7 @@ var GetGateway = function (gtw,lastUpdate,f){
 	
 	$('#lips').show();
 	$('#ips').show();
+	$('#ExportGateway').show();
 	
 	if (gtw != null){
 		var urlString = '/gateways/'+gtw;
@@ -743,6 +744,7 @@ var GetGateway = function (gtw,lastUpdate,f){
 		$('#ipb2').val('');
 		$('#msb2').val('');
 		
+		$('#ExportGateway').hide();
 		var title = $('#TitleH3').text().split(" ");
 		var aux = title[1].replace(".	Emplazamientos:", "-");
 		var site = '<option value="">'+aux+title[2].replace(".	Pasarelas:", "")+'</option>';
