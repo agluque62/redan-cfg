@@ -164,7 +164,7 @@ function EditNewService(button){
 			alertify.success('Servicio ' + $('#NewServiceEdit').val() + ' creado.');
 
 			$(button).text('Añadir servicio');
-			$('#NewServiceEdit').hide();
+			//$('#NewServiceEdit').hide();
 			$('#CopyButton').show();
 			$('#RemoveButton').show();
 		}
