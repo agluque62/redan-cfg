@@ -170,7 +170,7 @@
 	"AddProxy"				: "Añadir proxy",
 	"ProxysList"			: "Proxys",
 	"SilenceCancelation"	: "Supresión de silencio",
-	"SIPSupervisionPeriod"	: "Periodo de supervisión",
+	"SIPSupervisionPeriod"	: "Supervisa sesión?",
 	"SIPSupervisionPeriodSg": "Periodo de supervisión (sg.)",
 	"SIPPort"				: "Puerto",
 	"Sincronization"		: "Sincronización",
