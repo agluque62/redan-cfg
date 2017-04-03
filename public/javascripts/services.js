@@ -1,5 +1,4 @@
 var CurrentService={};
-var idService='';
 /******************************************************************************************************/
 /****** Module: services.js												*******************************/
 /****** Description: Módulo de soporte a la gestion de servicios		*******************************/
