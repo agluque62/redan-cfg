@@ -66,7 +66,6 @@ function PostService(name){
 					var services=[];
 					services.push(data.service);
 					AddServices(services,false);
-					//
 				}
 			}
 		});

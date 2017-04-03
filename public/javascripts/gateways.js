@@ -501,8 +501,7 @@ var PostGateway = function (f){
 					"snmpp": 161,
 					"traps":traps
 				};
-
-				
+			
 				$.ajax({type: 'POST', 
 						dataType: 'json', 
 						contentType:'application/json',
@@ -518,7 +517,7 @@ var PostGateway = function (f){
 														"cpus": cpus
 													},
 													"servicios": { idSERVICIOS : $("#ListServices option:selected").val() == "" ? null : $("#ListServices option:selected").val(),
-																"name":  $('#nameGw').val() + '-SERVICE',
+																"name":  $('#name').val()+'-'+$('#nameGw').val() + '-SERVICE',
 																"sip": sip,
 																"web": web,
 																"snmp": snmp,
