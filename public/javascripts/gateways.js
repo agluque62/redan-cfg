@@ -431,8 +431,9 @@ var PostGateway = function (f){
 						return;
 					}	
 			}
+			var claveServicio=$('#name').val()+'-'+$('#nameGw').val();
 			//La última parte es crear el servicio.
-			if(!EditNewService($('#nameGw').val())) {
+			if(!EditNewService(claveServicio)) {
 				alertify.error(mensajeServiceError);
 				return;
 			}

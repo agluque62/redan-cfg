@@ -1,5 +1,5 @@
 var CurrentService={};
-
+var idService='';
 /******************************************************************************************************/
 /****** Module: services.js												*******************************/
 /****** Description: Módulo de soporte a la gestion de servicios		*******************************/
@@ -66,6 +66,7 @@ function PostService(name){
 					var services=[];
 					services.push(data.service);
 					AddServices(services,false);
+					//
 				}
 			}
 		});
