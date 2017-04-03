@@ -378,11 +378,6 @@ var PostGateway = function (f){
 				alertify.error(mensajeNoName);
 				return;
 			}
-			//TODO metemos aquí por ahora lo del servicio.
-			if(!EditNewService($('#nameGw').val())) {
-				alertify.error(mensajeServiceError);
-				return;
-			}
 			
 			if ($('#ipv').val() == ''){
 				alertify.error(mensajeNoIp);
@@ -436,7 +431,11 @@ var PostGateway = function (f){
 						return;
 					}	
 			}
-			
+			//La última parte es crear el servicio.
+			if(!EditNewService($('#nameGw').val())) {
+				alertify.error(mensajeServiceError);
+				return;
+			}
 				/*****************/
 				/*	POST Method  */
 				/*****************/
