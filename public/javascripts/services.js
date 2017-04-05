@@ -70,6 +70,31 @@ function PostService(name){
 		});
 }
 
+function PostNewService(name, callback){
+	var urlString = '/services/service';
+	$.ajax({type: 'POST',
+		url: urlString,
+		dataType: 'json',
+		contentType:'application/json',
+		data: JSON.stringify( {
+			"name": name,
+			"sip": null,
+			"web": null,
+			"snmp": null,
+			"grab": null,
+			"sincr": null
+		}),
+		success: function(data) {
+			if (data.error != 0){
+				var services=[];
+				services.push(data.service);
+				AddServices(services,false);
+				callback(data.service);
+			}
+		}
+	});
+}
+
 function CopyService(sourceService, targetService){
 	var urlString = '/services/service';
 	CurrentService.name = targetService;
@@ -113,48 +138,48 @@ function AddServices(services,reset){
 	}
 }
 
-function EditNewService(cgwName){
+function EditNewService(cgwName, callback){
 	
 	if ($('#PuertoLocalSIP').val().length==0){
 		alertify.error("Debe introducir el puerto SIP");
-		return false;
+		callback();
 	}
 	
 	if ( $('#CbRUpdatePeriod').prop('checked') && $('#TbUpdatePeriod').val().length==0){
 		alertify.error("Debe introducir el periodo de supervisión");
-		return false;
+		callback();
 	}
 	
 	if ($("#NtpServersList option:selected").text().length==0){
 		alertify.error("Debe seleccionar un servidor NTP");
-		return false;
+		callback();
 	}
 	
 	if ($('#wport').val().length==0){
 		alertify.error("Debe introducir el puerto de servicio WEB");
-		return false;
+		callback();
 	}
 	
 	if ($('#stime').val().length==0){
 		alertify.error("Debe introducir el tiempo de seseión WEB");
-		return false;
+		callback();
 	}
 	
 	if ($('#snmpp').val().length==0){
 		alertify.error("Debe introducir el puerto SNMP");
-		return false;
+		callback();
 	}
 	
 	if ($('#TrapsList').val()==null){
 		alertify.error("Debe introducir algún trap");
-		return false;
+		callback();
 	}
 	
 	// Crea servicio vacío sin asignar a ninguna pasarela
-	PostService(cgwName);
-	alertify.success('Servicio creado para la pasarela '+ cgwName);
-	
-	return true;
+	PostNewService(cgwName, function(data) {
+		alertify.success('Servicio creado para la pasarela '+ cgwName);
+		callback(data);
+	});
 }
 
 function CloneService(button){

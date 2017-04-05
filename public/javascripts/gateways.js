@@ -433,39 +433,20 @@ var PostGateway = function (f){
 			}
 			var claveServicio=$('#name').val()+'-'+$('#nameGw').val();
 			//La última parte es crear el servicio.
-			if(!EditNewService(claveServicio)) {
-				alertify.error(mensajeServiceError);
-				return;
-			}
-				/*****************/
-				/*	POST Method  */
-				/*****************/
-				if ($('#dual').prop('checked')){
-					cpus=[
-				// CPU-1
-						{ 	"num": 1,
-							"tlan": 1,	//$('#Lan1 option:selected').val(),
-							"ip0": $('#ip01').val(),
-							"ms0": $('#ms01').val(),
-							"ip1": $('#ip11').val(),
-							"ms1": $('#ms11').val(),
-							"ipb": $('#ipb1').val(),
-							"msb": $('#msb1').val(),
-							"ipg": $('#ipg1').val()},
-				// CPU-2
-						 { 	"num": 2,
-						 	"tlan": 1,	//$('#Lan2 option:selected').val(),
-							"ip0": $('#ip02').val(),
-							"ms0": $('#ms02').val(),
-							"ip1": $('#ip12').val(),
-							"ms1": $('#ms12').val(),
-							"ipb": $('#ipb2').val(),
-							"msb": $('#msb2').val(),
-							"ipg": $('#ipg2').val()}
-							];
+			var newService;
+			EditNewService(claveServicio, function(newService) {
+				if(!newService || newService == null) {
+					alertify.error(mensajeServiceError);
+					return;
 				}
-				else{
-					cpus = [{ 	"num": 1,
+				else {
+					/*****************/
+					/*	POST Method  */
+					/*****************/
+					if ($('#dual').prop('checked')){
+						cpus=[
+							// CPU-1
+							{ 	"num": 1,
 								"tlan": 1,	//$('#Lan1 option:selected').val(),
 								"ip0": $('#ip01').val(),
 								"ms0": $('#ms01').val(),
@@ -473,81 +454,106 @@ var PostGateway = function (f){
 								"ms1": $('#ms11').val(),
 								"ipb": $('#ipb1').val(),
 								"msb": $('#msb1').val(),
-								"ipg": $('#ipg1').val()}
-							];
-				}
-
-				// SERVICES
+								"ipg": $('#ipg1').val()},
+							// CPU-2
+							{ 	"num": 2,
+								"tlan": 1,	//$('#Lan2 option:selected').val(),
+								"ip0": $('#ip02').val(),
+								"ms0": $('#ms02').val(),
+								"ip1": $('#ip12').val(),
+								"ms1": $('#ms12').val(),
+								"ipb": $('#ipb2').val(),
+								"msb": $('#msb2').val(),
+								"ipg": $('#ipg2').val()}
+						];
+					}
+					else{
+						cpus = [{ 	"num": 1,
+							"tlan": 1,	//$('#Lan1 option:selected').val(),
+							"ip0": $('#ip01').val(),
+							"ms0": $('#ms01').val(),
+							"ip1": $('#ip11').val(),
+							"ms1": $('#ms11').val(),
+							"ipb": $('#ipb1').val(),
+							"msb": $('#msb1').val(),
+							"ipg": $('#ipg1').val()}
+						];
+					}
+					
+					// SERVICES
 					// SIP
-				sip = {"proxys":proxys,
+					sip = {"proxys":proxys,
 						"registrars":registrars,
 						"PuertoLocalSIP": 5060,
 						"KeepAlivePeriod": 200, //$('#kap').val(),
 						"KeepAliveMultiplier": 10, //$('#kam').val(),
 						"SupresionSilencio": false, //$('#SupresionSilencio').prop('checked'),
 						"PeriodoSupervisionSIP": $('#CbRUpdatePeriod').prop('checked') ? $('#TbUpdatePeriod').val() : '90'
-				};
+					};
 					// WEB
-				web = {"wport": 8080,
-					"stime": 0
-				};
-				snmp = {
-					"agcomm": "public",
-					"agcont": "NUCLEO-DF DT. MADRID. SPAIN",
-					"agloc": "NUCLEO-DF LABS",
-					"agname": "ULISESG5000i",
-					"agv2": 1,
-					"sport": 65000,
-					"snmpp": 161,
-					"traps":traps
-				};
-			
-				$.ajax({type: 'POST', 
-						dataType: 'json', 
+					web = {"wport": 8080,
+						"stime": 0
+					};
+					snmp = {
+						"agcomm": "public",
+						"agcont": "NUCLEO-DF DT. MADRID. SPAIN",
+						"agloc": "NUCLEO-DF LABS",
+						"agname": "ULISESG5000i",
+						"agv2": 1,
+						"sport": 65000,
+						"snmpp": 161,
+						"traps":traps
+					};
+					
+					$.ajax({type: 'POST',
+						dataType: 'json',
 						contentType:'application/json',
-						url: '/gateways/gtw', 
+						url: '/gateways/gtw',
 						data: JSON.stringify( {
-												"idConf" : $('#name').val(),
-												"general" : { 
-														"name": $('#nameGw').val(),
-														'emplazamiento': $('#IdSite').val(),	//$('#CBEmplazamiento option:selected').text(),
-														"ipv": $('#ipv').val(),
-														"ips": $('#ips').val(),
-														"dualidad": $('#dual').prop('checked'),
-														"cpus": cpus
-													},
-													"servicios": { idSERVICIOS : $("#ListServices option:selected").val() == "" ? null : $("#ListServices option:selected").val(),
-																"name":  $('#name').val()+'-'+$('#nameGw').val() + '-SERVICE',
-																"sip": sip,
-																"web": web,
-																"snmp": snmp,
-																"grab": grab,
-																"sincr": sincr
-																}
-											}),
-					success: function(data){
-								if (data.error === null) {
-									$('#DivGateways').data('idCgw',data.data.idCGW);
-									// Si existe f, se añade la gateway a la lista para actualizar su configuración con 'Aplicar cambios'
-									if (f != null)
-										f(data.data.idCGW);
-
-									GenerateHistoricEvent(ID_HW,ADD_GATEWAY,data.data.name,$('#loggedUser').text());
-									alertify.success('Gateway \"' + data.data.name + '\" añadida.');
-									ShowSite($('#IdSite').val(),$('#IdSite').data('idSite'));
-									GetGateways(null,function(){
-										ShowHardwareGateway(data.data.idCGW,data.data.name);
-									});
-								}
-								else if (data.error == "ER_DUP_ENTRY") {
-									alertify.error('Gateway \"' + $('#nameGw').val() + '\" o dirección IP ya existe');
-								}
+							"idConf" : $('#name').val(),
+							"general" : {
+								"name": $('#nameGw').val(),
+								'emplazamiento': $('#IdSite').val(),	//$('#CBEmplazamiento option:selected').text(),
+								"ipv": $('#ipv').val(),
+								"ips": $('#ips').val(),
+								"dualidad": $('#dual').prop('checked'),
+								"cpus": cpus
 							},
-					error: function(data){
-									alertify.error('Gateway \"' + $('#nameGw').val() + '\" no existe');
+							"servicios": { idSERVICIOS : newService.idSERVICIOS,
+								"name":  newService.name,
+								"sip": sip,
+								"web": web,
+								"snmp": snmp,
+								"grab": grab,
+								"sincr": sincr
 							}
+						}),
+						success: function(data){
+							if (data.error === null) {
+								$('#DivGateways').data('idCgw',data.data.idCGW);
+								// Si existe f, se añade la gateway a la lista para actualizar su configuración con 'Aplicar cambios'
+								if (f != null)
+									f(data.data.idCGW);
+								
+								GenerateHistoricEvent(ID_HW,ADD_GATEWAY,data.data.name,$('#loggedUser').text());
+								alertify.success('Gateway \"' + data.data.name + '\" añadida.');
+								ShowSite($('#IdSite').val(),$('#IdSite').data('idSite'));
+								GetGateways(null,function(){
+									ShowHardwareGateway(data.data.idCGW,data.data.name);
+								});
+							}
+							else if (data.error == "ER_DUP_ENTRY") {
+								alertify.error('Gateway \"' + $('#nameGw').val() + '\" o dirección IP ya existe');
+							}
+						},
+						error: function(data){
+							alertify.error('Gateway \"' + $('#nameGw').val() + '\" no existe');
+						}
 					});
-			}
+				}
+			});
+				
+		}
 		
 	});
 
