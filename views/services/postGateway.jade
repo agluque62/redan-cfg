@@ -311,7 +311,7 @@ script.
 		}
 
 		function ValidateAtsNumber(element,label){
-			var regx_atsval = /^[0-9]{6}$/;
+			var regx_atsval = /^[2-3][0-9]{5}$/;
 
 			var matchVal = $(element).val().match(regx_atsval);
 			if ($(element).val()!='' && matchVal == null){
