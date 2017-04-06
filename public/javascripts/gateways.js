@@ -614,8 +614,8 @@ var GetGateway = function (gtw,lastUpdate,f){
 	$('#GeneralContent').show();
 	$('#TableToolsGateway').show();
 	
-	$('#lips').show();
-	$('#ips').show();
+	$('#lips').hide();
+	$('#ips').hide();
 	$('#ExportGateway').show();
 	
 	if (gtw != null){
@@ -839,22 +839,17 @@ var AddGatewaysFromActiveToListOfGateways = function(idSite){
 function UpdateGateway(f){
 	var serviceId = $("#ListServices option:selected").val();
 	if (serviceId != null){
-		alertify.confirm('Ulises G 5000 R',"Las modificaciones realizadas sobre el servicio se aplicarán a todas las pasarelas con ese servicio asignado. ¿Desea continuar?",
-			function(){ 
-			$.ajax({type: 'PUT', 
-						//url: '/gateways/' + $('#Component').text() + '/services/' + serviceId,
-						url: '/gateways/' + $('#DivGateways').data('idCgw') + '/services/' + serviceId,
-					success: function(data){
-								//GetServices(false);
-								PostGateway(f);
-							},
-					error: function(data){
-								alertify.error('Error asignando servicio a gateway.');
-							}
+		$.ajax({type: 'PUT',
+					//url: '/gateways/' + $('#Component').text() + '/services/' + serviceId,
+					url: '/gateways/' + $('#DivGateways').data('idCgw') + '/services/' + serviceId,
+				success: function(data){
+							//GetServices(false);
+							PostGateway(f);
+						},
+				error: function(data){
+							alertify.error('Error asignando servicio a gateway.');
+						}
 			});
-			},
-		 	function(){ alertify.error('Cancelado');}
-		);
 	}
 	else
 		PostGateway(f);
