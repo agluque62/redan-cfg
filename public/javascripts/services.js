@@ -143,36 +143,43 @@ function EditNewService(cgwName, callback){
 	if ($('#PuertoLocalSIP').val().length==0){
 		alertify.error("Debe introducir el puerto SIP");
 		callback();
+		return;
 	}
 	
 	if ( $('#CbRUpdatePeriod').prop('checked') && $('#TbUpdatePeriod').val().length==0){
 		alertify.error("Debe introducir el periodo de supervisión");
 		callback();
+		return;
 	}
 	
 	if ($("#NtpServersList option:selected").text().length==0){
 		alertify.error("Debe seleccionar un servidor NTP");
 		callback();
+		return;
 	}
 	
 	if ($('#wport').val().length==0){
 		alertify.error("Debe introducir el puerto de servicio WEB");
 		callback();
+		return;
 	}
 	
 	if ($('#stime').val().length==0){
 		alertify.error("Debe introducir el tiempo de seseión WEB");
 		callback();
+		return;
 	}
 	
 	if ($('#snmpp').val().length==0){
 		alertify.error("Debe introducir el puerto SNMP");
 		callback();
+		return;
 	}
 	
-	if ($('#TrapsList').val()==null){
+	if ($('#TrapsList option:eq(0)').val()==null){
 		alertify.error("Debe introducir algún trap");
 		callback();
+		return;
 	}
 	
 	// Crea servicio vacío sin asignar a ninguna pasarela
