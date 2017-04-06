@@ -204,12 +204,12 @@ var PostGateway = function (f){
 				return;
 			}
 
-			if ($('#ips').val() == ''){
+			/*if ($('#ips').val() == ''){
 				translateWord('ErrorIPServerConf',function(result){
 					alertify.error(result);
 				});
 				return;
-			}
+			}*/
 
 			//CPU 0
 			if ($('#ipb1').val() == ''){
