@@ -212,7 +212,11 @@ function UpdateRank(index,origen){
 
 		idRango = $('#rangeAtsDestination tr:nth-child(' + (index) +')').data('idrango');
 	}
-
+	
+	var regx_atsval = /^[2-3][0-9]{5}$/;
+	var matchValinicial = inicial.match(regx_atsval);
+	var matchValfinal = final.match(regx_atsval);
+	
 	if (inicial != '' && final==''){
 		final=inicial;
 	}
@@ -222,7 +226,8 @@ function UpdateRank(index,origen){
 	}
 
 	if ((inicial != '' && final!='') && 
-		(inicial <= final)){
+		(inicial <= final) &&
+		((matchValinicial!=null) || (matchValfinal!=null)) ) {
 		$.ajax({type: 'PUT', 
 				dataType: 'json', 
 				contentType:'application/json',
@@ -243,6 +248,15 @@ function UpdateRank(index,origen){
 		});
 	}
 	else{
+		if (origen) {
+			$('#rangeAtsOrigin tr:nth-child(' + (index) + ') td:nth-child(1) input').val($('#rangeAtsOrigin tr:nth-child(' + (index) + ') td:nth-child(1) input')[0].defaultValue);
+			$('#rangeAtsOrigin tr:nth-child(' + (index) + ') td:nth-child(2) input').val($('#rangeAtsOrigin tr:nth-child(' + (index) + ') td:nth-child(2) input')[0].defaultValue);
+		}
+		else {
+			$('#rangeAtsDestination tr:nth-child(' + (index) + ') td:nth-child(1) input').val($('#rangeAtsDestination tr:nth-child(' + (index) + ') td:nth-child(1) input')[0].defaultValue);
+			$('#rangeAtsDestination tr:nth-child(' + (index) + ') td:nth-child(2) input').val($('#rangeAtsDestination tr:nth-child(' + (index) + ') td:nth-child(2) input')[0].defaultValue);
+		}
+			
 		alertify.error('Rango ATS incorrecto.');
 	}
 }
