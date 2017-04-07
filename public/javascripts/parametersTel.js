@@ -323,6 +323,14 @@ function GetTelephonicResources(){
 	});*/	
 }
 
+function showATSParams() {
+	var cuantos = $('#ATSOriginList tr').length;
+	
+	var fila = "<tr><td> AAAA </td></tr>";
+	$('#ATSOriginList tr').after(fila);
+	var otra = $('#ATSOriginList tr:nth-child(0)').children().html();
+}
+
 function SelectTelSite(cfgName){
 	$.ajax({type: 'GET', 
 		url: '/resources/tel/' + cfgName + '/null/null',
