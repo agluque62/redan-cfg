@@ -1804,8 +1804,9 @@ function GetAtsRange(rsc){
 }
 
 function ShowRangeAts(data){
-	//var indexOrigen = 1;
-	//var indexDestino = 1;
+	var indexOrigen = 1;
+	var indexDestino = 1;
+
 	var cuantos = $('#rangeAtsOrigin tr').length;
 	var i=0;
 	for (i=2;i<cuantos;i++)
