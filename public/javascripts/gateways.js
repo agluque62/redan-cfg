@@ -1212,17 +1212,24 @@ function RemoveRegistrar(){
 }
 
 function AddTrap(){
-	if ($('#TrapIP').val() != '' && $('#TrapPort').val() != ''){
-		$('#TrapsList').append($('<option>',{
-			text: $('#TrapVersion').val() + ',' + $('#TrapIP').val() + '/' + $('#TrapPort').val()
-		}));
-		$('#TrapIP').val('');
-		$('#TrapPort').val('');
-	}
-	else{
-		translateWord('ErrorAddingTrap',function(result){
+	if($('#TrapsList').length == 4 || $('#TrapsList')[0].childNodes.length == 4 ) {
+		translateWord('ErrorNumberTrap',function(result){
 			alertify.error(result);
 		});
+	}
+	else {
+		if ($('#TrapIP').val() != '' && $('#TrapPort').val() != ''){
+			$('#TrapsList').append($('<option>',{
+				text: $('#TrapVersion').val() + ',' + $('#TrapIP').val() + '/' + $('#TrapPort').val()
+			}));
+			$('#TrapIP').val('');
+			$('#TrapPort').val('');
+		}
+		else{
+			translateWord('ErrorAddingTrap',function(result){
+				alertify.error(result);
+			});
+		}
 	}
 }
 

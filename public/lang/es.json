@@ -292,6 +292,7 @@
 	"ConfirmMakeBackup"		: "¿Hacer backup de la base de datos ahora?",
 	"AudioInputSignalForced": "Forzar Señal de Entrada Audio",
 	"ErrorAddingTrap"		: "Es obligario introducir la dirección IP y el puerto",
+	"ErrorNumberTrap"		: "Solo se pueden introducir un máximo de 4 traps",
 	"Estricto"				: "Estricto",
 	"Normal"				: "Normal",
 	"Emergencia"			: "Emergencia",

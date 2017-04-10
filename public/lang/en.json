@@ -292,6 +292,7 @@
 	"ConfirmMakeBackup"		: "Make backup of data base right now?",
 	"AudioInputSignalForced": "Forced audio input signal",
 	"ErrorAddingTrap"		: "You must insert a valid IP address and port",
+	"ErrorNumberTrap"		: "The maximun number of traps is 4",
 	"Estricto"				: "Strict",
 	"Normal"				: "Normal",
 	"Emergencia"			: "Emergency",
