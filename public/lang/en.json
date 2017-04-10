@@ -168,7 +168,7 @@
 	"RegistrarsList"		: "Registrars",
 	"RemoveProxy"			: "Remove proxy",
 	"AddProxy"				: "Add proxy",
-	"ProxysList"			: "Proxys",
+	"ProxysList"			: "Proxies",
 	"SilenceCancelation"	: "Cancelation of silence",
 	"SIPSupervisionPeriod"	: "Session supervision?",
 	"SIPSupervisionPeriodSg": "Supervision period (sc.)",
