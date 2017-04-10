@@ -14,7 +14,7 @@ var GetVersion = function(isFirstLoad) {
 			$("#IdNodeJSVersion").text(data.nodejsversion);
 			$("#IdMySQLVersion").text(data.mysqlversion);
 			$("#listVersions").empty();
-			$("#hVersion").text(data.version);
+			$("#hVersion").text(data.version+' '+data.subversion);
 			
 			$.each(data.file, function(index, value){
 				var item = $("<br>Fichero: <b>"+value.Name+"</b><ul><li>MD5: "+value.md5.toUpperCase()+"</li>" +
