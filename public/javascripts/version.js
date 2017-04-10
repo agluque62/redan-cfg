@@ -11,6 +11,8 @@ var GetVersion = function(isFirstLoad) {
 			$("#IdVersion").text(data.version);
 			$("#IdSubVersion").text(data.subversion);
 			$("#IdVersionDate").text(data.date);
+			$("#IdNodeJSVersion").text(data.nodejsversion);
+			$("#IdMySQLVersion").text(data.mysqlversion);
 			$("#listVersions").empty();
 			$("#hVersion").text(data.version);
 			

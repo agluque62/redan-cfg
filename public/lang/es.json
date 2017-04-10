@@ -257,6 +257,8 @@
 	"IdVersion"				: "Versión: ",
 	"Subversion"			: "Sub-Versión: ",
 	"VersGenDate"			: "Fecha de Versión: ",
+	"NodeJSVersion"			: "Versión NodeJS: ",
+	"MySQLVersion"			: "Versión MySQL: ",
     "Configurations"		: "Configuraciones",
 	"Gateways" 				: "Pasarelas",
 	"Hardware" 				: "Hardware",
