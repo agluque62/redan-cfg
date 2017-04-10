@@ -137,51 +137,51 @@ function AddPhoneParameters(){
 function AddRange(item,origin){
 	var inicial='';
 	var final='';
-
+	
 	var index = item.parentElement.parentElement.rowIndex;
-
+	
 	if (origin){
 		// Inicio
 		inicial=$('#rangeAtsOrigin tr:nth-child(' + (index+1) + ') td:nth-child(1) input').val();
-
+		
 		// Fin
 		final=$('#rangeAtsOrigin tr:nth-child(' + (index+1) + ') td:nth-child(2) input').val();
 	}
 	else{
 		// Inicio
 		inicial=$('#rangeAtsDestination tr:nth-child(' + (index+1) + ') td:nth-child(1) input').val();
-
+		
 		// Fin
 		final=$('#rangeAtsDestination tr:nth-child(' + (index+1) + ') td:nth-child(2) input').val();
 	}
-
+	
 	
 	if (inicial != '' && final==''){
 		final=inicial;
 	}
-
+	
 	if (inicial == '' && final!=''){
 		inicial=final;
 	}
-
-	if ((inicial != '' && final!='') && 
+	
+	if ((inicial != '' && final!='') &&
 		(inicial <= final)){
-		$.ajax({type: 'POST', 
-				dataType: 'json', 
-				contentType:'application/json',
-				url: '/resources/' + $('#DivParameters').data('idRecurso') + '/phoneParameters/range', 
-				data: JSON.stringify({
-					origen: origin,
-					inicial: inicial,
-					final: final
-				}),
-				success: function (data){
-					if (data.error == null){
-						GenerateHistoricEvent(ID_HW,MODIFY_ATS_ROUTES,$('#TbNameResource').val(),$('#loggedUser').text());
-						alertify.success('Rango ATS añadido.');
-						GetAtsRange($('#DivParameters').data('idRecurso'));
-					}
+		$.ajax({type: 'POST',
+			dataType: 'json',
+			contentType:'application/json',
+			url: '/resources/' + $('#DivParameters').data('idRecurso') + '/phoneParameters/range',
+			data: JSON.stringify({
+				origen: origin,
+				inicial: inicial,
+				final: final
+			}),
+			success: function (data){
+				if (data.error == null){
+					GenerateHistoricEvent(ID_HW,MODIFY_ATS_ROUTES,$('#TbNameResource').val(),$('#loggedUser').text());
+					alertify.success('Rango ATS añadido.');
+					GetAtsRange($('#DivParameters').data('idRecurso'));
 				}
+			}
 		});
 	}
 	else{

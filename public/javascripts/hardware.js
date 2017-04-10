@@ -1327,14 +1327,21 @@ function UpdateResource(slaveId, col, fila, f) {
 		}
 	}
 	if($('#SResourceType option:selected').val() == 2) { //Recurso Telefonía
-		if( $('#TbRemoteUri')[0].value == null  || $('#TbRemoteUri')[0].value == '' ) {
+		if ($('#TbRemoteUri')[0].value == null || $('#TbRemoteUri')[0].value == '') {
 			alertify.alert('Ulises G 5000 R', "Para un recurso telefónico, el campo URI remota tiene " +
 				"que tener un valor correcto.",
-				function(){
+				function () {
 					GotoResource(fila, col, true);
 				}
 			);
 		}
+		/*else if ($('#LbTypeTel')[0].value == 3) {//ATS
+			if ($('#rangeAtsOrigin')[0].childNodes["0"].childNodes.length == 6) {
+				translateWord('ErrorATSMaxOrig', function (result) {
+					alertify.error(result);
+				});
+			}
+		}*/
 		else
 			UpdateResourceReally(slaveId, col, fila, f);
 	}
@@ -1836,8 +1843,10 @@ function ShowRangeAts(data){
 														'<td align="center"' + clase + '><a ' + clase_a +' onclick="UpdateRank(' + indexOrigen + ',true)" >' + actualiza + '</a></td>' +
 														'<td align="center"' + clase + '><a ' + clase_a +' onclick="RemoveRank(' + indexOrigen + ',true)" >' + remove + '</a></td>' +
 														'</tr>');
-					if (indexOrigen > 4)
+					if ($('#rangeAtsOrigin')[0].childNodes["0"].childNodes.length == 6)
 						$('#AddOrigenRow').hide();
+					else
+						$('#AddOrigenRow').show();
 				}
 				else{
 					indexDestino++;
@@ -1847,8 +1856,10 @@ function ShowRangeAts(data){
 															'<td align="center"' + clase + '><a ' + clase_a +' onclick="UpdateRank(' + indexDestino + ',false)" >' + actualiza + '</a></td>' +
 															'<td align="center"' + clase + '><a ' + clase_a +' onclick="RemoveRank(' + indexDestino + ',false)" >' + remove + '</a></td>' +
 															'</tr>');
-					if (indexDestino > 4)
+					if ($('#rangeAtsDestination')[0].childNodes["0"].childNodes.length == 6)
 						$('#AddDestinoRow').hide();
+					else
+						$('#AddDestinoRow').show();
 				}
 			});
 		});

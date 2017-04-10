@@ -342,6 +342,8 @@
 	"ErrorThreshold"		: "Valor no válido",
 	"ErrorValue"			: "Valor no válido",
 	"ErrorATSNumber"		: "Número no válido",
+	"ErrorATSMaxOrig"		: "Se deben introducir 4 rangos ATS para el origen",
+	"ErrorATSMaxDest"		: "Se deben introducir 4 rangos ATS para el destino",
 	"TableBss"				: "Tabla calificación audio - BSS",
 	"TableId"				: "Id. Tabla",
 	"CreationUser"			: "Usuario de creación",
