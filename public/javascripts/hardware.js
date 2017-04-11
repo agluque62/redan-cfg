@@ -1246,6 +1246,10 @@ function AddResource(slaveId, col, fila, f){
 											var l = ($('.Res' + fila + col).offset().left - 145) + 'px';
 											$('#BigSlavesZone').animate({width: '85%'},500,function(){
 													$('#BigSlavesZone').addClass('divNucleo');
+												/*if($('#SResourceType option:selected').val() == 1) {
+													$('#CbGranularity option:eq(0)').attr("selected", "true");
+													$('#CbGranularity').attr("disabled", "disabled");
+												}*/
 											});
 										});		
 									});

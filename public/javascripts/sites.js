@@ -507,6 +507,10 @@ function GotoResource(row,col,update){
 			// });
 	//	}
 	//}
+	//if($('#SResourceType option:selected').val() == 1) {
+		//$('#CbGranularity').val(0);
+		//$('#CbGranularity').attr("disabled", "disabled");
+	//}
 }
 
 function Close(){
