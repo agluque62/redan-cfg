@@ -1168,11 +1168,16 @@ function modify(editText,select){
 }
 
 function AddProxy(){
-	if ($('#ProxyEdit').val() != ''){
-		$('#ProxysList').append($('<option>',{
-			text: $('#ProxyEdit').val()
-		}));
+	if($('#ProxysList')["0"].length != 2) {
+		if ($('#ProxyEdit').val() != ''){
+			alertify.success('Proxy añadido.');
+			$('#ProxysList').append($('<option>',{
+				text: $('#ProxyEdit').val()
+			}));
+		}
 	}
+	else
+		alertify.error('Solo se pueden insertar dos proxies para este servicio.');
 }
 
 function RemoveProxy(){
@@ -1191,11 +1196,16 @@ function RemoveProxy(){
 }
 
 function AddRegistrar(){
-	if ($('#RegistrarEdit').val() != ''){
-		$('#RegistrarsList').append($('<option>',{
-			text: $('#RegistrarEdit').val()
-		}));
+	if($('#RegistrarsList')["0"].length != 2) {
+		if ($('#RegistrarEdit').val() != '') {
+			alertify.success('Registrar añadido.');
+			$('#RegistrarsList').append($('<option>', {
+				text: $('#RegistrarEdit').val()
+			}));
+		}
 	}
+	else
+		alertify.error('Solo se pueden insertar dos registrars para este servicio.');
 }
 
 function RemoveRegistrar(){
