@@ -245,6 +245,7 @@
 	"Activo"				: "Active",
 	"CfgId"					: "Configuration id.",
 	"New"					: "New",
+	"NewTable"				: "New table",
     "Options" 				: "Options",
     "User" 					: "User",
     "AccessControl" 		: "Access Control",

@@ -37,9 +37,10 @@ script.
 
 	setTimeout(SynchronizedGateways(),2500);
 
-	function EnableAplicarCambios(){
-		translateWord('Activate',function(result){
-			if ($('#listaOpciones li:nth-last-child(2) a ').text() == result){
+	function EnableAplicarCambios(){//Quitamos el translate para no pedir continuamente el fichero de lang
+		//translateWord('Activate',function(result){
+			if ($('#listaOpciones li:nth-last-child(2) a ').text() == 'Apply changes' ||
+				$('#listaOpciones li:nth-last-child(2) a ').text() == 'Aplicar cambios' ) {
 				if (listOfGateways.length == 0)
 					$('#listaOpciones li:nth-last-child(2)').addClass('menuListDisabled');
 				else
@@ -49,7 +50,7 @@ script.
 						$('#listaOpciones li:nth-last-child(2)').addClass('menuListDisabled');
 			}
 			setTimeout(function(){EnableAplicarCambios()},1000);
-		});
+		//});
 	}
 	setTimeout(EnableAplicarCambios(),1000);
 
