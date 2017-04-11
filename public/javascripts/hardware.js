@@ -743,6 +743,7 @@ function ShowDataOfResource(data,f){
 		//$('#SResourceType').prop('disabled','disabled')
 
 		//$('#SRestriccion').prop('disabled','disabled');
+		
 		var rsc=$('table.resource').data('idRecurso');
 		$('#SRestriccion option[value="' + data.recursos[0].restriccion +'"]').prop('selected', true);
 		if(data.recursos[0].restriccion == "1") {
@@ -786,6 +787,18 @@ function ShowDataOfResource(data,f){
 
 		if (f != null)
 			f();
+		
+		if (data.recursos[1].ip == null) {
+			$('#SRestriccion option:eq(0)').prop('selected', true);
+		}
+		else if(data.recursos[1].blanca == 0) {
+			$('#SRestriccion option:eq(1)').prop('selected', true);
+			OnChangeRestriccion(1);
+		}
+		else {
+			$('#SRestriccion option:eq(2)').prop('selected', true);
+			OnChangeRestriccion(2);
+		}
 	}
 }
 
