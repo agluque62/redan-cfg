@@ -607,7 +607,7 @@ var CopyMethodSite = function(idSourceSite,nameTargetSite){
 			url: '/sites/' + idSourceSite + '/' + nameTargetSite, 
 			success: function(data){
 				if (data.error == 'ER_DUP_ENTRY')
-					alertify.error('Emplazamiento \"' + nameTargetSite + '\" ya existe.');
+					alertify.error('El nombre de emplazamiento \"' + nameTargetSite + '\" ya existe para esta configuración.');
 				else{
 					alertify.success('Emplazamiento clonado.');
 					ShowCfg($('#DivConfigurations').data('cfgJson'))
