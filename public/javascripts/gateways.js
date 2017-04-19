@@ -20,8 +20,8 @@ var ChangeGateWaySite = function(data){
 			$.ajax({type: 'POST',
 				url: '/gateways/changesite/'+idCgw+'/'+newIndex,
 				success: function(data){
-					if(data == 'DUP_ENTRY_NAME')
-						alertify.success('Ya existe una pasarela con el mismo nombre en el emplazamiento de destino.');
+					if(data.data == 'DUP_ENTRY_NAME')
+						alertify.error('Ya existe una pasarela con el mismo nombre en el emplazamiento de destino.');
 					else
 						alertify.success('La pasarela ha sido cambiada de emplazamiento.');
 					ShowSite($('#IdSite').val(),$('#IdSite').data('idSite'));
