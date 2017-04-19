@@ -21,7 +21,7 @@ var ChangeGateWaySite = function(data){
 				url: '/gateways/changesite/'+idCgw+'/'+newIndex,
 				success: function(data){
 					if(data.data == 'DUP_ENTRY_NAME')
-						alertify.error('Ya existe una pasarela con el mismo nombre en el emplazamiento de destino.');
+						alertify.error('Ya existe una pasarela con el mismo nombre en el emplazamiento de destino seleccionado.');
 					else
 						alertify.success('La pasarela ha sido cambiada de emplazamiento.');
 					ShowSite($('#IdSite').val(),$('#IdSite').data('idSite'));
