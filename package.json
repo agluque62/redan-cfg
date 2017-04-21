@@ -1,4 +1,4 @@
-{
+quit{
   "name": "UG5K-Serv",
   "version": "0.0.0",
   "private": true,
@@ -17,7 +17,7 @@
     "file-system": "^2.2.1",
     "jade": "~1.9.1",
     "morgan": "~1.5.1",
-    "mysql": "^2.5.4",
+    "mysql": "~2.5.4",
     "pdfmake": "^0.1.18",
     "serve-favicon": "~2.2.0"
   }

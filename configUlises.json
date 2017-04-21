@@ -25,6 +25,10 @@
       {"Path": "/lib/", "Name": "tableBss.js"},
       {"Path": "/lib/", "Name": "users.js"},
       {"Path": "/lib/", "Name": "version.js"}
-    ]
+    ],
+    "mysql_db": "ug5k",
+    "mysql_user": "agluque1",
+    "mysql_pass": "",
+    "port": 8081
   }
 }
